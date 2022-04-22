@@ -1,3 +1,13 @@
 .aboutTab {
    color: white;
+   height: 33%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: .5rem solid gray;
+   border-radius: .5rem;
+}
+.aboutTab:active {
+   border-left: none;
+   border-right: .5rem solid gray;
 }

@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
 import AboutMain from './About/AboutMain';
 import AboutNav from './About/AboutNav';
+import AboutCleverness from './About/AboutCleverness'
+import Unopened from './Unopened';
 const Main = () => {
+   const [bodyfade, setFade] = useState("hide");
    
+
+   useEffect(() => {
+      setTimeout(() => {
+         setFade("show")
+      }, 2700)
+   })
   return (
-     <BrowserRouter>
-     <div id="bodyBox">
+     <div className={bodyfade} id="bodyBox">
          <div id="leftBox">
                <aside id="sideNav">
                   <Routes>
-                     <Route exact path="/about" element={<AboutNav />}>
+                     <Route exact path="/" element={<Unopened />}>
 
                      </Route>
-                     <Route>
+                     <Route exact path={"/about"} element={<AboutNav />}>
 
                      </Route>
                      <Route>
@@ -24,21 +32,10 @@ const Main = () => {
          </div>
          <div id="rightBox">
             <section className="displayBox">
-               <Routes>
-                  <Route exact path="/about" element={<AboutMain />}>
-
-                  </Route>
-                  <Route>
-
-                  </Route>
-                  <Route>
-
-                  </Route>
-               </Routes>
+               
             </section>
          </div>
       </div>
-      </BrowserRouter>
   )
 }
 

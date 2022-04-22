@@ -9,8 +9,9 @@ body {
 #bodyBox {
   display: flex;
   align-items: center;
-  height: 50rem;
+  height: 45rem;
   margin: 0 2rem 5rem;
+  transition: all 3s;
 
   #leftBox {
     height: 90%;
@@ -28,9 +29,6 @@ body {
       #sideNav {
         height: 100%;
         width: 100%;
-        .aboutTab {
-           height: 33%;
-        }
       }
     
   }
@@ -51,4 +49,11 @@ body {
 
     }
   }
+}
+.show {
+   transition: opacity 3s;
+   opacity: 1;
+}
+.hide {
+   opacity: 0;
 }

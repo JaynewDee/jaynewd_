@@ -47,10 +47,6 @@ header {
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .66rem;
-         animation-name: static;
-         animation-duration: .66s;
-         animation-delay: 2s;
-         animation-iteration-count: 2, 5;
          .curly {
             color: rgb(170, 0, 0);
          }
@@ -63,6 +59,7 @@ header {
       }
    }
 }
+
 
 @keyframes static {
    

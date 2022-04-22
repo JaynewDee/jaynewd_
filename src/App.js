@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Main from './pages/Main';
 import Header from './components/Header';
 
@@ -6,10 +7,12 @@ const App = () => {
    
   return (
      
-    <div className="App">
-       <Header />
-         <Main />
-    </div>
+     <BrowserRouter>
+         <div className="App">
+            <Header />
+              <Main />
+         </div>
+    </BrowserRouter>
   )
    
 }
