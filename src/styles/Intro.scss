@@ -1,0 +1,19 @@
+.introBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 66vh;
+   transition-property: opacity;
+   transition-duration: 3s;
+   opacity: 1;
+   flex-flow: column wrap;
+   #greeting {
+      position: relative;
+   }
+   #welcome{
+      position: relative;
+      transition-property: opacity;
+      transition-duration: 3s;
+      opacity: 1;
+   }
+}

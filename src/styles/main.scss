@@ -1,0 +1,54 @@
+:root {
+  font-size: 18px;
+  height: 100%;
+}
+body {
+  height: auto;
+  margin: 0;
+}
+#bodyBox {
+  display: flex;
+  align-items: center;
+  height: 50rem;
+  margin: 0 2rem 5rem;
+
+  #leftBox {
+    height: 90%;
+    width: 22%;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+      0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+      0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+    border-radius: 0.66rem 0 0 0.66rem;
+    
+      #sideNav {
+        height: 100%;
+        width: 100%;
+        .aboutTab {
+           height: 33%;
+        }
+      }
+    
+  }
+  #rightBox {
+    height: 90%;
+    width: 77%;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+      0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+      0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0.66rem 0.66rem 0;
+    .displayBox {
+
+
+    }
+  }
+}
