@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import { Routes, Route } from "react-router-dom";
+import Unopened from './Unopened';
 import AboutMain from './About/AboutMain';
 import AboutNav from './About/AboutNav';
-import AboutCleverness from './About/AboutCleverness'
-import Unopened from './Unopened';
+import ProjectsMain from './Projects/ProjectsMain';
+import ProjectsNav from './Projects/ProjectsNav';
+
+
 const Main = () => {
    const [bodyfade, setFade] = useState("hide");
    
@@ -14,28 +17,29 @@ const Main = () => {
       }, 2700)
    })
   return (
-     <div className={bodyfade} id="bodyBox">
-         <div id="leftBox">
-               <aside id="sideNav">
-                  <Routes>
-                     <Route exact path="/" element={<Unopened />}>
+     
+         <div className={bodyfade} id="bodyBox">
+             <div id="leftBox">
+                   <aside id="sideNav">
+                      <Routes>
+                         <Route exact path="/" element={<Unopened />}>
 
-                     </Route>
-                     <Route exact path={"/about"} element={<AboutNav />}>
+                         </Route>
+                         <Route exact path={"/about"} element={<AboutNav />}     >
 
-                     </Route>
-                     <Route>
+                         </Route>
+                         <Route exact path={"/projects"} element=    {<ProjectsNav />}>
 
-                     </Route>
-                  </Routes>
-            </aside>
-         </div>
-         <div id="rightBox">
-            <section className="displayBox">
-               
-            </section>
-         </div>
-      </div>
+                         </Route>
+                      </Routes>
+                </aside>
+             </div>
+             <div id="rightBox">
+                <section className="displayBox">
+
+                </section>
+             </div>
+          </div>
   )
 }
 

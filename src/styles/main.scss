@@ -1,6 +1,7 @@
 :root {
   font-size: 18px;
   height: 100%;
+  transition: all 2s;
 }
 body {
   height: auto;
@@ -10,12 +11,13 @@ body {
   display: flex;
   align-items: center;
   height: 45rem;
-  margin: 0 2rem 5rem;
-  transition: all 3s;
-
+  margin: 0 5rem 5rem;
+  animation-name: fadeInBody;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
   #leftBox {
     height: 90%;
-    width: 22%;
+    width: 15%;
     display: flex;
     background-color: black;
     justify-content: center;
@@ -46,14 +48,18 @@ body {
     border-radius: 0 0.66rem 0.66rem 0;
     .displayBox {
 
-
     }
   }
 }
-.show {
-   transition: opacity 3s;
-   opacity: 1;
-}
-.hide {
-   opacity: 0;
+
+@keyframes fadeInBody {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }
