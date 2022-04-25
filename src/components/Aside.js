@@ -13,7 +13,7 @@ const Aside = ({ setDisplay }) => {
          <Route exact path={"/about"} element={<AboutNav setDisplay={setDisplay}/>}>
 
          </Route>
-         <Route exact path={"/projects"} element={<ProjectsNav />}>
+         <Route exact path={"/projects"} element={<ProjectsNav setDisplay={setDisplay}/>}>
 
          </Route>
          <Route exact path={"/experiments"} element={<Unopened />}>

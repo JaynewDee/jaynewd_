@@ -9,6 +9,7 @@ const AboutNav = ({setDisplay}) => {
            return (
             <button onClick={((e) => {
                               setDisplay(e.target.value)
+                              console.log(e.target)
                               })}className={item.className} key={item.key} value={item.name}>
                {item.icon}
             </button>

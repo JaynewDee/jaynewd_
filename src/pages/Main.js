@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import Aside from '../components/Aside'
+import Aside from '../components/Aside';
 import AboutMain from './About/AboutMain';
 import AboutTruth from './About/AboutTruth';
 import AboutBeauty from './About/AboutBeauty';
-import AboutGoodness from './About/AboutGoodness'
+import AboutGoodness from './About/AboutGoodness';
+import ProjectsMain from './Projects/ProjectsMain';
+import ProjectOne from './Projects/displays/ProjectOne'
+import ProjectTwo from './Projects/displays/ProjectTwo';
+import ProjectThree from './Projects/displays/ProjectThree';
+import ProjectFour from './Projects/displays/ProjectFour';
+import ProjectFive from './Projects/displays/ProjectFive';
 
 
-const Main = (props) => {
-   const [displayState, setDisplay] = useState("Fox");
-   console.log(displayState);
-   
+const Main = () => {
+   const [displayState, setDisplay] = useState("");
+   console.log(displayState)
       const aboutSwitch = (state) => {
          switch (state) {
-            case "none":
+            case "aboutNone":
                return <AboutMain/>
             case "Fox":
                return <AboutTruth />
@@ -24,6 +29,24 @@ const Main = (props) => {
                break
          }  
       }
+      const projectSwitch = (state) => {
+         switch (state) {
+            case "projectMain":
+               return <ProjectsMain />
+            case "Dino":
+               return <ProjectOne />
+            case "Paw":
+               return <ProjectTwo />
+            case "Ring":
+               return <ProjectThree />
+            case "Flower":
+               return <ProjectFour />
+            case "Truck":
+               return <ProjectFive />
+            default:
+               break
+         }
+      }
    
   return (
          <div id="bodyBox">
@@ -33,6 +56,7 @@ const Main = (props) => {
              <div id="rightBox">
                 <section className="displayBox">
                   {aboutSwitch(displayState)}
+                  {projectSwitch(displayState)}
                 </section>
              </div>
           </div>

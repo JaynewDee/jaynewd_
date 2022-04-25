@@ -1,27 +1,40 @@
 
 
-.projectTab {
-   color: white;
-   height: 20%;
-   width: 100%;
+
+.tabStateLocked {
+   color: rgb(170,0,0);
+   height: 15%;
+   width: 99%;
    display: flex;
    justify-content: center;
    align-items: center;
    border-left: .55rem solid rgb(243, 243, 243);
    border-radius: .5rem;
-   animation: tabFade 2s ease-in;
+   animation: tabFade 2s ease-in, lockIn .33s ease-out forwards;
+}
+
+.tabStateUnlocked {
+   color: rgb(111, 111, 111);
+   height: 15%;
+   width: 99%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: .55rem solid rgb(170, 0, 0);
+   border-radius: .5rem;
+   animation: tabFade 2s ease-in, unLock .33s ease-out;
 }
 
 
 @keyframes lockIn {
    0% {};
    100% {border-left: none;
-         border-right: .66rem solid rgb(243, 243, 243);
+         border-right: .5rem solid rgb(35, 173, 173);
          z-index: 2;};
 }
 
 @keyframes unLock {
    0% {}
-   100% {border-left: .55rem solid rgb(243, 243, 243);
+   100% {border-left: .55rem solid rgb(0, 0, 0);
          z-index: 0;}
 }
