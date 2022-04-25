@@ -1,13 +1,26 @@
 .aboutTab {
-   color: white;
-   height: 33%;
+   color: black;
+   height: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .5rem solid gray;
+   border-left: .5rem solid rgba(0,0,0,1);   
    border-radius: .5rem;
+   animation: tabFade 2s;
+   max-width: 8rem;
+   margin: 1rem;
 }
+
 .aboutTab:active {
    border-left: none;
-   border-right: .5rem solid gray;
+   border-right: .5rem solid rgb(243, 243, 243);
+}
+
+@keyframes tabFade {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }

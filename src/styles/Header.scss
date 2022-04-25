@@ -16,44 +16,82 @@ header {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   height: 15rem;
+   height: 10rem;
    font-family: $trispace;
-   
    h1 {
       display: flex;
       flex-flow: column wrap;
-      justify-content: center;
-      flex: 1 0 50%;
+      flex: 1 0 50vw;
       text-align: right;
       height: 40%;
       font-weight: 300;
-      margin: 2rem;
       line-height: 2rem;
       letter-spacing: .33rem;
+      margin: 1rem 2rem;
+      
+      // *SYNTHETIC RAIN* //
+      #synthetic {
+         animation: fadeInSynthetic 2s ease-out;
+      }
+      #rain {
+         animation: fadeInRain 2.1s ease-out;
+      }
    }
    nav {
-      flex: 1 0 33%;
+      flex: 1 0 30vw;
       font-weight: 100;
       display: flex;
       flex-flow: column wrap;
       align-items: flex-start;
-      margin: 2rem;
-      line-height: 2rem;
+      line-height: 2.33rem;
       letter-spacing: .11rem;
+      margin: 1rem 2rem;
       .navLink {
          flex: 1 0 100%;
          text-decoration: none;
          color: rgba(0,0,0,0.66);
-         font-size: .66rem;
+         font-size: .7rem;
+         animation: fadeInLink 3s;
+         transition: all 1.33s;
          .curly {
             color: rgb(170, 0, 0);
          }
       }
       .navLink:hover {
+         transform: translateX(-1rem) scale(1.1);
+
          .curly {
             font-size: 1rem;
             color: #23ADAD;
+            text-decoration: line-through #23ADAD;
+         }
+      }
+      .navLink:active {
+         .curly {
+            font-size: 1rem;
+            color: #23ADAD;
+            text-decoration: line-through #23ADAD;
          }
       }
    }
+}
+
+@keyframes fadeInSynthetic {
+   0% {opacity: 0;
+   transform: translateY(1200px)}
+   40% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+@keyframes fadeInRain {
+   0% {opacity: 0;
+      transform: translateY(-1200px)}
+   100% {opacity: 1}
+}
+
+@keyframes fadeInLink {
+   0% {opacity: 0;
+      transform: translateX(500px)}
+   30% {opacity: 0}
+   100% {opacity: 1}
 }

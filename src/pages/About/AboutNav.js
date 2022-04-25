@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import '../../styles/Nav/AboutNav.scss'
-import {abouttabs} from '../../data/tabs'
+import React from 'react';
+import '../../styles/Nav/AboutNav.scss';
+import { abouttabs } from '../../data/tabs';
 
-const AboutNav = (items) => {
-   
+const AboutNav = ({setDisplay}) => {
       
      return (
         abouttabs.map((item) => {
            return (
-            <div className={item.className} key={item.key}>
+            <button onClick={((e) => {
+                              setDisplay(e.target.value)
+                              })}className={item.className} key={item.key} value={item.name}>
                {item.icon}
-            </div>
+            </button>
         )})
      )
 }

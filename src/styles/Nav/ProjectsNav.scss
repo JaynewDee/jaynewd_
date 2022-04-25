@@ -1,0 +1,27 @@
+
+
+.projectTab {
+   color: white;
+   height: 20%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: .55rem solid rgb(243, 243, 243);
+   border-radius: .5rem;
+   animation: tabFade 2s ease-in;
+}
+
+
+@keyframes lockIn {
+   0% {};
+   100% {border-left: none;
+         border-right: .66rem solid rgb(243, 243, 243);
+         z-index: 2;};
+}
+
+@keyframes unLock {
+   0% {}
+   100% {border-left: .55rem solid rgb(243, 243, 243);
+         z-index: 0;}
+}
