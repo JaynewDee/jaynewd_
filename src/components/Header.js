@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
 import {routes} from '../data/navRoutes'
 const curlyLeft = '{'
 const curlyRight = '}'
 
 
-const Header = ({setDisplay}) => {
+const Header = ({ setNav }) => {
    
    const [previousClicked, setPrevious] = useState("")
    
@@ -38,17 +37,17 @@ const Header = ({setDisplay}) => {
           {routes.map((route) => {
              
              return (
-                <Link to={route.href}>
+                
                 <button value={route.value} onClick={((e) => {
                   tabSwitch(e);
-                  setDisplay(e.target.value)
+                  setNav(e.target.value)
                   console.log(e.target)
                   })} className={route.className} style={{textDecoration: 'none'}} key={route.key}>
                         <span className="curly">{curlyLeft}</span>
                         <span className="navText"> {route.title} </span> 
                         <span className="curly">{curlyRight}</span>
                   </button>
-                  </Link>
+                  
              )
           })}
        </nav>

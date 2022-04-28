@@ -14,6 +14,10 @@ $trispace: 'Trispace';
 span {
    pointer-events: none;
 }
+button {
+   line-height: 2;
+   letter-spacing: .13rem;
+}
 header {
    display: flex;
    justify-content: flex-end;
@@ -31,7 +35,7 @@ header {
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: .33rem;
-      margin: 1rem 2rem;
+      margin: 1rem 3rem;
       
       // *SYNTHETIC RAIN* //
       #synthetic {
@@ -44,19 +48,19 @@ header {
    nav {
       flex: 1 0 30vw;
       font-weight: 100;
+      font-family: $trispace;
       display: flex;
       flex-flow: column wrap;
       align-items: flex-start;
-      line-height: 2.33rem;
-      letter-spacing: .11rem;
       margin: 1rem 1rem 1rem 3rem;
 
-      
       .navLink {
-         background: none;
-         padding: 1rem;
+         background: white;
+         padding: .33rem;
       }
       .navLinkUnlocked {
+         background: white;
+         border: none;
          transition: all 2s;
          flex: 1 0 100%;
          text-decoration: none;
@@ -67,6 +71,8 @@ header {
          }
       }
       .navLinkUnlocked:hover {
+         background: white;
+         border: none;
          transform: scale(1.33) translateX(-1rem);
          transition: all 1s;
          .curly {
@@ -76,6 +82,8 @@ header {
          
       }
       .navLinkLocked {
+         background: white;
+         border: none;
          flex: 1 0 100%;
          transform: scale(1.33) translateX(-1rem);
          text-decoration: none;
@@ -113,7 +121,3 @@ header {
    100% {opacity: 1}
 }
 
-// @keyframes navLock {
-//    0% {};
-//    100% {transform: translateX(-1rem) scale(1.33);}
-// }
