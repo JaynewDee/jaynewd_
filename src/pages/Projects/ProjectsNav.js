@@ -13,7 +13,7 @@ const ProjectsNav = ({setDisplay}) => {
       if (previousClicked !== "") {
          previousClicked.className = unlocked;
       }
-      console.log(e.target.className)
+
       if (e.target.className === locked) {
          e.target.className = unlocked
       }
@@ -31,8 +31,6 @@ const ProjectsNav = ({setDisplay}) => {
           <button onClick={((e) => {
             tabSwitch(e);
             setDisplay(e.target.value)
-                                 
-                                 console.log(e.target)
                                  })} className={item.className} key={item.key} value={item.name}>
              {item.icon}
           </button>

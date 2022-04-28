@@ -6,4 +6,4 @@ const ProjectOne = () => {
   )
 }
 
-export default ProjectOne
+export default ProjectOne;

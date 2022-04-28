@@ -8,9 +8,10 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .55rem solid rgb(243, 243, 243);
-   border-radius: .5rem;
-   animation: tabFade 2s ease-in, lockIn .33s ease-out forwards;
+   border-left: .1rem solid rgb(243, 243, 243);
+   animation: tabFade 2s ease-in, lockIn .3s ease-out forwards;
+   transition: all .33s;
+   padding-right: .55rem;
 }
 
 .tabStateUnlocked {
@@ -20,21 +21,18 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .55rem solid rgb(170, 0, 0);
-   border-radius: .5rem;
-   animation: tabFade 2s ease-in, unLock .33s ease-out;
+   border-top: .33rem solid rgb(170, 0, 0);
+   border-radius: 0 .88rem .88rem 0;
+   animation: tabFade 2s ease-in;
 }
 
 
 @keyframes lockIn {
-   0% {};
+   0% {border-left: none};
    100% {border-left: none;
-         border-right: .5rem solid rgb(35, 173, 173);
-         z-index: 2;};
-}
-
-@keyframes unLock {
-   0% {}
-   100% {border-left: .55rem solid rgb(0, 0, 0);
-         z-index: 0;}
+         border-right: .5rem solid rgba(35, 173, 173, .8);
+         border-top: .2rem solid black;
+         border-bottom: .2rem solid black;
+         z-index: 2;
+      transform: scale(.99)}
 }

@@ -1,20 +1,27 @@
-.aboutTab {
-   color: black;
+.aboutTabUnlocked {
+   color: rgba(0,0,0,.7);
+   height: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-left: .5rem solid rgba(0,0,0,.8);   
+   border-radius: .5rem;
+   transition: all .33s;
+   animation: tabFade 2s;
+   max-width: 99%;
+}
+
+.aboutTabLocked {
+   color: rgba(35, 173, 173, .95);
    height: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
    border-left: .5rem solid rgba(0,0,0,1);   
-   border-radius: .5rem;
-   animation: tabFade 2s;
-   max-width: 8rem;
-   margin: 1rem;
+   animation: tabFade 2s, lockAbout .2s ease-out forwards;
+   max-width: 100%;
 }
 
-.aboutTab:active {
-   border-left: none;
-   border-right: .5rem solid rgb(243, 243, 243);
-}
 
 @keyframes tabFade {
    0% {
@@ -22,5 +29,17 @@
    }
    100% {
       opacity: 1;
+   }
+}
+
+@keyframes lockAbout {
+   0% {}
+   100% {border-left: none;
+      border-right: .5rem solid rgba(170, 0, 0, .95);
+      border-top: .3rem solid rgba(0,0,0,.8);
+      border-bottom: .4rem solid rgba(0,0,0,.8);
+      border-left: .16rem solid rgba(170, 0, 0, .95);
+      z-index: 2;
+      transform: scale(.99)
    }
 }

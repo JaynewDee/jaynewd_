@@ -2,7 +2,9 @@ import React from 'react'
 
 const ProjectsMain = () => {
   return (
-    <div>ProjectsMain</div>
+    <div id="projectMainBox">
+       Default Project Page
+    </div>
   )
 }
 

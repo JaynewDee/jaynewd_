@@ -16,14 +16,15 @@ header {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   height: 10rem;
+   height: 9rem;
    font-family: $trispace;
+   margin: 3rem 0;
    h1 {
       display: flex;
       flex-flow: column wrap;
       flex: 1 0 50vw;
       text-align: right;
-      height: 40%;
+      height: 50%;
       font-weight: 300;
       line-height: 2rem;
       letter-spacing: .33rem;
@@ -45,36 +46,51 @@ header {
       align-items: flex-start;
       line-height: 2.33rem;
       letter-spacing: .11rem;
-      margin: 1rem 2rem;
-      .navLink {
+      margin: 1rem 1rem 1rem 3rem;
+      
+      .navText {
+         
+      }
+      .navLinkUnlocked {
          flex: 1 0 100%;
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .7rem;
-         animation: fadeInLink 3s;
-         transition: all 1.33s;
+         animation: fadeInLink 2s 1;
+         transition: all 2s;
          .curly {
             color: rgb(170, 0, 0);
          }
+         
       }
-      .navLink:hover {
-         transform: translateX(-1rem) scale(1.1);
-
+      .navLinkUnlocked:hover {
+         transform: scale(1.33) translateX(-2rem);
          .curly {
-            font-size: 1rem;
-            color: #23ADAD;
-            text-decoration: line-through #23ADAD;
+            text-decoration: line-through;
+            color: rgba(35, 173, 173, .95);
+            pointer-events: none;
          }
+         
       }
-      .navLink:active {
+      .navLinkLocked {
+         flex: 1 0 100%;
+         transform: scale(1.28) translateX(-2rem);
+         text-decoration: none;
+         color: rgba(0,0,0,0.66);
+         font-size: .7rem;
+         transition: all 2s;
+         pointer-events: none;
          .curly {
-            font-size: 1rem;
-            color: #23ADAD;
-            text-decoration: line-through #23ADAD;
+            color: rgba(35, 173, 173, .95);
+            text-decoration: line-through;
+         }
+         .navText {
+            pointer-events: none;
          }
       }
    }
 }
+
 
 @keyframes fadeInSynthetic {
    0% {opacity: 0;
@@ -94,4 +110,9 @@ header {
       transform: translateX(500px)}
    30% {opacity: 0}
    100% {opacity: 1}
+}
+
+@keyframes navLock {
+   0% {};
+   100% {transform: translateX(-1rem) scale(1.1);}
 }
