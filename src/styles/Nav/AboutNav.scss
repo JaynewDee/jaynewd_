@@ -1,25 +1,26 @@
 .aboutTabUnlocked {
    color: rgba(0,0,0,.7);
-   height: 20%;
+   height: 17%;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .5rem solid rgba(0,0,0,.8);   
-   border-radius: .5rem;
-   transition: all .33s;
+   border-left: .1rem solid rgba(0,0,0,.8);   
+   border-radius: .5rem 0 0 .5rem;
+   transition: all 1s;
    animation: tabFade 2s;
-   max-width: 99%;
+   width: 66%;
 }
 
 .aboutTabLocked {
-   color: rgba(35, 173, 173, .95);
-   height: 20%;
+   color: rgba(0, 121, 140, .8);
+   height: 17%;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .5rem solid rgba(0,0,0,1);   
+   border-left: .1rem solid rgba(0,0,0,1);   
    animation: tabFade 2s, lockAbout .2s ease-out forwards;
    max-width: 100%;
+   border-radius: .5rem 0 0 .5rem;
 }
 
 
@@ -33,13 +34,13 @@
 }
 
 @keyframes lockAbout {
-   0% {}
+   0% {width: 66%;}
    100% {border-left: none;
-      border-right: .5rem solid rgba(170, 0, 0, .95);
-      border-top: .3rem solid rgba(0,0,0,.8);
-      border-bottom: .4rem solid rgba(0,0,0,.8);
-      border-left: .16rem solid rgba(170, 0, 0, .95);
+      border-top: .5rem solid rgba(0,0,0,.8);
+      border-bottom: .5rem solid rgba(0,0,0,.8);
+      border-left: .66rem solid rgba(170, 0, 0, .95);
       z-index: 2;
-      transform: scale(.99)
+      transform: scale(.93) translateX(.11rem);
+      width: 68%;
    }
 }

@@ -5,14 +5,16 @@ const curlyLeft = '{'
 const curlyRight = '}'
 
 
-const Header = () => {
+const Header = ({setDisplay}) => {
    
    const [previousClicked, setPrevious] = useState("")
-
+   
    const locked = 'navLinkLocked';
    const unlocked = 'navLinkUnlocked';
 
    const tabSwitch = (e) => {
+      e.preventDefault()
+      console.log(e.target.value)
       console.log(e.target)
       if (previousClicked !== "") {
          previousClicked.className = unlocked;
@@ -36,12 +38,17 @@ const Header = () => {
           {routes.map((route) => {
              
              return (
-                <Link onClick={tabSwitch} className={route.className} style={{textDecoration: 'none'}} key={route.key} to={route.href}>
+                <Link to={route.href}>
+                <button value={route.value} onClick={((e) => {
+                  tabSwitch(e);
+                  setDisplay(e.target.value)
+                  console.log(e.target)
+                  })} className={route.className} style={{textDecoration: 'none'}} key={route.key}>
                         <span className="curly">{curlyLeft}</span>
                         <span className="navText"> {route.title} </span> 
                         <span className="curly">{curlyRight}</span>
+                  </button>
                   </Link>
-               
              )
           })}
        </nav>

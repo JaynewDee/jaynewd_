@@ -8,17 +8,20 @@
    font-family: 'Trispace';
 }
 
+
 $epilogue: 'Epilogue';
 $trispace: 'Trispace';
-
+span {
+   pointer-events: none;
+}
 header {
    display: flex;
-   justify-content: center;
+   justify-content: flex-end;
    align-items: center;
    flex-flow: row wrap;
    height: 9rem;
    font-family: $trispace;
-   margin: 3rem 0;
+   margin: 1rem 0 2rem;
    h1 {
       display: flex;
       flex-flow: column wrap;
@@ -47,45 +50,43 @@ header {
       line-height: 2.33rem;
       letter-spacing: .11rem;
       margin: 1rem 1rem 1rem 3rem;
+
       
-      .navText {
-         
+      .navLink {
+         background: none;
+         padding: 1rem;
       }
       .navLinkUnlocked {
+         transition: all 2s;
          flex: 1 0 100%;
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .7rem;
-         animation: fadeInLink 2s 1;
-         transition: all 2s;
          .curly {
             color: rgb(170, 0, 0);
          }
-         
       }
       .navLinkUnlocked:hover {
-         transform: scale(1.33) translateX(-2rem);
+         transform: scale(1.33) translateX(-1rem);
+         transition: all 1s;
          .curly {
             text-decoration: line-through;
-            color: rgba(35, 173, 173, .95);
-            pointer-events: none;
+            color: rgba(0, 121, 140, .8);
          }
          
       }
       .navLinkLocked {
          flex: 1 0 100%;
-         transform: scale(1.28) translateX(-2rem);
+         transform: scale(1.33) translateX(-1rem);
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .7rem;
          transition: all 2s;
          pointer-events: none;
+         // animation: navLock 2s;
          .curly {
-            color: rgba(35, 173, 173, .95);
+            color: rgba(0, 121, 140, .8);
             text-decoration: line-through;
-         }
-         .navText {
-            pointer-events: none;
          }
       }
    }
@@ -112,7 +113,7 @@ header {
    100% {opacity: 1}
 }
 
-@keyframes navLock {
-   0% {};
-   100% {transform: translateX(-1rem) scale(1.1);}
-}
+// @keyframes navLock {
+//    0% {};
+//    100% {transform: translateX(-1rem) scale(1.33);}
+// }

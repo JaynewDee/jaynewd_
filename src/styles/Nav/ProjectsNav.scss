@@ -1,38 +1,40 @@
-
-
-
 .tabStateLocked {
-   color: rgb(170,0,0);
-   height: 15%;
-   width: 99%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-left: .1rem solid rgb(243, 243, 243);
-   animation: tabFade 2s ease-in, lockIn .3s ease-out forwards;
-   transition: all .33s;
-   padding-right: .55rem;
+  color: rgba(170, 0, 0, .7);
+  height: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.1rem solid rgba(170, 0, 0, .7);
+  animation: tabFade 2s ease-in, lockIn 0.33s ease-in forwards;
+  transition: all 0.33s;
 }
 
 .tabStateUnlocked {
-   color: rgb(111, 111, 111);
-   height: 15%;
-   width: 99%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-top: .33rem solid rgb(170, 0, 0);
-   border-radius: 0 .88rem .88rem 0;
-   animation: tabFade 2s ease-in;
+  color: rgb(111, 111, 111);
+  height: 11%;
+  width: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.22rem solid rgba(170, 0, 0, .85);
+  border-bottom: 0.22rem solid rgba(170, 0, 0, .85);
+  border-radius: .33rem 0 0 .33rem;
+  animation: tabFade 2s ease-in;
 }
 
-
 @keyframes lockIn {
-   0% {border-left: none};
-   100% {border-left: none;
-         border-right: .5rem solid rgba(35, 173, 173, .8);
-         border-top: .2rem solid black;
-         border-bottom: .2rem solid black;
-         z-index: 2;
-      transform: scale(.99)}
+  0% {
+     width: 44%;
+    border-left: none;
+  }
+  
+  100% {
+    border-left: 0.5rem solid rgba(0, 121, 140, .8);
+    border-right: 0.5rem solid rgba(0, 121, 140, .8);
+    border-top: 0.25rem solid rgba(4, 4, 4, .7);
+    border-bottom: 0.3rem solid rgba(4, 4, 4, .7);
+    z-index: 1;
+    width: 100%;
+    ;
+  }
 }

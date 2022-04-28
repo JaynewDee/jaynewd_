@@ -12,8 +12,8 @@ import ProjectFive from '../pages/Projects/displays/ProjectFive';
 
 export const aboutSwitch = (state) => {
    switch (state) {
-      case "aboutNone":
-         return <AboutMain/>
+      case "aboutMain":
+         return <AboutMain />
       case "Fox":
          return <AboutTruth />
       case "Sword":
@@ -24,6 +24,7 @@ export const aboutSwitch = (state) => {
          break
    }  
 }
+
 export const projectSwitch = (state) => {
    switch (state) {
       case "projectMain":
