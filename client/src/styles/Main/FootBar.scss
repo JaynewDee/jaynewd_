@@ -1,0 +1,11 @@
+#footBox {
+   position: relative;
+   top: 50rem;
+   height: 15rem;
+   width: 100%;
+   background-color: rgba(12, 12, 12, 0.93);
+   color: white;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+}

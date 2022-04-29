@@ -38,7 +38,7 @@ const Header = ({ setNav, setDisplay }) => {
              
              return (
                 
-                <button type="button" value={route.value} onClick={((e) => {
+                <button autoFocus={route.autofocus}type="reset" value={route.value} onClick={((e) => {
                   tabSwitch(e);
                   setNav(e.target.value)
                   setDisplay(e.target.value)

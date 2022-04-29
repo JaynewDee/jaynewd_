@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import Header from '../components/Header'
+import Header from '../components/Header';
+import FootBar from '../components/FootBar';
+import UtilityBar from '../components/UtilityBar';
 import {aboutSwitch, projectSwitch} from '../utils/displaySwitch';
 import ProjectsNav from '../pages/Projects/ProjectsNav';
 import AboutNav from '../pages/About/AboutNav';
@@ -25,7 +27,7 @@ const Portal = () => {
    }
   return (
       <>
-         <Header setDisplay={setDisplay}setNav={setNav}/>
+         <Header setDisplay={setDisplay} setNav={setNav}/>
 
          <div id="bodyBox">
 
@@ -41,10 +43,13 @@ const Portal = () => {
                      {aboutSwitch(displayState)}
                      {projectSwitch(displayState)}
                   </section>
+                  <UtilityBar />
                 
                 </div>
          </div>
+         <FootBar />
       </>
+ 
   )
 }
 

@@ -4,6 +4,7 @@ const ProjectOne = () => {
   return (
     <div className="projectBox">
        <div className="underSlide">
+          <h3>Project One(1)</h3>
        <p>
        thug cat side-eyes your "jerk" other hand while being petted yet i just saw other cats inside the house and nobody ask me before using my litter box. Go crazy with excitement when plates are clanked together signalling the arrival of cat food pet my belly, you know you want to; seize the hand and shred it!, yet cat gets stuck in tree firefighters try to get cat down firefighters get stuck in tree cat eats firefighters' slippers 
        </p>

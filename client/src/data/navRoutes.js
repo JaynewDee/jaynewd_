@@ -2,22 +2,26 @@ export const routes = [
    {
       key: 1,
       title: "Ethos",
-      className: 'navLink',
+      className: 'navLinkUnlocked',
       href: "/about",
-      value: "aboutMain"
+      value: "aboutMain",
+      autofocus: true
    },
    {
       key: 2,
       title: "Projects",
-      className: 'navLink',
+      className: 'navLinkUnlocked',
       href: "/projects",
-      value: "projectMain"
+      value: "projectMain",
+      autofocus: false
    },
    {
       key: 3,
       title: "Experiments",
-      className: 'navLink',
+      className: 'navLinkUnlocked',
       href: "/experiments",
-      value: "expMain"
+      value: "expMain",
+      autofocus: false
+
    },
 ]

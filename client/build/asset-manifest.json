@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7fa1479b.css",
+    "main.js": "/static/js/main.ca26e04a.js",
+    "static/media/Trispace[wdth,wght].woff2": "/static/media/Trispace[wdth,wght].eb2fcf0b1259d4eaf768.woff2",
+    "static/media/Epilogue[wght].woff2": "/static/media/Epilogue[wght].a084dee06d10ed2d2a85.woff2",
+    "index.html": "/index.html",
+    "main.7fa1479b.css.map": "/static/css/main.7fa1479b.css.map",
+    "main.ca26e04a.js.map": "/static/js/main.ca26e04a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fa1479b.css",
+    "static/js/main.ca26e04a.js"
+  ]
+}

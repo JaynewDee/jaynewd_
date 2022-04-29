@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../styles/Nav/AboutNav.scss';
 import { abouttabs } from '../../data/tabs';
 
 const AboutNav = ({setDisplay}) => {

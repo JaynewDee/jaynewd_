@@ -26,7 +26,7 @@
   border-top: 0.22rem solid rgba(170, 0, 0, 0.85);
   border-bottom: 0.22rem solid rgba(170, 0, 0, 0.85);
   border-radius: .33rem;
-  animation: tabFade 2s ease-in;
+  animation: tabFade 1.33s ease-out;
   filter: opacity(.93);
   height: 9%;
   box-shadow:   0 4px 3px rgba(0, 0, 0, 0.20),  0 8px 10px rgba(0, 0, 0, 0.20),
@@ -55,7 +55,7 @@
     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2),
       inset 0 8px 10px rgba(0, 0, 0, 0.2), inset 0 10px 12px rgba(0, 0, 0, 0.2),
       inset 0 14px 16px rgba(0, 0, 0, 0.2);
-   filter: saturate(2)
+   filter: saturate(1.33)
   }
 }
 

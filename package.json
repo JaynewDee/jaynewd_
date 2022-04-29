@@ -19,5 +19,8 @@
   "homepage": "https://github.com/JaynewDee/jaynewd_#readme",
   "devDependencies": {
     "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
   }
 }

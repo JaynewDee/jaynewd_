@@ -15,28 +15,32 @@ var abouttabs = [{
       key: 1,
       name: "Fox",
       icon: < GiFox size = {
-         "2rem"
+         "3rem"
       }
       />,
       className: "aboutTabUnlocked",
+      toggled: false
+
    },
    {
       key: 2,
       name: "Sword",
       icon: < GiWingedSword size = {
-         "2rem"
+         "3rem"
       }
       />,
       className: "aboutTabUnlocked",
+      toggled: false
    },
    {
       key: 3,
       name: "Heart",
       icon: < GiGlassHeart size = {
-         "1.77rem"
+         "2.66rem"
       }
       />,
       className: "aboutTabUnlocked",
+      toggled: false
    },
 ]
 

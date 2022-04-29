@@ -21,27 +21,34 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-flow: row wrap;
-  height: 9rem;
+  flex-flow: row nowrap;
+  height: 12rem;
   font-family: $trispace;
-  margin: 3rem 0;
+  margin-top: 0;
+   align-self: flex-end;
+   width: 100vw;
   h1 {
     display: flex;
-    flex-flow: column wrap;
-    flex: 1 0 50vw;
+    flex-flow: row wrap;
     text-align: right;
-    height: 50%;
     font-weight: 300;
     line-height: 2rem;
     letter-spacing: 0.33rem;
     margin: 1rem 3rem;
+      justify-content: flex-end;
+      height: 3rem;
+      flex: 1 0 100vw;
+      margin: 0 7rem 1rem;
 
+   
     // *SYNTHETIC RAIN* //
     #synthetic {
       animation: fadeInSynthetic 2s ease-out;
+      flex: 1 0 100%;
     }
     #rain {
       animation: fadeInRain 2.1s ease-out;
+      flex: 1 0 100%;
     }
   }
   h1:hover {
@@ -70,8 +77,7 @@ header {
       text-decoration: none;
       color: rgba(0, 0, 0, 0.66);
       font-size: 0.7rem;
-      margin: 1rem;
-
+      margin: .66rem .33rem;
       .curly {
         color: rgb(170, 0, 0);
       }
@@ -154,28 +160,27 @@ header {
 
 @media screen and (max-width: 915px) {
   header {
-    margin-top: 0;
-    height: 9rem;
+    height: 12rem;
     align-self: flex-end;
+    align-items: center;
+
     h1 {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+      align-items: center;
       flex-flow: row wrap;
       height: 3rem;
-      flex: 1 0 100vw;
-      margin: 2rem 7rem 1rem;
-      #synthetic {
-        flex: 1 0 100%;
-      }
-      #rain {
-        flex: 1 0 100%;
-      }
+      flex: 1 0 50%;
+      margin-right: -3rem;
+      margin-top: -1rem;
+      text-align: center;
+
     }
     nav {
       display: flex;
       padding-top: 0;
-      margin: .33rem 12rem;
-      flex: 1 0 10vw;
+      margin: auto 3rem;
+      flex: 1 0 auto;
       align-items: flex-end;
       
       .navLinkLocked {
@@ -192,10 +197,11 @@ header {
 @media screen and (max-width: 476px) {
    header {
       h1 {
-         margin: 2rem 2rem 1rem;
+         margin: 3rem 0 3rem 3rem;
+         text-align: left;
       }
       nav {
-         margin: .33rem 2rem;
+         margin: auto 2rem;
       }
    }
 }

@@ -5,7 +5,7 @@ import '../../styles/Main/About.scss'
 
 const AboutTruth = () => {
    const [previous, setPrevious] = useState("");
-   const textProps = propsObject.filter((item) => item.section.text)
+   
    const locked = "collapsed";
    const unlocked = "expanded";
    const clickHandler = (e) => {
@@ -26,7 +26,6 @@ const AboutTruth = () => {
          setPrevious(e.target)
       }
    
-      console.log(textProps)
   return (
       <div key="55" id="truthBox">
          {propsObject.map((item) => {
