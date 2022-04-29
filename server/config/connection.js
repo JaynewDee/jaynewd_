@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const uRi = process.env.MONGODB_URI;
 
-mongoose.connect( 'mongodb+srv://jaynewdee:!2babytiger2!@cluster0.fwmsg.mongodb.net/synthetic?retryWrites=true&w=majority')
+mongoose.connect( process.env.PORT || 3000)
 
 module.exports = mongoose.connection;
