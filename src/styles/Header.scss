@@ -14,10 +14,10 @@ $trispace: 'Trispace';
 span {
    pointer-events: none;
 }
-button {
-   line-height: 2;
-   letter-spacing: .13rem;
-}
+// button {
+//    line-height: 2;
+//    letter-spacing: .13rem;
+// }
 header {
    display: flex;
    justify-content: flex-end;
@@ -45,6 +45,9 @@ header {
          animation: fadeInRain 2.1s ease-out;
       }
    }
+   h1:hover {
+      cursor: pointer;
+   }
    nav {
       flex: 1 0 30vw;
       font-weight: 100;
@@ -53,10 +56,15 @@ header {
       flex-flow: column wrap;
       align-items: flex-start;
       margin: 1rem 1rem 1rem 3rem;
+      border: none;
 
       .navLink {
+         color:rgba(0,0,0,0.66);
          background: white;
-         padding: .33rem;
+         border: none;
+         animation: fadeInLink 3s ease-out;
+         
+
       }
       .navLinkUnlocked {
          background: white;
@@ -66,15 +74,18 @@ header {
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .7rem;
+         margin: 1rem;
+
          .curly {
             color: rgb(170, 0, 0);
          }
       }
       .navLinkUnlocked:hover {
-         background: white;
+         // background: white;
          border: none;
          transform: scale(1.33) translateX(-1rem);
          transition: all 1s;
+         border-radius: 17%;
          .curly {
             text-decoration: line-through;
             color: rgba(0, 121, 140, .8);
@@ -82,16 +93,17 @@ header {
          
       }
       .navLinkLocked {
-         background: white;
+         background: transparent;
          border: none;
+         margin: 1.33rem 0;
          flex: 1 0 100%;
-         transform: scale(1.33) translateX(-1rem);
+         transform: scale(1.66) translateX(-1rem);
          text-decoration: none;
          color: rgba(0,0,0,0.66);
          font-size: .7rem;
          transition: all 2s;
          pointer-events: none;
-         // animation: navLock 2s;
+         animation: navLock 2s forwards;
          .curly {
             color: rgba(0, 121, 140, .8);
             text-decoration: line-through;
@@ -121,3 +133,9 @@ header {
    100% {opacity: 1}
 }
 
+@keyframes navLock {
+   0% {box-shadow: none};
+   100% {
+      z-index: 3;
+   }
+}

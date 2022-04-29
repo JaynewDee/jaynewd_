@@ -1,3 +1,152 @@
-#aboutTruth {
-   color: white;
+#aboutMain {
+   margin: 1rem;
+   font-size: smaller;
+   line-height: 1rem;
+}
+#aboutMain >* {
+   text-indent: .66rem;
+}
+#aboutMain > ul {
+   list-style-type: none;
+   margin: 1rem;
+   display: flex;
+   text-align: center;
+}
+#truthBox {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 10%;
+  width: 90%;
+  line-height: 0.9;
+  height: 97%;
+  z-index: 1;
+  animation: fadeInBody 5s forwards;
+ 
+  .truthSection {
+     display: flex;
+     text-align: center;
+     align-items: center;
+  }
+  
+  .collapsed {
+    padding: 0.33rem;
+    border-radius: 0.33rem;
+    animation: retreat 2s ease-in-out forwards;
+  }
+  
+
+  .collapsed + section {
+    display: none;
+    height: 33%;
+    margin: 3rem;
+    animation: floatBack 1s ease-in forwards;
+  }
+  .expanded {
+    padding: .66rem;
+    margin: 2rem 0;
+    animation: buttonRelaxer 1s ease-in-out forwards;
+   //  transition: all 3s;
+  }
+  .expanded + section::before {
+   content: "";
+   border: 2px solid white;
+   background-color: rgba(170, 0, 0, .95);
+   height: 0;
+   width: 66%;
+   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.20),  0 8px 10px rgba(0, 0, 0, 0.20),
+    0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
+    0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+
+}
+  .expanded + section {
+     display: flex;
+     flex-flow: column wrap;
+    height: 13%;
+    pointer-events: none;
+    font-size: .66rem;
+    animation: spreadFloat 1s ease-out forwards, fadeInBody 4s  forwards;
+  }
+  .expanded + section::after {
+   content: "";
+   border: 1px solid white;
+   background-color: rgba(170, 0, 0, .95);
+   height: 0;
+   width: 33%;
+   position: relative;
+   top: 3rem;
+   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.20),  0 8px 10px rgba(0, 0, 0, 0.20),
+   0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
+   0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.20);
+   border-radius: 3px;
+}
+}
+
+@keyframes spreadFloat {
+  0% {
+    height: 15%;
+  }
+  100% {
+    height: 37%;
+    
+  }
+}
+
+@keyframes floatBack {
+  from {
+    height: 30%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes buttonRelaxer {
+  from {
+    transform: rotate(360deg);
+    margin: 0;
+  }
+  to {
+    transform: scale(1.1);
+    color: rgba(170, 0, 0, 1);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.20),  0 8px 10px rgba(0, 0, 0, 0.20),
+    0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
+    0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.20);
+  }
+}
+
+@keyframes retreat {
+  from {
+    transform: scale(1.3) rotate(0deg);
+    margin: 3rem;
+    color: rgba(170, 0, 0, 1);
+  }
+  to {
+    transform: rotate(180deg);
+    margin: 0;
+  }
+}
+
+@keyframes blink {
+   0% {
+      background-color: rgba(170, 0, 0, .95);
+   }
+   20% {
+      background-color: black;
+   }
+   40% {
+      background-color: rgba(170, 0, 0, .95);
+   }
+   60% {
+      background-color: black;
+   }
+   80% {
+      background-color: rgba(170, 0, 0, .95);
+   }
+   100% {
+      background-color: black;
+   }
 }

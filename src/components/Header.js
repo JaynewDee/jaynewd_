@@ -29,7 +29,7 @@ const Header = ({ setNav }) => {
 
   return (
     <header>
-      <h1>
+      <h1 onClick={(() => {window.location.reload()})}>
           <data id="synthetic">Synthetic</data>
           <data id="rain"> Rain </data>
       </h1>
@@ -38,7 +38,7 @@ const Header = ({ setNav }) => {
              
              return (
                 
-                <button value={route.value} onClick={((e) => {
+                <button type="button" value={route.value} onClick={((e) => {
                   tabSwitch(e);
                   setNav(e.target.value)
                   console.log(e.target)

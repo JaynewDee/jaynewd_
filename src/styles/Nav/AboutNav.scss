@@ -1,27 +1,33 @@
 .aboutTabUnLocked {
    color: rgba(0,0,0,.7);
-   height: 17%;
    display: flex;
+   flex: 1 0 1rem;
    justify-content: center;
-   align-items: center;
+   align-items: space-evenly;
    border-left: .1rem solid rgba(0,0,0,.8);   
-   border-radius: .5rem 0 0 .5rem;
    transition: all 1s;
-   animation: tabFade 2s;
+   animation: tabFade 2s ease-in;
    width: 66%;
+   height: 11%;
    z-index: 2;
+   box-shadow:   0 4px 3px rgba(0, 0, 0, 0.20),  0 8px 10px rgba(0, 0, 0, 0.20),
+       0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
+       0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.20);
 }
 
 .aboutTabLocked {
-   color: rgba(0, 121, 140, .8);
-   height: 13%;
+   color: rgba(0, 121, 140, 1);
    display: flex;
    justify-content: center;
    align-items: center;
-   border-left: .1rem solid rgba(0,0,0,1);   
-   animation: tabFade 2s, lockAbout .2s ease-out forwards;
-   max-width: 100%;
-   border-radius: .5rem 0 0 .5rem;
+   animation: lockAbout .33s ease-out forwards;
+   width: 90%;
+   height: 7%;
+   border-left: solid white;
+   .icons {
+      transform: scale(1.5)
+   }
+   
 }
 
 
@@ -35,18 +41,18 @@
 }
 
 @keyframes lockAbout {
-   0% {width: 66%;}
+   0% {transform: scale(1.07)}
    100% {
-      border-top: .5rem solid rgba(0,0,0,.8);
-      border-bottom: .5rem solid rgba(0,0,0,.8);
-      border-left: .5rem solid rgba(170, 0, 0, .95);
-      border-right: .33rem solid rgba(170, 0, 0, .95);
-      z-index: 2;
-      transform: scale(.93) translateX(.11rem);
-      width: 68%;
+      border-top: .3rem solid rgba(0,0,0,.1);
+      border-bottom: .3rem solid rgba(0,0,0,.1);
+      border-left: .33rem solid rgba(170, 0, 0, .95);
+      border-right: .44rem solid rgba(170, 0, 0, .95);
+      transform: scale(1);
+      width: 100%;
+      z-index: 0;
       box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.20), inset 0 8px 10px rgba(0, 0, 0, 0.20),
-      inset 0 10px 12px rgba(0, 0, 0, 0.20), inset 0 14px 16px rgba(0, 0, 0, 0.20),
-      inset 0 18px 32px rgba(0, 0, 0, 0.20), inset 0 32px 64px rgba(0, 0, 0, 0.20);
+      inset 0 10px 12px rgba(0, 0, 0, 0.20)
+      
    }
    
 }

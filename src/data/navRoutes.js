@@ -1,7 +1,7 @@
 export const routes = [
    {
       key: 1,
-      title: "About",
+      title: "Ethos",
       className: 'navLink',
       href: "/about",
       value: "aboutMain"
