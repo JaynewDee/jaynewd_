@@ -4,7 +4,7 @@ const curlyLeft = '{'
 const curlyRight = '}'
 
 
-const Header = ({ setNav }) => {
+const Header = ({ setNav, setDisplay }) => {
    
    const [previousClicked, setPrevious] = useState("")
    
@@ -41,6 +41,7 @@ const Header = ({ setNav }) => {
                 <button type="button" value={route.value} onClick={((e) => {
                   tabSwitch(e);
                   setNav(e.target.value)
+                  setDisplay(e.target.value)
                   console.log(e.target)
                   })} className={route.className} style={{textDecoration: 'none'}} key={route.key}>
                         <span className="curly">{curlyLeft}</span>

@@ -5,8 +5,8 @@
    justify-content: center;
    align-items: space-evenly;
    border-left: .1rem solid rgba(0,0,0,.8);   
-   transition: all 1s;
-   animation: tabFade 2s ease-in;
+   // transition: all 1s;
+   animation: tabFade 2s ease-in, lockAbout .33s ease-out forwards;
    width: 66%;
    height: 11%;
    z-index: 2;
@@ -23,7 +23,7 @@
    animation: lockAbout .33s ease-out forwards;
    width: 90%;
    height: 7%;
-   border-left: solid white;
+   border-left: .33rem solid rgba(170, 0, 0, .95);
    .icons {
       transform: scale(1.5)
    }
@@ -41,12 +41,12 @@
 }
 
 @keyframes lockAbout {
-   0% {transform: scale(1.07)}
+   0% {}
    100% {
-      border-top: .3rem solid rgba(0,0,0,.1);
-      border-bottom: .3rem solid rgba(0,0,0,.1);
-      border-left: .33rem solid rgba(170, 0, 0, .95);
-      border-right: .44rem solid rgba(170, 0, 0, .95);
+      border-top: .3rem solid rgba(0,0,0,.2);
+      border-bottom: .3rem solid rgba(0,0,0,.2);
+      // border-left: .66rem solid rgba(170, 0, 0, .95);
+      border-right: .66rem solid rgba(170, 0, 0, .95);
       transform: scale(1);
       width: 100%;
       z-index: 0;

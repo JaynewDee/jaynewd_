@@ -1,5 +1,15 @@
 #projectMainBox {
-   
+   display: flex;
+   justify-content: center;
+   overflow:auto;
+   .underSlide {
+      width: 33%;
+      background-color: rgba(12, 12, 12, 0);
+      color: white;
+      text-align: center;
+      position: relative;
+      
+   }
 }
 
 #projectOneBox {

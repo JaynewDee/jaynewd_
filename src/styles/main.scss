@@ -55,31 +55,47 @@ button,
   font-size: 18px;
   height: 100%;
   transition: all 2s;
+  overflow-y: scroll;
 }
 body {
   height: auto;
   margin: 0;
 }
+#bodyBox::after {
+   content: "";
+   height: 44rem;
+   width: 97%;
+   background-color: black;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+   border-radius: 1rem;
+   position: absolute;
+   margin-top: -.66rem;
+   z-index: -3;
+ }
+
 #bodyBox::before {
   content: "";
-  height: 41rem;
-  width: 82%;
+  height: 42rem;
+  width: 93%;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
-  border-radius: 0.66rem;
+  border-radius: 1rem;
   position: absolute;
-  z-index: -1;
-  top: 12rem;
-  left: 4.66rem;
-
+  margin-top: -.33rem;
+   z-index: -2;
 }
+
 #bodyBox {
+   position: fixed;
+   width: 96%;
   display: flex;
   justify-content: center;
   height: 45rem;
-  margin: 0 2rem 5rem 2rem;
+  margin: 1rem;
   animation-name: fadeInBody;
   animation-duration: 3s;
   animation-iteration-count: 1;
@@ -88,19 +104,20 @@ body {
   font-weight: 300;
   #leftBox {
     height: 90%;
-    width: 12%;
+    width: 13%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
     background-color: rgba(0, 5, 5, 0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-      0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+      0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0.66rem 0 0 0.66rem;
-    border-left: 0.33rem solid rgba(0, 121, 140, 0.8);
+    border-left: 0.33rem solid rgba(0, 121, 140, .7);
   }
   #rightBox {
     color: white;
+    z-index: 5;
     height: 90%;
     width: 77%;
     display: flex;
@@ -110,15 +127,16 @@ body {
     background-color: rgba(12, 12, 12, 0.93);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-      0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+      0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0 1rem 1rem 0;
     .displayBox {
+       z-index: -1;
       display: flex;
       justify-content: center;
       color: white;
       width: 80%;
       height: 88%;
-      padding: 0.11rem;
+      padding: .11rem;
       border-radius: 0 0.66rem 0.66rem 0;
       box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2),
         inset 0 8px 10px rgba(0, 0, 0, 0.2),
@@ -129,6 +147,7 @@ body {
     }
   }
 }
+
 
 .icons {
   pointer-events: none;
@@ -151,6 +170,7 @@ body {
     transform: translateX(0rem);
   }
 }
+
 @media screen and (max-width: 769px) {
   :root {
     font-size: 16px;

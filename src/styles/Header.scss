@@ -1,141 +1,201 @@
 @font-face {
-   src: url('./assets/fonts/Epilogue[wght].woff2');
-   font-family: 'Epilogue';
+  src: url("./assets/fonts/Epilogue[wght].woff2");
+  font-family: "Epilogue";
 }
 
 @font-face {
-   src: url('./assets/fonts/Trispace[wdth,wght].woff2');
-   font-family: 'Trispace';
+  src: url("./assets/fonts/Trispace[wdth,wght].woff2");
+  font-family: "Trispace";
 }
 
-
-$epilogue: 'Epilogue';
-$trispace: 'Trispace';
+$epilogue: "Epilogue";
+$trispace: "Trispace";
 span {
-   pointer-events: none;
+  pointer-events: none;
 }
 // button {
 //    line-height: 2;
 //    letter-spacing: .13rem;
 // }
 header {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   flex-flow: row wrap;
-   height: 9rem;
-   font-family: $trispace;
-   margin: 1rem 0 2rem;
-   h1 {
-      display: flex;
-      flex-flow: column wrap;
-      flex: 1 0 50vw;
-      text-align: right;
-      height: 50%;
-      font-weight: 300;
-      line-height: 2rem;
-      letter-spacing: .33rem;
-      margin: 1rem 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 9rem;
+  font-family: $trispace;
+  margin: 3rem 0;
+  h1 {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 50vw;
+    text-align: right;
+    height: 50%;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0.33rem;
+    margin: 1rem 3rem;
+
+    // *SYNTHETIC RAIN* //
+    #synthetic {
+      animation: fadeInSynthetic 2s ease-out;
+    }
+    #rain {
+      animation: fadeInRain 2.1s ease-out;
+    }
+  }
+  h1:hover {
+    cursor: pointer;
+  }
+  nav {
+    flex: 1 0 30vw;
+    font-weight: 100;
+    font-family: $trispace;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    border: none;
       
-      // *SYNTHETIC RAIN* //
-      #synthetic {
-         animation: fadeInSynthetic 2s ease-out;
-      }
-      #rain {
-         animation: fadeInRain 2.1s ease-out;
-      }
-   }
-   h1:hover {
-      cursor: pointer;
-   }
-   nav {
-      flex: 1 0 30vw;
-      font-weight: 100;
-      font-family: $trispace;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start;
-      margin: 1rem 1rem 1rem 3rem;
+    .navLink {
+      color: rgba(0, 0, 0, 0.66);
+      background: white;
       border: none;
+      animation: fadeInLink 3s ease-out;
+    }
+    .navLinkUnlocked {
+      background: white;
+      border: none;
+      transition: all 2s;
+      flex: 1 0 100%;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.66);
+      font-size: 0.7rem;
+      margin: 1rem;
 
-      .navLink {
-         color:rgba(0,0,0,0.66);
-         background: white;
-         border: none;
-         animation: fadeInLink 3s ease-out;
-         
-
+      .curly {
+        color: rgb(170, 0, 0);
       }
-      .navLinkUnlocked {
-         background: white;
-         border: none;
-         transition: all 2s;
-         flex: 1 0 100%;
-         text-decoration: none;
-         color: rgba(0,0,0,0.66);
-         font-size: .7rem;
-         margin: 1rem;
-
-         .curly {
-            color: rgb(170, 0, 0);
-         }
+    }
+    .navLinkUnlocked:hover {
+      // background: white;
+      border: none;
+      transform: scale(1.33) translateX(-1rem);
+      transition: all 1s;
+      border-radius: 17%;
+      .curly {
+        text-decoration: line-through;
+        color: rgba(0, 121, 140, 0.8);
       }
-      .navLinkUnlocked:hover {
-         // background: white;
-         border: none;
-         transform: scale(1.33) translateX(-1rem);
-         transition: all 1s;
-         border-radius: 17%;
-         .curly {
-            text-decoration: line-through;
-            color: rgba(0, 121, 140, .8);
-         }
-         
+    }
+    .navLinkLocked {
+      background: transparent;
+      border: none;
+      margin: 1.33rem 0;
+      flex: 1 0 100%;
+      transform: scale(1.66) translateX(-1rem);
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.66);
+      font-size: 0.7rem;
+      transition: all 2s;
+      pointer-events: none;
+      animation: navLock 2s forwards;
+      .curly {
+        color: rgba(0, 121, 140, 0.8);
+        text-decoration: line-through;
       }
-      .navLinkLocked {
-         background: transparent;
-         border: none;
-         margin: 1.33rem 0;
-         flex: 1 0 100%;
-         transform: scale(1.66) translateX(-1rem);
-         text-decoration: none;
-         color: rgba(0,0,0,0.66);
-         font-size: .7rem;
-         transition: all 2s;
-         pointer-events: none;
-         animation: navLock 2s forwards;
-         .curly {
-            color: rgba(0, 121, 140, .8);
-            text-decoration: line-through;
-         }
-      }
-   }
+    }
+  }
 }
 
-
 @keyframes fadeInSynthetic {
-   0% {opacity: 0;
-   transform: translateY(1200px)}
-   40% {opacity: 0;}
-   100% {opacity: 1;}
+  0% {
+    opacity: 0;
+    transform: translateY(1200px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInRain {
-   0% {opacity: 0;
-      transform: translateY(-1200px)}
-   100% {opacity: 1}
+  0% {
+    opacity: 0;
+    transform: translateY(-1200px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInLink {
-   0% {opacity: 0;
-      transform: translateX(500px)}
-   30% {opacity: 0}
-   100% {opacity: 1}
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes navLock {
-   0% {box-shadow: none};
-   100% {
-      z-index: 3;
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  header {
+    margin-top: 0;
+    height: 9rem;
+    align-self: flex-end;
+    h1 {
+      display: flex;
+      justify-content: flex-end;
+      flex-flow: row wrap;
+      height: 3rem;
+      flex: 1 0 100vw;
+      margin: 2rem 7rem 1rem;
+      #synthetic {
+        flex: 1 0 100%;
+      }
+      #rain {
+        flex: 1 0 100%;
+      }
+    }
+    nav {
+      display: flex;
+      padding-top: 0;
+      margin: .33rem 12rem;
+      flex: 1 0 10vw;
+      align-items: flex-end;
+      
+      .navLinkLocked {
+         margin: 0;
+      }
+      .navLinkUnlocked {
+         margin: .33rem;
+         filter: opacity(.6)
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 476px) {
+   header {
+      h1 {
+         margin: 2rem 2rem 1rem;
+      }
+      nav {
+         margin: .33rem 2rem;
+      }
    }
 }

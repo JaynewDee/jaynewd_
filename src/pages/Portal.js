@@ -25,9 +25,9 @@ const Portal = () => {
    }
   return (
       <>
-         <Header setNav={setNav}/>
+         <Header setDisplay={setDisplay}setNav={setNav}/>
 
-         <div content={<div></div>} id="bodyBox">
+         <div id="bodyBox">
 
             <IconContext.Provider value={{ className: "icons" }}>
                 <div id="leftBox">
@@ -38,10 +38,8 @@ const Portal = () => {
                 <div id="rightBox">
                    
                   <section className="displayBox">
-                  
                      {aboutSwitch(displayState)}
                      {projectSwitch(displayState)}
-                     
                   </section>
                 
                 </div>
