@@ -1,0 +1,64 @@
+#projectMainBox {
+   
+   
+}
+.projectBox {
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: flex-start;
+   align-items: center;;
+   overflow: auto;
+   font-size: 14px;
+
+   .underSlide {
+      width: 66%;
+      background-color: rgba(12, 12, 12, 0);
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 2rem;
+      animation: slideUp 2s ease-out forwards;
+      display: block;
+   }
+}
+#projectOneBox {
+   color: white;
+   overflow: auto;
+}
+
+#projectTwoBox {
+   color: white;
+}
+
+#projectThreeBox {
+   color: white;
+}
+
+#projectFourBox {
+   color: white;
+}
+
+#projectFiveBox {
+   color: white;
+}
+.floatLeft {
+   display: block;
+   position: relative;
+   float: left;
+}
+.floatRight {
+   display: block;
+   position: relative;
+   float: right;
+}
+
+@keyframes slideUp {
+   0% {
+      transform: translateY(-66rem);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
