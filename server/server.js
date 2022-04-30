@@ -13,20 +13,17 @@ app.use(express.json());
 app.use(express.urlencoded({
    extended: false
 }));
-app.use(express.static("public"));
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.get('*', (req, res) => {
-   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
  });
  
-app.get('/', (req, res) => {
-   console.log('/ route bypassed')
+app.get('/*', (req, res) => {
+   res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 app.listen(PORT, () => {
    console.log(`API server running on port ${PORT}!`);
  });
- 
- db.once('open', () => {
-   
- });
+
