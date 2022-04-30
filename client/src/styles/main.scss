@@ -56,7 +56,6 @@ button,
   font-size: 18px;
   height: 100%;
   transition: all 2s;
-  overflow-y: scroll;
   font-family: 'Trispace';
 }
 body {
@@ -171,7 +170,10 @@ body {
        }
     }
     .utilityBtn:hover {
-      color:rgba(0, 121, 140, .7)
+      color:rgba(0, 121, 140, .7);
+      transform: scale(1.03);
+      transform: translateZ(30px);
+      border-top: 5px solid rgba(170,0,0,.8)
     }
   }
 }

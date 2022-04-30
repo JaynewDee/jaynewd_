@@ -2,7 +2,15 @@ import React from 'react'
 
 const FootBar = () => {
   return (
-    <div id="footBox">FootBar</div>
+    <div id="footBox">
+       <div className="sinkFrame">
+          <p className="scrollText">
+          {/* FootBar */}
+          </p>
+      </div>   
+          
+
+   </div>
   )
 }
 

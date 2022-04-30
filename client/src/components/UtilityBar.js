@@ -5,7 +5,7 @@ const UtilityBar = () => {
      
     <div id="utilityBox">
        <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
-       <button style={{textAlign: "right"}}className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
+       <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
        <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
 
     </div>
