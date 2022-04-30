@@ -47,7 +47,7 @@ const Portal = () => {
                 
                 </div>
          </div>
-         <FootBar />
+         {/* <FootBar /> */}
       </>
  
   )
