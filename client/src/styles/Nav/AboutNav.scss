@@ -14,15 +14,12 @@
 .aboutTabUnLocked {
    color: rgba(0,0,0,.7);
    display: flex;
-   flex: 1 0 1rem;
    justify-content: center;
    align-items: center;
    border-left: .1rem solid rgba(0,0,0,.8);   
    animation:  fadeInBody 1.33s ease-out;
    width: 66%;
    height: 11%;
-   margin: 0 auto;
-   z-index: 2;
    box-shadow:   0 4px 3px rgba(0, 0, 0, 0.30),  0 8px 10px rgba(0, 0, 0, 0.20),
        0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
        0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.40);

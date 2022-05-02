@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import FootBar from '../components/FootBar';
 import UtilityBar from '../components/UtilityBar';
 import {aboutSwitch, projectSwitch} from '../utils/displaySwitch';
 import ProjectsNav from '../pages/Projects/ProjectsNav';
@@ -33,7 +32,10 @@ const Portal = () => {
 
             <IconContext.Provider value={{ className: "icons" }}>
                 <div id="leftBox">
+                   <div id="topNavPad"className="padBox"></div>
                       {navSwitch(navState)}
+                   <div id="botNavPad"className="padBox"></div>
+
                 </div>
             </IconContext.Provider>
                
@@ -47,7 +49,6 @@ const Portal = () => {
                 
                 </div>
          </div>
-         {/* <FootBar /> */}
       </>
  
   )

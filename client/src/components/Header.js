@@ -30,8 +30,8 @@ const Header = ({ setNav, setDisplay }) => {
   return (
     <header>
       <h1 onClick={(() => {window.location.reload()})}>
-          <data id="synthetic">Synthetic</data>
-          <data id="rain"> Rain </data>
+          <data id="synthetic">SYNTHETIC</data>
+          <data id="rain">RAIN</data>
       </h1>
        <nav>
           {routes.map((route) => {

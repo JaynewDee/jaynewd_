@@ -63,29 +63,17 @@ body {
   margin: 0;
 }
 
-#bodyBox::after {
-   content: "";
-   height: 100vh;
-   width: 100vw;
-   background-color: black;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
-     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
-   border-radius: 1rem;
-   position: absolute;
-   margin: .33rem;
-   z-index: -3;
- }
+
 
 #bodyBox::before {
   content: "";
-  height: 100vh;
-  width: 100vw;
+  height: 98vh;
+  width: 98vw;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
+  border-radius: 1.66rem;
   position: absolute;
   margin-top: -.33rem;
    z-index: -2;
@@ -96,14 +84,20 @@ body {
    width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: .33rem auto;
   animation-name: fadeInBody;
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   font-family: "Trispace";
   font-weight: 300;
+  .padBox {
+     border-top: 2px solid white;
+     background-color: rgba(0, 121, 140, .7);
+     margin: 4rem auto 2rem;
+     width: 66%;
+   }
   #leftBox {
     height: 97vh;
     width: 13%;
@@ -114,7 +108,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
       0 18px 32px rgba(0, 0, 0, 0.15);
-    border-radius: 0.66rem 0 0 0.66rem;
+    border-radius: 1.33rem 0 0 1.33rem;
     border-left: 0.33rem solid rgba(0, 121, 140, .7);
   }
   #rightBox {
@@ -127,10 +121,10 @@ body {
     align-items: center;
     border: none;
     background-color: rgba(12, 12, 12, 0.93);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
-      0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-      0 18px 32px rgba(0, 0, 0, 0.15);
-    border-radius: 0 1rem 1rem 0;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15), inset 0 8px 10px rgba(0, 0, 0, 0.15),
+      inset 0 10px 12px rgba(0, 0, 0, 0.15), inset 0 14px 16px rgba(0, 0, 0, 0.15),
+      inset 0 18px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 0 1.33rem 1.33rem 0;
     .displayBox {
        z-index: -1;
       display: flex;
@@ -138,7 +132,7 @@ body {
       color: white;
       width: 80%;
       height: 88%;
-      padding: .11rem;
+      margin-top: 2rem;
       border-radius: 0 0.66rem 0.66rem 0;
       box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2),
         inset 0 8px 10px rgba(0, 0, 0, 0.5),
@@ -175,7 +169,19 @@ body {
    //  }
   }
 }
-
+#bodyBox::after {
+   content: "";
+   height: 100vh;
+   width: 100vw;
+   background-color: black;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+   border-radius: 2rem;
+   position: absolute;
+   margin-top: -.66rem;
+   z-index: -3;
+ }
 
 .icons {
   pointer-events: none;
@@ -201,7 +207,7 @@ body {
 
 @media screen and (max-width: 769px) {
   :root {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 650px) {

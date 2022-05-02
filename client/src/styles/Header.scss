@@ -18,37 +18,34 @@ span {
 //    letter-spacing: .13rem;
 // }
 header {
+  z-index: 6;
+  position: absolute;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-flow: row nowrap;
-  height: 12rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 5rem;
   font-family: $trispace;
-  margin-top: 0;
-   align-self: flex-end;
-   width: 100vw;
-   display: none;
-  h1 {
-    display: flex;
-    flex-flow: row wrap;
-    text-align: right;
-    font-weight: 300;
-    line-height: 2rem;
-    letter-spacing: 0.33rem;
-    margin: 1rem 3rem;
-      justify-content: flex-end;
-      height: 3rem;
-      flex: 1 0 100vw;
-      margin: 0 7rem 1rem;
+  width: 86vw;
+  margin: 0 2rem;
 
-   
+  h1 {
+     width: 13%;
+     position: relative;
+   display: flex;
+   flex-flow: row wrap;
+   margin-top: 1.66rem;
+   text-align: left;
+   font-size: 1.11rem;
+
     // *SYNTHETIC RAIN* //
     #synthetic {
       animation: fadeInSynthetic 2s ease-out;
+      color: white;
       flex: 1 0 100%;
     }
     #rain {
       animation: fadeInRain 2.1s ease-out;
+      color: white;
       flex: 1 0 100%;
     }
   }
@@ -56,35 +53,36 @@ header {
     cursor: pointer;
   }
   nav {
-    flex: 1 0 30vw;
     font-weight: 100;
     font-family: $trispace;
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
+    flex-flow: row nowrap;
+    flex: 1 0 17%;
+    justify-content: flex-end;
+    align-items: flex-end;
     border: none;
-      
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    
     .navLink {
-      color: rgba(0, 0, 0, 0.66);
-      background: white;
+      color: white;
       border: none;
       animation: fadeInLink 3s ease-out;
     }
+
     .navLinkUnlocked {
-      background: white;
+      background: transparent;
       border: none;
       transition: all 2s;
-      flex: 1 0 100%;
       text-decoration: none;
-      color: rgba(0, 0, 0, 0.66);
-      font-size: 0.7rem;
-      margin: .66rem .33rem;
+      color: white;
+      font-size: 0.8rem;
+      opacity: .7;
       .curly {
         color: rgb(170, 0, 0);
       }
     }
     .navLinkUnlocked:hover {
-      // background: white;
       border: none;
       transform: scale(1.33) translateX(-1rem);
       transition: all 1s;
@@ -97,12 +95,10 @@ header {
     .navLinkLocked {
       background: transparent;
       border: none;
-      margin: 1.33rem 0;
-      flex: 1 0 100%;
-      transform: scale(1.66) translateX(-1rem);
+      transform: scale(1.33) translateY(-1rem);
       text-decoration: none;
-      color: rgba(0, 0, 0, 0.66);
-      font-size: 0.7rem;
+      color: white;
+      font-size: 1rem;
       transition: all 2s;
       pointer-events: none;
       animation: navLock 2s forwards;
@@ -124,9 +120,7 @@ header {
   }
   100% {
     opacity: 1;
-    text-decoration: overline solid black;
   }
-
 }
 
 @keyframes fadeInRain {
@@ -161,50 +155,3 @@ header {
   }
 }
 
-@media screen and (max-width: 915px) {
-  header {
-    height: 12rem;
-    align-self: flex-end;
-    align-items: center;
-
-    h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: row wrap;
-      height: 3rem;
-      flex: 1 0 50%;
-      margin-right: -3rem;
-      margin-top: -1rem;
-      text-align: center;
-
-    }
-    nav {
-      display: flex;
-      padding-top: 0;
-      margin: auto 3rem;
-      flex: 1 0 auto;
-      align-items: flex-end;
-      
-      .navLinkLocked {
-         margin: 0;
-      }
-      .navLinkUnlocked {
-         margin: .33rem;
-         filter: opacity(.6)
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 476px) {
-   header {
-      h1 {
-         margin: 3rem 0 3rem 3rem;
-         text-align: left;
-      }
-      nav {
-         margin: auto 2rem;
-      }
-   }
-}
