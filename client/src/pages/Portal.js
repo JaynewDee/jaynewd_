@@ -17,7 +17,7 @@ const Portal = () => {
       
       switch(state) {
          case about:
-            return <AboutNav setDisplay={setDisplay}/>
+            return <AboutNav id="aboutNav" setDisplay={setDisplay}/>
          case project:
             return <ProjectsNav setDisplay={setDisplay}/>
          default:
@@ -32,10 +32,9 @@ const Portal = () => {
 
             <IconContext.Provider value={{ className: "icons" }}>
                 <div id="leftBox">
-                   <div id="topNavPad"className="padBox"></div>
+                   <div id="buttonBox">
                       {navSwitch(navState)}
-                   <div id="botNavPad"className="padBox"></div>
-
+                  </div>
                 </div>
             </IconContext.Provider>
                

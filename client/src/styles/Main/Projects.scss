@@ -8,19 +8,30 @@
    justify-content: flex-start;
    align-items: center;;
    overflow: auto;
-   font-size: 12px;
-
+   font-size: 16px;
+   line-height: 1.6;
+   margin: 2rem;
    .underSlide {
-      width: 85%;
+      width: 100%;
       background-color: rgba(12, 12, 12, 0);
       color: white;
       text-align: center;
       position: relative;
-      padding: 2rem;
-      animation: slideUp 1s ease-in-out forwards;
+      padding: 0;
+      margin: 0;
+      animation: slideUp 1.66s ease-in-out forwards;
       display: block;
    }
+   .underSlide > p {
+      padding: 3rem;
+   }
+   .underSlide p > img {
+      width: 33%;
+      margin-bottom: -1rem;
+   }
 }
+
+
 #projectOneBox {
 
 }
@@ -54,7 +65,7 @@
 @keyframes slideUp {
    0% {
       transform: translateY(-33%);
-      opacity: -1;
+      opacity: -.1;
    }
    100% {
       transform: translateY(0);

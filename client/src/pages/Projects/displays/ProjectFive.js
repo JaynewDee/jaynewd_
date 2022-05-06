@@ -4,7 +4,8 @@ const ProjectFive = () => {
   return (
    <div className="projectBox">
    <div className="underSlide">
-      <h3>Project Five(5)</h3>
+      <h3>| Truck School |</h3>
+      <h4>Official CDL Certification Training</h4>
    <p>
    thug cat side-eyes your "jerk" other hand while being petted yet i just saw other cats inside the house and nobody ask me before using my litter box. Go crazy with excitement when plates are clanked together signalling the arrival of cat food pet my belly, you know you want to; seize the hand and shred it!, yet cat gets stuck in tree firefighters try to get cat down firefighters get stuck in tree cat eats firefighters' slippers 
    </p>
@@ -14,4 +15,4 @@ const ProjectFive = () => {
   )
 }
 
-export default ProjectFive
+export default ProjectFive;

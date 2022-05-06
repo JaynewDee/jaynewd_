@@ -26,27 +26,58 @@ header {
   height: 5rem;
   font-family: $trispace;
   width: 86vw;
-  margin: 0 2rem;
+  margin: 0 3.66rem;
 
   h1 {
-     width: 13%;
-     position: relative;
-   display: flex;
-   flex-flow: row wrap;
-   margin-top: 1.66rem;
-   text-align: left;
-   font-size: 1.11rem;
+   width: auto;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.66rem;
 
     // *SYNTHETIC RAIN* //
     #synthetic {
       animation: fadeInSynthetic 2s ease-out;
       color: white;
-      flex: 1 0 100%;
+      height: auto;
     }
+    
     #rain {
       animation: fadeInRain 2.1s ease-out;
       color: white;
-      flex: 1 0 100%;
+      height: auto;
+
+    }
+    .padBox {
+       border-top: .11rem solid white;
+       position: relative;
+       padding: .16rem;
+       display: block;
+    }
+    #topNavPad {
+       width: 100%;
+       border-color:rgba(0, 121, 140, 0.8);
+    }
+    #subTopNavPad {
+      width: 80%;
+      border-color:rgb(170, 0, 0);
+    }
+    #midNavPad {
+      width: 60%;
+      border-color:rgba(0, 121, 140, 0.8);
+    }
+    #subBotNavPad {
+      width: 40%;
+      border-color:rgb(170, 0, 0);
+
+    }
+    #botNavPad {
+      border-color:rgba(0, 121, 140, 0.8);
+       width: 20%;
     }
   }
   h1:hover {
@@ -59,11 +90,11 @@ header {
     flex-flow: row nowrap;
     flex: 1 0 17%;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     border: none;
-    margin-bottom: 1rem;
+    margin-top: 2.66rem;
     margin-left: 3rem;
-    
+
     .navLink {
       color: white;
       border: none;
@@ -77,14 +108,14 @@ header {
       text-decoration: none;
       color: white;
       font-size: 0.8rem;
-      opacity: .7;
+      opacity: 0.7;
       .curly {
         color: rgb(170, 0, 0);
       }
     }
     .navLinkUnlocked:hover {
       border: none;
-      transform: scale(1.03) translateY(-.33rem);
+      transform: scale(1.03), translateY(-0.33rem);
       transition: all 1s;
       border-radius: 17%;
       .curly {
@@ -92,10 +123,17 @@ header {
         color: rgba(0, 121, 140, 0.8);
       }
     }
+    .navLinkUnlocked:hover::after {
+      content: "";
+      width: 2px;
+      height: 2px;
+      transition: all 3s;
+      transform: translateX(2rem);
+    }
     .navLinkLocked {
       background: transparent;
       border: none;
-      transform: scale(1.33) translateY(-1rem);
+      transform: scale(1.33) translateY(0.66rem);
       text-decoration: none;
       color: white;
       font-size: 1rem;
@@ -151,7 +189,9 @@ header {
     box-shadow: none;
   }
   100% {
-    z-index: 3;
+    z-index: 10;
   }
 }
 
+@keyframes shimmer {
+}

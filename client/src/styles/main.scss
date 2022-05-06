@@ -92,24 +92,28 @@ body {
   animation-timing-function: ease-out;
   font-family: "Trispace";
   font-weight: 300;
-  .padBox {
-     border-top: 2px solid white;
-     background-color: rgba(0, 121, 140, .7);
-     margin: 4rem auto 2rem;
-     width: 66%;
-   }
+  
+   
   #leftBox {
     height: 97vh;
-    width: 13%;
+    width: 12%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
     background-color: rgba(0, 5, 5, 0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
       0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 1.33rem 0 0 1.33rem;
     border-left: 0.33rem solid rgba(0, 121, 140, .7);
+    #buttonBox {
+       align-self: center;
+       display: flex;
+       flex-flow: column wrap;
+       justify-content: space-evenly;
+       height: 66%;
+       width: 80%;
+       margin: 8rem 0 0 .33rem;
+    }
   }
   #rightBox {
     color: white;
@@ -173,11 +177,11 @@ body {
    content: "";
    height: 100vh;
    width: 100vw;
-   background-color: black;
+   background-color: rgba(0,0,0,.86);
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
      0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
      0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
-   border-radius: 2rem;
+   border-radius: 0rem;
    position: absolute;
    margin-top: -.66rem;
    z-index: -3;
@@ -209,6 +213,7 @@ body {
   :root {
     font-size: 15px;
   }
+
 }
 @media screen and (max-width: 650px) {
   :root {

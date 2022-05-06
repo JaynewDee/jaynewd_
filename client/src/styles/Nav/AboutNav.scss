@@ -1,54 +1,43 @@
 .aboutTabLocked {
-   color: rgba(0, 121, 140, 1);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   animation: lockAbout .11s ease-out forwards;
-   width: 90%;
-   height: 7%;
-   border-left: .33rem solid rgba(170, 0, 0, .95);
-   .icons {
-      transform: scale(1.5)
-   }
+  color: rgba(0, 121, 140, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: lockAbout 0.11s ease-out forwards;
+  width: 90%;
+  height: 7%;
+  border-left: 0.33rem solid rgba(170, 0, 0, 0.95);
+  .icons {
+    transform: scale(1.5);
+  }
 }
 .aboutTabUnLocked {
-   color: rgba(0,0,0,.7);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-left: .1rem solid rgba(0,0,0,.8);   
-   animation:  fadeInBody 1.33s ease-out;
-   width: 66%;
-   height: 11%;
-   box-shadow:   0 4px 3px rgba(0, 0, 0, 0.30),  0 8px 10px rgba(0, 0, 0, 0.20),
-       0 10px 12px rgba(0, 0, 0, 0.20),  0 14px 16px rgba(0, 0, 0, 0.20),
-       0 18px 32px rgba(0, 0, 0, 0.20),  0 32px 64px rgba(0, 0, 0, 0.40);
-       opacity: 0;
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.8);
+  animation: fadeInBody 1.33s ease-out;
+  width: 66%;
+  height: 11%;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.2),
+    0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
+    0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.4);
+  opacity: 0;
 }
-
-
-
-
-
 
 @keyframes lockAbout {
-   0% {}
-   100% {
-      border-top: .3rem solid rgba(0,0,0,.2);
-      border-bottom: .3rem solid rgba(0,0,0,.2);
-      // border-left: .66rem solid rgba(170, 0, 0, .95);
-      border-right: .66rem solid rgba(170, 0, 0, .95);
-      transform: scale(1);
-      width: 100%;
-      z-index: 0;
-      box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.20), inset 0 8px 10px rgba(0, 0, 0, 0.20),
-      inset 0 10px 12px rgba(0, 0, 0, 0.20)
-      
-   }
-   
+  0% {
+  }
+  100% {
+    border-top: 0.3rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.3rem solid rgba(0, 0, 0, 0.2);
+    // border-left: .66rem solid rgba(170, 0, 0, .95);
+    border-right: 0.66rem solid rgba(170, 0, 0, 0.95);
+    transform: scale(1);
+    width: 100%;
+    z-index: 0;
+    box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.2),
+      inset 0 8px 10px rgba(0, 0, 0, 0.2), inset 0 10px 12px rgba(0, 0, 0, 0.2);
+  }
 }
-
-// @keyframes grab {
-//    0% {};
-//    100% {}
-// }
