@@ -1,10 +1,30 @@
-import React from 'react'
-
+import React, {useState, useEffect}from 'react'
+import Git from '../../../utils/API';
 const ProjectTwo = () => {
+   const [data, setData] = useState({});
+   const [populated, setPopped] = useState([false]);
+   console.log(data);
+   useEffect(() => {
+      Git
+      .getPaws()
+         .then((data) => {
+            console.log(data)
+            setData({
+               _id: data.id,
+               repoName: data.name,
+               url: data.html_url,
+               clone: data.clone_url
+            })
+         })
+         .catch((error) => {console.error(error)})
+         .finally(() => {return})
+   }
+   ,[populated])
+
   return (
    <div className="projectBox">
    <div className="underSlide">
-      <h3>Project Two(2)</h3>
+      <h3>{data?.repoName || "Project Two"}</h3>
    <p>
    thug cat side-eyes your "jerk" other hand while being petted yet i just saw other cats inside the house and nobody ask me before using my litter box. Go crazy with excitement when plates are clanked together signalling the arrival of cat food pet my belly, you know you want to; seize the hand and shred it!, yet cat gets stuck in tree firefighters try to get cat down firefighters get stuck in tree cat eats firefighters' slippers 
    </p>

@@ -26,12 +26,17 @@
       padding: 3rem;
    }
    .underSlide p > img {
-      width: 33%;
+      width: 66%;
       margin-bottom: -1rem;
    }
 }
 
-
+.projecth4 {
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   
+}
 #projectOneBox {
 
 }

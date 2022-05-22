@@ -22,6 +22,5 @@ export const routes = [
       href: "/experiments",
       value: "expMain",
       autofocus: false
-
    },
 ]

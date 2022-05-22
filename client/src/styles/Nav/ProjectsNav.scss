@@ -5,10 +5,10 @@
   justify-content: center;
   align-items: center;
   border-left: 0.1rem solid rgba(170, 0, 0, 0.7);
-  animation: tabFade 2s ease-in, lockIn 0.33s ease-in-out forwards;
+  animation: tabFade 2s ease-in, lockIn 0.22s ease-in-out forwards;
   //   transition: all 0.33s;
   .icons {
-    transform: scale(1.33);
+    
   }
 }
 
@@ -38,6 +38,7 @@
 @keyframes lockIn {
   0% {
   }
+  50% {transform: scale(.95)}
   100% {
     border-left: 0.44rem solid rgba(0, 121, 140, 1);
     border-right: 0.44rem solid rgba(0, 121, 140, 1);

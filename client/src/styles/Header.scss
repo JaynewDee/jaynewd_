@@ -37,7 +37,7 @@ header {
     margin-top: 3rem;
     text-align: center;
     font-size: 1.5rem;
-    line-height: 1.66rem;
+    line-height: 1.93rem;
 
     // *SYNTHETIC RAIN* //
     #synthetic {
@@ -115,9 +115,10 @@ header {
     }
     .navLinkUnlocked:hover {
       border: none;
-      transform: scale(1.03), translateY(-0.33rem);
+      transform: scale(1.15);
       transition: all 1s;
       border-radius: 17%;
+      cursor: pointer;
       .curly {
         text-decoration: line-through;
         color: rgba(0, 121, 140, 0.8);
@@ -181,6 +182,7 @@ header {
   }
   100% {
     opacity: 1;
+    transform: translateZ(10rem);
   }
 }
 

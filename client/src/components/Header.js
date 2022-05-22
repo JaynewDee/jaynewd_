@@ -45,9 +45,9 @@ const Header = ({ setNav, setDisplay }) => {
                   <span style={{color: "rgb(170, 0, 0)"}} className="curly">{curlyRight}</span>
                
              <span style={{color: "rgba(0, 121, 140, 0.8)"}}>{bracketRight}</span>
-            <p style={{fontSize: "1rem", color: "white"}}>
+            {/* <p style={{fontSize: "1rem", color: "white"}}>
                by <em>Joshua Diehl</em>
-            </p>
+            </p> */}
           </div>
           
 
@@ -62,7 +62,7 @@ const Header = ({ setNav, setDisplay }) => {
           {routes.map((route) => {
              
              return (
-                <button autoFocus={route.autofocus}type="reset" value={route.value} onClick={((e) => {
+                <button autoFocus={route.autofocus} type="reset" value={route.value} onClick={((e) => {
                   tabSwitch(e);
                   setNav(e.target.value)
                   setDisplay(e.target.value)
