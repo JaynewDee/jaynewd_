@@ -5,7 +5,7 @@ import Git from '../../../utils/API'
 const ProjectOne = () => {
    const [data, setData] = useState({});
    const [populated, setPopped] = useState([false]);
-   console.log(data);
+
    useEffect(() => {
       Git
       .getRex()
@@ -25,7 +25,7 @@ const ProjectOne = () => {
   return (
     <div className="projectBox">
        <div className="underSlide">
-          <h3>| {data?.repoName || "Project One"}|</h3>
+          <h3>| {data?.repoName || "Project One"} |</h3>
             <p>
                <img id="rex" src={DinoImg} alt="Fearsome, towering dinosaur!"></img>
             </p>

@@ -10,7 +10,8 @@
    overflow: auto;
    font-size: 16px;
    line-height: 1.6;
-   margin: 2rem;
+   margin: 0 2rem;
+   padding: 2rem 0;
    .underSlide {
       width: 100%;
       background-color: rgba(12, 12, 12, 0);
@@ -19,11 +20,11 @@
       position: relative;
       padding: 0;
       margin: 0;
-      animation: slideUp 1.66s ease-in-out forwards;
+      animation: slideDown 1.66s ease-in-out forwards;
       display: block;
    }
    .underSlide > p {
-      padding: 3rem;
+      padding: 1rem;
    }
    .underSlide p > img {
       width: 66%;
@@ -67,7 +68,7 @@
    float: right;
 }
 
-@keyframes slideUp {
+@keyframes slideDown {
    0% {
       transform: translateY(-33%);
       opacity: -.1;

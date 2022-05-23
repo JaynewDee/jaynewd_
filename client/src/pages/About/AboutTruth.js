@@ -8,8 +8,9 @@ const AboutTruth = () => {
    
    const locked = "collapsed";
    const unlocked = "expanded";
+
+   
    const clickHandler = (e) => {
-         
          if (previous !== "") {
             if(e.target === previous) {return}
             setPrevious(e.target)
@@ -39,7 +40,7 @@ const AboutTruth = () => {
             })}>
                {item.name}
             </button>
-            <Truth text={item.section.text} header={item.header.text} key={Math.random()} />
+            <Truth text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*10)} />
             </>
          )
          

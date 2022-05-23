@@ -52,7 +52,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: none;
 }
 
 :root {
@@ -225,9 +225,14 @@ body {
 }
 @media screen and (max-width: 426px) {
    :root {
-      font-size: 11px;
+      font-size: 10px;
    }
    #truthBox > button {
       color: white
+   }
+   header {
+    nav {
+        flex-flow: un;
+    }
    }
 }

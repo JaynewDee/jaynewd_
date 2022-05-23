@@ -25,7 +25,7 @@ const AboutNav = ({setDisplay}) => {
      return (
         abouttabs.map((item) => {
            return (
-            <button style={{"-webkit-appearance": "none"}}onClick={((e) => {
+            <button onClick={((e) => {
                               tabSwitch(e);
                               setDisplay(e.target.value)
                               })}className={item.className} key={item.key} value={item.name}>

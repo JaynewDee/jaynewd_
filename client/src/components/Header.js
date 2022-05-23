@@ -6,8 +6,7 @@ const curlyLeft = '{'
 const curlyRight = '}'
 const bracketLeft = '[';
 const bracketRight = ']';
-const parenLeft = '(';
-const parenRight = ')';
+
 
 const Header = ({ setNav, setDisplay }) => {
    
