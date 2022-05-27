@@ -8,6 +8,7 @@ class GetGit {
    constructor(octo){
       this.octo = octo;
       this.rex = undefined;
+      this.paws = undefined;
    }
 
    async getRex() {

@@ -18,7 +18,6 @@ textarea {
   line-height: 1.15; /* 1 */
 }
 
-
 /**
   * Show the overflow in IE.
   * 1. Show the overflow in Edge.
@@ -39,10 +38,9 @@ button,
 select {
   /* 1 */
   text-transform: none;
-
 }
 button:hover {
-   cursor: pointer;
+  cursor: pointer;
 }
 /**
   * Correct the inability to style clickable types in iOS and Safari.
@@ -59,14 +57,12 @@ button,
   font-size: 18px;
   height: 100%;
   transition: all 2s;
-  font-family: 'Trispace';
+  font-family: "Trispace";
 }
 body {
   height: auto;
   margin: 0;
 }
-
-
 
 #bodyBox::before {
   content: "";
@@ -78,13 +74,13 @@ body {
     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
   border-radius: 1.66rem;
   position: absolute;
-  margin-top: -.33rem;
-   z-index: -2;
+  margin-top: -0.33rem;
+  z-index: -2;
 }
 
 #bodyBox {
-   position: fixed;
-   width: 100vw;
+  position: fixed;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,8 +91,7 @@ body {
   animation-timing-function: ease-out;
   font-family: "Trispace";
   font-weight: 300;
-  
-   
+
   #leftBox {
     height: 97vh;
     width: 12%;
@@ -107,15 +102,15 @@ body {
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
       0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 1.33rem 0 0 1.33rem;
-    border-left: 0.33rem solid rgba(0, 121, 140, .7);
+    border-left: 0.33rem solid rgba(0, 121, 140, 0.7);
     #buttonBox {
-       align-self: center;
-       display: flex;
-       flex-flow: column wrap;
-       justify-content: space-evenly;
-       height: 66%;
-       width: 80%;
-       margin: 8rem 0 0 .33rem;
+      align-self: center;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      height: 66%;
+      width: 80%;
+      margin: 8rem 0 0 0.33rem;
     }
   }
   #rightBox {
@@ -128,12 +123,14 @@ body {
     align-items: center;
     border: none;
     background-color: rgba(12, 12, 12, 0.93);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15), inset 0 8px 10px rgba(0, 0, 0, 0.15),
-      inset 0 10px 12px rgba(0, 0, 0, 0.15), inset 0 14px 16px rgba(0, 0, 0, 0.15),
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
+      inset 0 8px 10px rgba(0, 0, 0, 0.15),
+      inset 0 10px 12px rgba(0, 0, 0, 0.15),
+      inset 0 14px 16px rgba(0, 0, 0, 0.15),
       inset 0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0 1.33rem 1.33rem 0;
     .displayBox {
-       z-index: -1;
+      z-index: -1;
       display: flex;
       justify-content: center;
       color: white;
@@ -147,48 +144,52 @@ body {
         inset 0 14px 16px rgba(0, 0, 0, 0.5),
         inset 0 18px 32px rgba(0, 0, 0, 0.2),
         inset 0 32px 64px rgba(0, 0, 0, 0.4);
+      animation-name: fadeInBody;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
     }
-   //  #utilityBox {
-   //     display: flex;
-   //     flex-flow: row wrap;
-   //     justify-content: center;
-   //     width: 11%;
-   //     height: 33%;
-   //     margin: 3rem -1rem 3rem .66rem;
-   //     button {
-   //        width: .07rem;
-   //        font-size: .66rem;
-   //        display: flex;
-   //        justify-content: center;
-   //        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
-   //    0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-   //    0 18px 32px rgba(0, 0, 0, 0.15)
-   //     }
-   //     .buttonTextVert {
-   //        writing-mode: vertical-rl;
-   //     }
-   //  }
-   //  .utilityBtn:hover {
-   //    color:rgba(0, 121, 140, .7);
-   //    transform: scale(1.03);
-   //    transform: translateZ(30px);
-   //    border-top: 5px solid rgba(170,0,0,.8)
-   //  }
+    //  #utilityBox {
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     justify-content: center;
+    //     width: 11%;
+    //     height: 33%;
+    //     margin: 3rem -1rem 3rem .66rem;
+    //     button {
+    //        width: .07rem;
+    //        font-size: .66rem;
+    //        display: flex;
+    //        justify-content: center;
+    //        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+    //    0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+    //    0 18px 32px rgba(0, 0, 0, 0.15)
+    //     }
+    //     .buttonTextVert {
+    //        writing-mode: vertical-rl;
+    //     }
+    //  }
+    //  .utilityBtn:hover {
+    //    color:rgba(0, 121, 140, .7);
+    //    transform: scale(1.03);
+    //    transform: translateZ(30px);
+    //    border-top: 5px solid rgba(170,0,0,.8)
+    //  }
   }
 }
 #bodyBox::after {
-   content: "";
-   height: 100vh;
-   width: 100vw;
-   background-color: rgba(0,0,0,.86);
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
-     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
-     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
-   border-radius: 0rem;
-   position: absolute;
-   margin-top: -.66rem;
-   z-index: -3;
- }
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.86);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
+    0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
+    0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+  border-radius: 0rem;
+  position: absolute;
+  margin-top: -0.66rem;
+  z-index: -3;
+}
 
 .icons {
   pointer-events: none;
@@ -202,7 +203,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes headerOneFlight {
   0% {
     transform: translateX(200rem);
@@ -216,23 +216,22 @@ body {
   :root {
     font-size: 15px;
   }
-
 }
 @media screen and (max-width: 650px) {
   :root {
     font-size: 14px;
   }
+  header {
+    nav {
+      display: block;
+    }
+  }
 }
 @media screen and (max-width: 426px) {
-   :root {
-      font-size: 10px;
-   }
-   #truthBox > button {
-      color: white
-   }
-   header {
-    nav {
-        flex-flow: un;
-    }
-   }
+  :root {
+    font-size: 10px;
+  }
+  #truthBox > button {
+    color: white;
+  }
 }

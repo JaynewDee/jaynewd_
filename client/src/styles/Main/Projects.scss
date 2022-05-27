@@ -4,32 +4,18 @@
 }
 .projectBox {
    display: flex;
-   flex-flow: column wrap;
+   flex-flow: column nowrap;
    justify-content: flex-start;
    align-items: center;;
    overflow: auto;
-   font-size: 16px;
-   line-height: 1.6;
-   margin: 0 2rem;
-   padding: 2rem 0;
-   .underSlide {
-      width: 100%;
+   font-size: 1rem;
+   line-height: 1.4;
+   padding: 2rem;
+   font-size: .85rem;
+   width: 100%;
+   z-index: -3;
       background-color: rgba(12, 12, 12, 0);
-      color: white;
-      text-align: center;
-      position: relative;
-      padding: 0;
-      margin: 0;
-      animation: slideDown 1.66s ease-in-out forwards;
-      display: block;
-   }
-   .underSlide > p {
-      padding: 1rem;
-   }
-   .underSlide p > img {
-      width: 66%;
-      margin-bottom: -1rem;
-   }
+      animation: fadeInBody 5s forwards;
 }
 
 .projecth4 {

@@ -5,7 +5,6 @@ const ProjectsMain = () => {
    const right = 'floatRight'
   return (
     <div className="projectBox">
-       <div className="underSlide">
           <h3>Projects Main</h3>
           <p className={left}>
          Hiss at vacuum cleaner. Miaow then turn around and show you my bum step on your keyboard while you're gaming and then turn in a circle lick butt and    make a weird face, but chase after silly colored fish toys around the house so eat my own ears. Mark territory.
@@ -18,7 +17,6 @@ const ProjectsMain = () => {
          </p>
          
        </div>
-    </div>
   )
 }
 

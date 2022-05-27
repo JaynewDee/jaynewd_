@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { symbolStyles } from '../../../../data/symbolStyles';
 const Truth = ({text, header}) => {
    
   return (
      <>
          
-            <section className="truthSection" key={Math.random()}>
+            <section className="truthSection" key={Math.floor(Math.random()*100)}>
                <h2>
                   {header}
                </h2>
