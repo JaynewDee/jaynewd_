@@ -17,7 +17,7 @@ span {
 //    line-height: 2;
 //    letter-spacing: .13rem;
 // }
-header {
+.navHeader {
   z-index: 6;
   position: absolute;
   display: flex;
@@ -26,7 +26,7 @@ header {
   height: 5rem;
   font-family: $trispace;
   width: 86vw;
-  margin: 0 3.66rem;
+  margin: 0 3rem;
 
   h1 {
    width: auto;
@@ -34,7 +34,7 @@ header {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.93rem;
@@ -92,7 +92,7 @@ header {
     justify-content: flex-end;
     align-items: flex-start;
     border: none;
-    margin-top: 2.66rem;
+    margin-top: 2rem;
     margin-left: 3rem;
 
     .navLink {

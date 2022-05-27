@@ -4,11 +4,8 @@ const axios = require("axios").default;
 // import FormSubmit from './Buttons/FormSubmit';
 // import GetAll from './Buttons/GetAll';
 
-
 const Form = ({ setCurrent }) => {
   const [formText, setFormText] = useState("");
-  //   const [prompt, setPrompt] = useState("");
-  //   const [roboReply, setReply] = useState("");
 
   const handleInputChange = (event) => {
     const { value } = event.target;
@@ -35,8 +32,6 @@ const Form = ({ setCurrent }) => {
         // storing only the AI's response
         let replyOnly = choices.replace(textOnly, "");
         // Store final values in component state, to pass to parent portal
-        // setPrompt(textOnly);
-        // setReply(replyOnly);
         return { prompt: textOnly, response: replyOnly };
       })
       .then((current) => {

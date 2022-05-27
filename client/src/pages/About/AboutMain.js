@@ -5,7 +5,7 @@ const AboutMain = () => {
     <article id="aboutMain">
       <h3>Hello, human!</h3>
       <p>
-        While conceiving to build this interactive portfolio project, I had no
+        While conceiving this interactive portfolio project, I had no
         central vision of the end result, but rather, I felt my heart emboldened
         toward 3 primary endeavors:
       </p>

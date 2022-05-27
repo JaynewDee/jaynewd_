@@ -8,7 +8,8 @@ import ProjectTwo from '../pages/Projects/displays/ProjectTwo';
 import ProjectThree from '../pages/Projects/displays/ProjectThree';
 import ProjectFour from '../pages/Projects/displays/ProjectFour';
 import ProjectFive from '../pages/Projects/displays/ProjectFive';
-import converStation from '../pages/converStation/converStation.js';
+import ExpMain from '../pages/Experiments/ExpMain';
+import ConverStation from '../pages/Experiments/converStation/ConverStation';
 
 
 
@@ -48,8 +49,10 @@ export const projectSwitch = (state) => {
 
 export const experimentSwitch = (state) => {
    switch (state) {
-      case "converStation":
-         return <converStation />
+      case "experimentMain":
+         return <ExpMain />
+      case "ConverStation":
+         return <ConverStation />
       default:
          break
    }

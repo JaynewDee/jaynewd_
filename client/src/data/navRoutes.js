@@ -20,7 +20,7 @@ export const routes = [
       title: "Experiments",
       className: 'navLinkUnlocked',
       href: "/experiments",
-      value: "expMain",
+      value: "experimentMain",
       autofocus: false
    },
 ]

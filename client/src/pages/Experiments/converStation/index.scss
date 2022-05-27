@@ -1,0 +1,258 @@
+@font-face {
+  src: url("./styles/assets/Trispace[wdth\,wght].woff2");
+  font-family: "Trispace";
+}
+
+// *** CSS VARS *** //
+$trispace: "Trispace";
+$code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+$background: rgba(26, 26, 26, 1);
+$secondary: rgba(49, 49, 49, 1);
+// ---------------- //
+
+// ----------------------- //
+
+.converstationBox {
+  width: 100%;
+  overflow: auto;
+  #header-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-family: $trispace;
+    h1 {
+      margin: 3rem auto 0.33rem;
+    }
+    h3 {
+      margin: 0 auto 3rem;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+  // ------------------------ //
+  
+  /* 
+       #portal-box is the ID of the container which wraps 
+          the Form and History/Transcript elements
+  */
+  #portal-box {
+    .prompt-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // flex-flow: column wrap;
+      margin-bottom: 1rem;
+  
+      #prompt-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        width: 66%;
+  
+        #prompt-field {
+          box-sizing: border-box;
+          border-radius: .22rem .22rem 0 0;
+          outline: none;
+          padding: 3rem;
+          margin: auto;
+          width: 100%;
+          height: 16rem;
+          resize: none;
+          font-size: 1.66rem;
+          letter-spacing: 1.7;
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
+            inset 0 8px 10px rgba(0, 0, 0, 0.15),
+            inset 0 10px 12px rgba(0, 0, 0, 0.15),
+            inset 0 14px 16px rgba(0, 0, 0, 0.15),
+            inset 0 18px 32px rgba(0, 0, 0, 0.15);
+          caret-color: red;
+          z-index: 1;
+        }
+  
+        .submit-btn {
+          font-size: 1rem;
+          font-family: $code;
+          transition: all 0.33s;
+          letter-spacing: .11rem;
+          transform: translateY(-1rem);
+          width: 100%;
+          padding: 2rem 0 1rem;
+          -webkit-appearance: none;
+          border: none;
+          border-radius: 0 0 .22rem .22rem;
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
+            inset 0 8px 10px rgba(0, 0, 0, 0.15),
+            inset 0 10px 12px rgba(0, 0, 0, 0.15),
+            inset 0 14px 16px rgba(0, 0, 0, 0.15),
+            inset 0 18px 32px rgba(0, 0, 0, 0.15);
+        }
+        .submit-btn:hover {
+          cursor: pointer;
+          background-color: $secondary;
+          color: white;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15),
+            0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15),
+            0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15);
+        }
+        .submit-btn:active {
+          transform: scale(0.99) translateY(-0.8rem);
+        }
+      }
+    }
+  
+    #history-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      margin-bottom: 8rem;
+  
+      #history-box {
+        overflow: auto;
+        position: relative;
+        display: block;
+        height: 24rem;
+        width: 66%;
+        margin: auto;
+        border-radius: .22rem;
+        .exchange {
+          box-sizing: border-box;
+          border-radius: .22rem;
+          padding: 2rem 3rem;
+          letter-spacing: 1.3;
+          width: 100%;
+          display: flex;
+          flex-flow: column wrap;
+          margin: auto;
+          background-color: $secondary;
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
+            inset 0 8px 10px rgba(0, 0, 0, 0.15);
+  
+          font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+            monospace;
+          h4 {
+            margin-left: 10%;
+            max-width: 50%;
+            animation: fade-in-prompt 2s ease-in forwards;
+            font-weight: 300;
+          }
+          h4::before {
+            content: ">>";
+            position: relative;
+            left: -1rem;
+            color: red;
+            font-size: 1.66rem;
+            border-radius: 50%;
+          }
+          p {
+            align-self: flex-end;
+            text-align: right;
+            max-width: 50%;
+            margin-right: 10%;
+            font-weight: 300;
+          }
+          p::after {
+            content: "<<";
+            position: relative;
+            right: -1rem;
+            font-size: 1.66rem;
+            color: red;
+            border-radius: 50%;
+          }
+          .icon {
+            transform: translateY(0.16rem) translateX(.22rem);
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+}
+// *** TITLE & SUB-HEADER *** //
+
+// ---------------------------------------------//
+
+// *** FOOTER *** //
+// #footer-box {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-flow: column wrap;
+//   background-color: white;
+//   color: black;
+//   box-shadow: inset 0 4px 6px $background;
+//   // inset 0 10px 12px $background, inset 0 14px 16px $background,
+//   // inset 0 18px 32px $background;
+//   height: 6rem;
+//   margin-bottom: 0;
+// }
+// ---------------- //
+
+// *** KEYFRAMES/ANIMATIONS *** //
+@keyframes fade-in-prompt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// ------------------------- //
+
+// *** MEDIA QUERIES *** //
+@media screen and(max-width: 1025px) {
+  :root {
+    font-size: 16px;
+
+    #portal-box {
+      #history-section {
+        #history-box {
+          .exchange {
+            padding: 1rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  :root {
+    font-size: 14px;
+    #portal-box {
+      #history-section {
+        #history-box {
+          .exchange {
+            padding: 0.33rem 0.66rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  :root {
+    font-size: 12px;
+    #portal-box {
+      #history-section {
+        #history-box {
+          .exchange {
+            padding: 0.33rem 0.66rem;
+            h4 {
+              margin-bottom: 3rem;
+              max-width: 75%;
+            }
+            p {
+              margin-top: 3rem;
+              max-width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// --------------------------END---------------------------------//

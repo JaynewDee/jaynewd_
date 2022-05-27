@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import UtilityBar from "../components/UtilityBar";
-import { aboutSwitch, projectSwitch, experimentSwitch } from "../utils/displaySwitch";
+import {
+  aboutSwitch,
+  projectSwitch,
+  experimentSwitch,
+} from "../utils/displaySwitch";
 import ProjectsNav from "../pages/Projects/ProjectsNav";
 import AboutNav from "../pages/About/AboutNav";
+import ExpNav from "../pages/Experiments/Nav/ExpNav";
 import { IconContext } from "react-icons";
 
 const Portal = () => {
@@ -13,16 +18,20 @@ const Portal = () => {
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
+    const experiment = state.includes("experiment") ? state : false;
 
     switch (state) {
       case about:
         return <AboutNav id="aboutNav" setDisplay={setDisplay} />;
       case project:
         return <ProjectsNav setDisplay={setDisplay} />;
+      case experiment:
+        return <ExpNav setDisplay={setDisplay} />;
       default:
         break;
     }
   };
+  
   return (
     <>
       <Header setDisplay={setDisplay} setNav={setNav} />
@@ -38,6 +47,7 @@ const Portal = () => {
           <section className="displayBox">
             {aboutSwitch(displayState)}
             {projectSwitch(displayState)}
+            {experimentSwitch(displayState)}
           </section>
           <UtilityBar />
         </div>

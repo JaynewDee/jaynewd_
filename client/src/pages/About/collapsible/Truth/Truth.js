@@ -15,5 +15,5 @@ const Truth = ({text, header}) => {
       </>
   )
 }
-
+ 
 export { Truth };

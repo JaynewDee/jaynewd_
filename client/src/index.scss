@@ -1,6 +1,6 @@
 @import "./styles/main.scss", "./styles/Header.scss", "./styles/Main/About.scss",
   "./styles/Main/Projects.scss", "./styles/Nav/AboutNav.scss",
-  "./styles/Nav/ProjectsNav.scss", "./styles/Main/FootBar.scss";
+  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss", "./styles/Main/FootBar.scss";
 
 @media screen and (max-width: 769px) {
   :root {
@@ -11,7 +11,7 @@
   :root {
     font-size: 14px;
   }
-  header {
+  .navHeader {
     nav {
       flex-flow: column nowrap;
       justify-content: flex-start;

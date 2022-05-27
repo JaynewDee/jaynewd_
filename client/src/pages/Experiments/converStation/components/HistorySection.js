@@ -7,8 +7,8 @@ const HistorySection = ({ data }) => {
   console.log(history);
   useEffect(() => {
     setHistory([data, ...history]);
-  }, [data]);
-  
+  },[data]);
+
   return (
     <>
       <section id="history-section">

@@ -1,29 +1,26 @@
 import React from 'react';
 import  Header  from './components/Header';
 import Portal from './components/Portal';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import './index.scss';
-// import { getEngines } from './API/index';
-// import { urls } from './API/urls';
-
-// const { get, post } = urls;
 
 
 
-const converStation = () => {
-    
 
+const ConverStation = () => {
     return (
       <>
+      <div className="converstationBox">
         <Header />
             {/* or, gateway between form, display and history */}
           <Portal />
-        <Footer />
+        {/* <Footer /> */}
+      </div>
       </>
     );
 };
 
-export default converStation;
+export default ConverStation;
 
 // *** SUMMARY OF AI ENGINE *** //
 

@@ -9,23 +9,20 @@
       display: block;
       overflow: auto;
       z-index: -5;
-      animation: fadeInBody 5s forwards;
+      animation: fadeInBody 3s forwards;
 }
 #aboutMain > * {
-  margin: 3rem;
+  margin: 2rem 3rem;
   padding: .33rem;
 }
-// #aboutMain > h3::before {
-//   content: ">";
-// }
+#aboutMain {
+  margin-bottom: 1rem;
+}
 .section > h3::before {
   content: ">";
   color:rgba(170, 0, 0, 0.95);
 }
 .section {
-  h3 {
-    
-  }
   p {
     margin-left: 1rem;
     margin-bottom: 1rem;

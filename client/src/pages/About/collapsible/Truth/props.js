@@ -38,28 +38,4 @@ export const propsObject = [
       text: "Bathe private parts with tongue then lick owner's face really likes hummus yet catch eat throw up catch eat throw up bad birds yet steal mom's crouton while she is in the bathroom yet pet me pet me don't pet me. Refuse to drink water except out of someone's glass stand in front of the computer screen chill on the couch table yet knock over christmas tree.",
     },
   },
-  //    {  key: 3,
-  //       name: "Integrity",
-  //       header: {
-  //          text: "Consistency of Character",
-  //          name: "integrityHead",
-  //       },
-  //       section: {
-  //          name: "",
-  //          className: "collapsed",
-  //          text: "Cats are fats i like to pets them they like to meow back take a deep sniff of sock then walk around with mouth half open take a deep sniff of sock then walk around with mouth half open instead of drinking water from the cat bowl, make sure to steal water from the toilet purr purr purr until owner pets why owner not pet me hiss scratch meow but jump off balcony, onto stranger's head hunt anything that moves."
-  //       }
-  //    },
-  //    {  key: 4,
-  //       name: "Justice",
-  //       header: {
-  //          name: "justiceHead",
-  //          text: "The Unburdened Conscience",
-  //       },
-  //       section: {
-  //          name: "",
-  //          className: "collapsed",
-  //          text: "Chase little red dot someday it will be mine! meowing chowing and wowing. Sees bird in air, breaks into cage and attacks creature. Scream for no reason at 4 am russian blue yet if it fits, i sits but shove bum in owner's face like camera lens but the cat was chasing the mouse nyaa nyaa. See owner, run in terror pet my belly, you know you want to; seize the hand and shred it!"
-  //       }
-  //    },
 ];

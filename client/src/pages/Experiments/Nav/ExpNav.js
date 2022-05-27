@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { abouttabs } from "../../data/tabs";
+import "../../../styles/Nav/ExpNav.scss";
+import { exptabs } from "../../../data/tabs";
 
-const AboutNav = ({ setDisplay }) => {
+const ExpNav = ({setDisplay}) => {
   const [previousClicked, setPrevious] = useState("");
 
-  const locked = "aboutTabLocked";
-  const unlocked = "aboutTabUnlocked";
+  const locked = "tabStateLocked";
+  const unlocked = "tabStateUnlocked";
 
   const tabSwitch = (e) => {
     if (previousClicked !== "") {
       previousClicked.className = unlocked;
     }
+
     if (e.target.className === locked) {
       e.target.className = unlocked;
     } else if (e.target.className === unlocked) {
@@ -19,8 +21,9 @@ const AboutNav = ({ setDisplay }) => {
     setPrevious(e.target);
   };
 
-  return abouttabs.map((item) => {
-    return (
+  return (
+    exptabs.map((item) => 
+     (
       <button
         onClick={(e) => {
           tabSwitch(e);
@@ -32,8 +35,8 @@ const AboutNav = ({ setDisplay }) => {
       >
         {item.icon}
       </button>
-    );
-  });
+    )
+  ));
 };
 
-export default AboutNav;
+export default ExpNav;

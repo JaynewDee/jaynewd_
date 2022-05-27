@@ -26,7 +26,6 @@ const ProjectOne = () => {
   }, [populated]);
   return (
     <div className="projectBox">
-      {/* <div className="underSlide"> */}
       <h3>| {data?.repoName || "Project One"} |</h3>
       <p>
         <img id="rex" src={DinoImg} alt="Fearsome, towering dinosaur!"></img>
@@ -72,7 +71,6 @@ const ProjectOne = () => {
         sleeping in the box but bite nose of your human.
       </p>
     </div>
-    //  </div>
   );
 };
 
