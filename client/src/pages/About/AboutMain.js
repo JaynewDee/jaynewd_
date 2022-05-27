@@ -29,7 +29,7 @@ const AboutMain = () => {
         <p></p>
         <p>I am honored by you if you've read this far.</p>
         <p>
-          Synthetic rain is my joyful attempt to marry the decisive power of
+          I've named this portfolio Synthetic Rain as a way of expressing my desire to marry the decisive power of
           technology to a natural symbol, a lurch toward capturing metaphorically
           the pervasive modern juxtaposition of machine and flesh. That though we often
           stare through electrons painting raining arrays of pixels with rays of light,
