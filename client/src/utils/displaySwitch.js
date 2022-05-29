@@ -3,11 +3,11 @@ import AboutTruth from '../pages/About/AboutTruth';
 import AboutBeauty from '../pages/About/AboutBeauty';
 import AboutGoodness from '../pages/About/AboutGoodness';
 import ProjectsMain from '../pages/Projects/ProjectsMain';
-import ProjectOne from '../pages/Projects/displays/ProjectOne'
-import ProjectTwo from '../pages/Projects/displays/ProjectTwo';
-import ProjectThree from '../pages/Projects/displays/ProjectThree';
-import ProjectFour from '../pages/Projects/displays/ProjectFour';
-import ProjectFive from '../pages/Projects/displays/ProjectFive';
+import ProjectOne from '../pages/Projects/ProjectOne'
+import ProjectTwo from '../pages/Projects/ProjectTwo';
+import ProjectThree from '../pages/Projects/ProjectThree';
+import ProjectFour from '../pages/Projects/ProjectFour';
+import ProjectFive from '../pages/Projects/ProjectFive';
 import ExpMain from '../pages/Experiments/ExpMain';
 import ConverStation from '../pages/Experiments/converStation/ConverStation';
 

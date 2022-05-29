@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react'
-import Git from '../../../utils/API';
+import Git from '../../utils/API';
 const ProjectTwo = () => {
    const [data, setData] = useState({});
    const [populated, setPopped] = useState([false]);

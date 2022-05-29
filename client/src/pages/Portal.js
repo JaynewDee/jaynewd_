@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import UtilityBar from "../components/UtilityBar";
+// import UtilityBar from "../components/UtilityBar";
 import {
   aboutSwitch,
   projectSwitch,
@@ -14,7 +14,7 @@ import { IconContext } from "react-icons";
 const Portal = () => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
-
+  console.log(displayState)
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
@@ -31,27 +31,30 @@ const Portal = () => {
         break;
     }
   };
+
   
+
   return (
     <>
       <Header setDisplay={setDisplay} setNav={setNav} />
 
-      <div id="bodyBox">
+      <div value={displayState} id="bodyBox">
         <IconContext.Provider value={{ className: "icons" }}>
           <aside id="leftBox">
             <div id="buttonBox">{navSwitch(navState)}</div>
-
           </aside>
         </IconContext.Provider>
 
-        <section id="rightBox">
+        <article id="rightBox">
           <section className="displayBox">
-            {aboutSwitch(displayState)}
-            {projectSwitch(displayState)}
-            {experimentSwitch(displayState)}
+            <aside className="contentBox">
+              {aboutSwitch(displayState)}
+              {projectSwitch(displayState)}
+              {experimentSwitch(displayState)}
+            </aside>
           </section>
-          <UtilityBar />
-        </section>
+          {/* <UtilityBar /> */}
+        </article>
       </div>
     </>
   );

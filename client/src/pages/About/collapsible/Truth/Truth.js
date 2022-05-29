@@ -8,8 +8,9 @@ const Truth = ({text, header}) => {
                <h2>
                   {header}
                </h2>
-
+               <p>
                {text}
+               </p>
 
             </section>
       </>

@@ -1,53 +1,59 @@
-#aboutMain {
-  width: 100%;
-  background-color: rgba(12, 12, 12, 0);
-  color: white;
-  text-align: left;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  display: block;
-  overflow: auto;
-  z-index: -5;
-  animation: fadeInBody 3s forwards;
-}
-#aboutMain > * {
-  margin: 2rem 3rem;
-  padding: .33rem;
-}
-.section > h3::before {
-  content: ">";
-  color:rgba(170, 0, 0, 0.95);
-}
 .section {
   p {
-    margin-left: 1rem;
+    margin-left: 3rem;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
   p::before {
     content: "-";
+    margin-right: 1rem;
+    margin-left: -1.5rem;
     color: rgba(0, 121, 140, 0.7);
     font-size: 1.33rem;
   }
 }
+.section + p {
+  font-size: 0.9rem;
+}
+.section > h3 {
+  font-size: 0.8rem;
+}
+
+#aboutMain > * {
+  margin: 2rem 3rem;
+  padding: 0.33rem;
+}
+#aboutMain > h3 {
+  font-size: 1.1rem;
+}
+#aboutMain > p {
+  font-size: 1rem;
+}
+#aboutMain:last-child {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.section > h3::before {
+  content: ">";
+  color: rgba(170, 0, 0, 0.95);
+  margin-right: 1rem;
+}
 
 #truthBox {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   color: white;
-  margin: 0 10%;
-  width: 90%;
   line-height: 1.33;
-  height: 97%;
-  z-index: 1;
   animation: fadeInBody 5s forwards;
 
   .truthSection {
     display: flex;
     text-align: center;
     align-items: center;
+    flex-flow: column wrap;
   }
 
   .collapsed {
@@ -70,7 +76,7 @@
 
   .expanded + section::before {
     content: "";
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: rgba(170, 0, 0, 0.95);
     height: 0;
     width: 66%;
@@ -82,8 +88,9 @@
 
   .expanded + section {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     height: 13%;
+    margin-bottom: 5rem;
     pointer-events: none;
     font-size: 0.66rem;
     animation: spreadFloat 1s ease-out forwards, fadeInBody 4s forwards;
@@ -91,7 +98,7 @@
 
   .expanded + section::after {
     content: "";
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: rgba(170, 0, 0, 0.95);
     height: 0;
     width: 33%;

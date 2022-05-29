@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMain = () => {
   return (
-    <article id="aboutMain">
+<>
       <h3>Hello, human!</h3>
       <p>
         While conceiving this interactive portfolio project, I had no
@@ -44,7 +44,9 @@ const AboutMain = () => {
           <em>Joshua</em>
         </strong>
       </h4>
-    </article>
+      <p></p>
+      <p></p>
+    </>
   );
 };
 

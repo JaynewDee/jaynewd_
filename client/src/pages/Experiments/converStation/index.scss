@@ -13,8 +13,8 @@ $secondary: rgba(49, 49, 49, 1);
 // ----------------------- //
 
 .converstationBox {
-  width: 100%;
-  overflow: auto;
+  height: 100%;
+  width: 130%;
   animation: fadeInBody 2s forwards ease-in;
 
   #header-box {
@@ -24,16 +24,17 @@ $secondary: rgba(49, 49, 49, 1);
     flex-flow: column nowrap;
     font-family: $trispace;
     h1 {
+      font-size: 1.5rem;
       margin: 3rem auto 0.33rem;
     }
     h3 {
       margin: 0 auto 2rem;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
   }
   // ------------------------ //
-  
+
   /* 
        #portal-box is the ID of the container which wraps 
           the Form and History/Transcript elements
@@ -45,17 +46,17 @@ $secondary: rgba(49, 49, 49, 1);
       align-items: center;
       // flex-flow: column wrap;
       margin-bottom: 1rem;
-  
+
       #prompt-form {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-flow: column wrap;
         width: 66%;
-  
+
         #prompt-field {
           box-sizing: border-box;
-          border-radius: .22rem .22rem 0 0;
+          border-radius: 0.22rem 0.22rem 0 0;
           outline: none;
           padding: 3rem;
           margin: auto;
@@ -72,18 +73,18 @@ $secondary: rgba(49, 49, 49, 1);
           caret-color: red;
           z-index: 1;
         }
-  
+
         .submit-btn {
           font-size: 1rem;
           font-family: $code;
           transition: all 0.33s;
-          letter-spacing: .11rem;
+          letter-spacing: 0.11rem;
           transform: translateY(-1rem);
           width: 100%;
           padding: 2rem 0 1rem;
           -webkit-appearance: none;
           border: none;
-          border-radius: 0 0 .22rem .22rem;
+          border-radius: 0 0 0.22rem 0.22rem;
           box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
             inset 0 8px 10px rgba(0, 0, 0, 0.15),
             inset 0 10px 12px rgba(0, 0, 0, 0.15),
@@ -103,14 +104,14 @@ $secondary: rgba(49, 49, 49, 1);
         }
       }
     }
-  
+
     #history-section {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column wrap;
       margin-bottom: 8rem;
-  
+
       #history-box {
         overflow: auto;
         position: relative;
@@ -118,10 +119,10 @@ $secondary: rgba(49, 49, 49, 1);
         height: 24rem;
         width: 66%;
         margin: auto;
-        border-radius: .22rem;
+        border-radius: 0.22rem;
         .exchange {
           box-sizing: border-box;
-          border-radius: .22rem;
+          border-radius: 0.22rem;
           padding: 2rem 3rem;
           letter-spacing: 1.3;
           width: 100%;
@@ -131,7 +132,7 @@ $secondary: rgba(49, 49, 49, 1);
           background-color: $secondary;
           box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
             inset 0 8px 10px rgba(0, 0, 0, 0.15);
-  
+
           font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
             monospace;
           h4 {
@@ -164,8 +165,8 @@ $secondary: rgba(49, 49, 49, 1);
             border-radius: 50%;
           }
           .icon {
-            transform: translateY(0.16rem) translateX(.22rem);
-            opacity: .6;
+            transform: translateY(0.16rem) translateX(0.22rem);
+            opacity: 0.6;
           }
         }
       }
@@ -222,7 +223,7 @@ $secondary: rgba(49, 49, 49, 1);
 
 @media screen and (max-width: 769px) {
   :root {
-    font-size: 14px;
+    font-size: 13px;
     #portal-box {
       #history-section {
         #history-box {

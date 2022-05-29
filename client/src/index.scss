@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 769px) {
   :root {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -25,7 +25,8 @@
 }
 @media screen and (max-width: 426px) {
   :root {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.4;
   }
   #truthBox > button {
     color: white;
