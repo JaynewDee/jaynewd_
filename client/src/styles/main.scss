@@ -56,14 +56,17 @@ button,
 :root {
   font-size: 18px;
   height: 100%;
-  transition: all 2s;
   font-family: "Trispace";
 }
 body {
   height: auto;
   margin: 0;
 }
-
+.App {
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+}
 
 #bodyBox::before {
   content: "";
@@ -76,10 +79,10 @@ body {
   border-radius: 1.66rem;
   position: absolute;
   margin-top: -0.33rem;
-  z-index: -2;
+  z-index: -1;
 }
 #bodyBox[value="Dino"]:hover {
-  cursor: url('./assets/cursors/spear.png') 15 10, move;
+  cursor: url("./assets/cursors/spear.png") 15 10, move;
 }
 #bodyBox {
   position: fixed;
@@ -89,24 +92,59 @@ body {
   align-items: center;
   height: 100vh;
   margin-bottom: 3rem;
-  animation-name: fadeInBody;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
   font-family: "Trispace";
   font-weight: 300;
 
   #leftBox {
-    height: 97vh;
+    height: 99vh;
     width: 12%;
     display: flex;
-    flex-flow: column wrap;
-    background-color: rgba(0, 5, 5, 0.95);
+    flex-flow: column nowrap;
+    background-color: rgba(0, 5, 5, 0.85);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
       0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
       0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 1.33rem 0 0 1.33rem;
     border-left: 0.33rem solid rgba(0, 121, 140, 0.7);
+    h1 {
+      width: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      z-index: 5;
+
+      // *SYNTHETIC RAIN* //
+      .nameBox {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        #firstName {
+          animation: fadeInSynthetic 2s ease-out;
+          color: white;
+          letter-spacing: 0.05rem;
+        }
+
+        #middleName {
+          animation: fadeInRain 2.1s ease-out;
+          color: white;
+        }
+        #lastName {
+          animation: fadeInRain 2.1s ease-out;
+          color: white;
+          letter-spacing: 0.05rem;
+        }
+      }
+      .nameBox {
+        data {
+          margin: auto;
+        }
+      }
+    }
+    h1:hover {
+      cursor: pointer;
+    }
     #buttonBox {
       align-self: center;
       display: flex;
@@ -114,62 +152,77 @@ body {
       justify-content: space-evenly;
       height: 66%;
       width: 80%;
-      margin: 8rem 0 0 0.33rem;
+      margin: auto;
+
+    }
+    .socialBox {
+      height: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-self: flex-end;
+      margin: auto auto .5rem;
+      a {
+        text-decoration: none;
+        color: white;
+        margin: auto;
+        padding: .3rem;
+      }
     }
   }
   #rightBox {
-    color: white;
+    color: rgba(0, 0, 0, 0.9);
     z-index: 1;
-    height: 97vh;
-    width: 83%;
+    height: 99vh;
+    width: 87%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: rgba(12, 12, 12, 0.93);
+    background-color: rgba(215, 215, 215, .1);
+
     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15),
-      inset 0 8px 10px rgba(0, 0, 0, 0.15),
+      inset 0 8px 10px rgba(0, 0, 0, 0.15)
       inset 0 10px 12px rgba(0, 0, 0, 0.15),
       inset 0 14px 16px rgba(0, 0, 0, 0.15),
       inset 0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0 1.33rem 1.33rem 0;
     .displayBox {
+      z-index: 5;
       overflow: auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
+      color: rgba(0, 0, 0, 0.8);
       width: 85%;
       height: 75%;
-      margin: 3rem 3rem 3rem 2rem;
       padding: 2rem 0;
       border-radius: 0 0.66rem 0.66rem 0;
-      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2),
-        inset 0 8px 10px rgba(0, 0, 0, 0.5),
-        inset 0 10px 12px rgba(0, 0, 0, 0.2),
-        inset 0 14px 16px rgba(0, 0, 0, 0.5),
-        inset 0 18px 32px rgba(0, 0, 0, 0.2),
-        inset 0 32px 64px rgba(0, 0, 0, 0.4);
+      background-color: rgba(200, 200, 200, .1);
 
+      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2),
+        inset -3px 6px 8px rgba(0, 0, 0, 0.2),
+        inset -6px 8px 10px rgba(0, 0, 0, 0.3),
+        inset -9px 10px 14px rgba(0, 0, 0, 0.4);
+        // inset 0 18px 32px rgba(0, 0, 0, 0.2),
 
       .contentBox {
-        margin: 3rem;
+        margin: 4rem 3rem 2rem;
         width: 100%;
-        height: 75%;
+        height: 100%;
         display: flex;
+        justify-content: flex-start;
         flex-flow: column nowrap;
         align-items: center;
-        filter: drop-shadow(0 .5rem .5rem rgba(101, 101, 101, .7));
-        animation-name: fadeInBody;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
+        animation: slideDown 3s ease-in-out forwards;
+        filter: drop-shadow(0 0.5rem 0.5rem rgba(101, 101, 101, 0.3));
+        .red {
+          color: rgb(170, 0, 0);
+        }
       }
 
       .contentBox:last-child {
-        transform: translateY(-3rem)
+        transform: translateY(-3rem);
       }
-
     }
     //  #utilityBox {
     //     display: flex;
@@ -217,21 +270,20 @@ body {
   pointer-events: none;
 }
 
-@keyframes fadeInBody {
+// @keyframes fadeInBody {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes slideDown {
   0% {
-    opacity: 0;
+    transform: translateY(-500px);
   }
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes headerOneFlight {
-  0% {
-    transform: translateX(200rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
-
-

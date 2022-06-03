@@ -10,11 +10,13 @@ import './index.scss';
 const ConverStation = () => {
     return (
       <>
+      <div>
       <div className="converstationBox">
         <Header />
             {/* or, gateway between form, display and history */}
           <Portal />
         {/* <Footer /> */}
+      </div>
       </div>
       </>
     );

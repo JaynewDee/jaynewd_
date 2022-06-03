@@ -1,21 +1,19 @@
-@import "./styles/main.scss", "./styles/Header.scss", "./styles/Main/About.scss",
-  "./styles/Main/Projects.scss", "./styles/Main/Experiments.scss", "./styles/Nav/AboutNav.scss",
-  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss", "./styles/Main/FootBar.scss";
+@import "./styles/main.scss", "./styles/Header.scss", "./styles/Pages/About.scss",
+  "./styles/Pages/Projects.scss", "./styles/Pages/Experiments.scss", "./styles/Nav/AboutNav.scss",
+  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss", "./styles/Pages/FootBar.scss";
 
 @media screen and (max-width: 769px) {
   :root {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 650px) {
   :root {
-    font-size: 14px;
+    font-size: 12px;
   }
   .navHeader {
     nav {
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: flex-end;
+
       .navLinkLocked {
          transform: translateX(-.66rem);
          padding: .33rem 0;
@@ -25,7 +23,7 @@
 }
 @media screen and (max-width: 426px) {
   :root {
-    font-size: 11px;
+    font-size: 9px;
     line-height: 1.4;
   }
   #truthBox > button {

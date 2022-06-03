@@ -9,12 +9,15 @@ import {
 import ProjectsNav from "../pages/Projects/ProjectsNav";
 import AboutNav from "../pages/About/AboutNav";
 import ExpNav from "../pages/Experiments/Nav/ExpNav";
+import SocialBox from "../components/SocialBox";
+import Name from "../components/Name";
 import { IconContext } from "react-icons";
 
 const Portal = () => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
-  console.log(displayState)
+  console.log(displayState);
+
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
@@ -32,16 +35,15 @@ const Portal = () => {
     }
   };
 
-  
-
   return (
     <>
       <Header setDisplay={setDisplay} setNav={setNav} />
-
       <div value={displayState} id="bodyBox">
         <IconContext.Provider value={{ className: "icons" }}>
           <aside id="leftBox">
-            <div id="buttonBox">{navSwitch(navState)}</div>
+            <Name />
+            <section id="buttonBox">{navSwitch(navState)}</section>
+            <SocialBox />
           </aside>
         </IconContext.Provider>
 

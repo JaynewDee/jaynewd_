@@ -3,8 +3,6 @@ import { routes } from "../data/navRoutes";
 
 const curlyLeft = "{";
 const curlyRight = "}";
-const bracketLeft = "[";
-const bracketRight = "]";
 
 const Header = ({ setNav, setDisplay }) => {
   const [previousClicked, setPrevious] = useState("");
@@ -28,30 +26,7 @@ const Header = ({ setNav, setDisplay }) => {
 
   return (
     <section className="navHeader">
-      <h1
-        onClick={() => {
-          window.location.reload();
-        }}
-      >
-        <data id="synthetic">
-          <em>Synthetic</em>
-        </data>
-        <div>
-          <span style={{ color: "rgba(0, 121, 140, 0.8)" }}>{bracketLeft}</span>
-          <span style={{ color: "rgb(170, 0, 0)" }} className="curly">
-            {curlyLeft}
-          </span>
-          <data id="rain">
-            <em>Rain</em>
-          </data>
-          <span style={{ color: "rgb(170, 0, 0)" }} className="curly">
-            {curlyRight}
-          </span>
-          <span style={{ color: "rgba(0, 121, 140, 0.8)" }}>
-            {bracketRight}
-          </span>
-        </div>
-      </h1>
+      
       <nav>
         {routes.map((route) => {
           return (
@@ -64,7 +39,7 @@ const Header = ({ setNav, setDisplay }) => {
                 setNav(e.target.value);
                 setDisplay(e.target.value);
               }}
-              className={route.className}
+              className={route.className + ' navLink'}
               style={{ textDecoration: "none" }}
               key={route.key}
             >

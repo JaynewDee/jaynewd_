@@ -4,13 +4,14 @@
     margin-bottom: 1rem;
     font-size: 0.8rem;
   }
-  p::before {
-    content: "-";
-    margin-right: 1rem;
-    margin-left: -1.5rem;
-    color: rgba(0, 121, 140, 0.7);
-    font-size: 1.33rem;
-  }
+  
+}
+.section > h3 + p::before {
+  content: "-";
+  margin-right: 1rem;
+  margin-left: -1.5rem;
+  color: rgba(0, 121, 140, 0.7);
+  font-size: 1.33rem;
 }
 .section + p {
   font-size: 0.9rem;
@@ -19,21 +20,11 @@
   font-size: 0.8rem;
 }
 
-#aboutMain > * {
-  margin: 2rem 3rem;
-  padding: 0.33rem;
-}
-#aboutMain > h3 {
-  font-size: 1.1rem;
-}
-#aboutMain > p {
-  font-size: 1rem;
-}
-#aboutMain:last-child {
-  margin-bottom: 0;
-  font-size: 1.3rem;
-}
 
+.footSpacer {
+  height: 20rem;
+  color:rgba(0, 121, 140, 0.7);
+}
 .section > h3::before {
   content: ">";
   color: rgba(170, 0, 0, 0.95);
@@ -45,9 +36,9 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   line-height: 1.33;
-  animation: fadeInBody 5s forwards;
+  margin: auto;
 
   .truthSection {
     display: flex;
@@ -78,7 +69,7 @@
     content: "";
     border: 3px solid white;
     background-color: rgba(170, 0, 0, 0.95);
-    height: 0;
+    height: 1px;
     width: 66%;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
       0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
@@ -100,7 +91,7 @@
     content: "";
     border: 2px solid white;
     background-color: rgba(170, 0, 0, 0.95);
-    height: 0;
+    height: 1px;
     width: 33%;
     position: relative;
     top: 3rem;

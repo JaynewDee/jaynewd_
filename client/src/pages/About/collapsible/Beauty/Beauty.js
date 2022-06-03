@@ -6,4 +6,4 @@ const Beauty = () => {
   )
 }
 
-export default Beauty;
+export {Beauty};
