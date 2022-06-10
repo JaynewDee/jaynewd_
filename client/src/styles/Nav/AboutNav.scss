@@ -27,7 +27,9 @@
       0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
       0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
 }
-
+.aboutTabUnlocked:hover {
+    mix-blend-mode:hard-light;
+  }
 @keyframes lockAbout {
   0% {
   }

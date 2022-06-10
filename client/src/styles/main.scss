@@ -118,17 +118,11 @@ body {
       .nameBox {
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
 
         #firstName {
           animation: fadeInSynthetic 2s ease-out;
           color: white;
           letter-spacing: 0.05rem;
-        }
-
-        #middleName {
-          animation: fadeInRain 2.1s ease-out;
-          color: white;
         }
         #lastName {
           animation: fadeInRain 2.1s ease-out;

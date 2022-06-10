@@ -13,7 +13,7 @@ const Name = () => {
         <em>Joshua</em>
       </data>
       <data id="middleName">
-        <em>Newell</em>
+        <em></em>
       </data>
       <data id="lastName">
         <em>Diehl</em>

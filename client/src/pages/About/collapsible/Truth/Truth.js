@@ -4,7 +4,7 @@ const Truth = ({text, header}) => {
   return (
      <>
          
-            <section className="truthSection" key={Math.floor(Math.random()*100)}>
+            <section className="truthSection" key={Math.floor(Math.random()*1000)}>
                <h2>
                   {header}
                </h2>
