@@ -3,15 +3,11 @@ import AboutTruth from '../pages/About/AboutTruth';
 import AboutBeauty from '../pages/About/AboutBeauty';
 import AboutGoodness from '../pages/About/AboutGoodness';
 import ProjectsMain from '../pages/Projects/ProjectsMain';
-import ProjectOne from '../pages/Projects/ProjectOne'
-import ProjectTwo from '../pages/Projects/ProjectTwo';
-import ProjectThree from '../pages/Projects/ProjectThree';
-import ProjectFour from '../pages/Projects/ProjectFour';
-import ProjectFive from '../pages/Projects/ProjectFive';
+import ProjectPage from '../pages/Projects/ProjectPage';
+import projectLayout from '../pages/Projects/projectLayout';
 import ExpMain from '../pages/Experiments/ExpMain';
+import Git from './API';
 import ConverStation from '../pages/Experiments/converStation/ConverStation';
-
-
 
 export const aboutSwitch = (state) => {
    switch (state) {
@@ -33,15 +29,15 @@ export const projectSwitch = (state) => {
       case "projectMain":
          return <ProjectsMain />
       case "Dino":
-         return <ProjectOne />
+         return projectLayout(<ProjectPage/>, Git.getRex())
       case "Paw":
-         return <ProjectTwo />
+         return projectLayout(<ProjectPage/>, Git.getPaws())
       case "Ring":
-         return <ProjectThree />
+         return projectLayout(<ProjectPage/>)
       case "Flower":
-         return <ProjectFour />
+         return projectLayout(<ProjectPage/>)
       case "Truck":
-         return <ProjectFive />
+         return projectLayout(<ProjectPage/>)
       default:
          break
    }

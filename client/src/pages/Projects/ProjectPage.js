@@ -1,48 +1,23 @@
-import React, { useState, useEffect } from "react";
-import DinoImg from "../../assets/imgs/Dinologo1.png";
-import Git from "../../utils/API";
-
-const ProjectOne = () => {
-  const [data, setData] = useState({});
-  const [populated, setPopped] = useState([false]);
-
-  useEffect(() => {
-    Git.getRex()
-      .then((data) => {
-        console.log(data);
-        setData({
-          _id: data.id,
-          repoName: data.name,
-          url: data.html_url,
-          clone: data.clone_url,
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        return;
-      });
-  }, [populated]);
-
-  const redirect = (e) => {
-    window.open(e.target.value, "_blank");
-  }
+import React, { useState } from 'react'
 
 
+const ProjectPage = ({id, repoName, url, clone}) => {
 
+    const redirect = (e) => {
+        window.open(e.target.value, "_blank");
+      }
 
   return (
     <>
-      <h3>| {data?.repoName || "Project One"} |</h3>
+    <h3 id={id}>| {repoName || "Project One"} |</h3>
       <p>
-        <img id="rex" src={DinoImg} alt="Fearsome, towering dinosaur!"></img>
+        
       </p>
-      <button value={data.url} onClick={(e) => redirect(e)}>
+      <button value={url} onClick={(e) => redirect(e)}>
         Git Repo
       </button>
       <button
-        value={data.clone}
+        value={clone}
         onClick={(e) => {
           e.preventDefault();
           navigator.clipboard.writeText(e.target.value).catch((err) => {
@@ -89,8 +64,8 @@ const ProjectOne = () => {
           away sleeping in the box but bite nose of your human.
         </p>
       </section>
-    </>
-  );
-};
+      </>
+  )
+}
 
-export default ProjectOne;
+export default ProjectPage;

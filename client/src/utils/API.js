@@ -7,26 +7,22 @@ const octo = new Octokit({
 class GetGit {
    constructor(octo){
       this.octo = octo;
-      this.rex = undefined;
-      this.paws = undefined;
    }
-
    async getRex() {
       const rex = await this.octo.rest.repos.get({
          owner: "brandynh",
          repo: "ParksAndRex"
       });
-      return this.rex = rex.data;
+      console.log(rex.data)
+      return rex.data;
    }
-
    async getPaws() {
       const paws = await this.octo.rest.repos.get({
          owner: "MikeMallonIT",
          repo: "Project2-DaySpaw"
       })
-      return this.paws = paws.data;
+      return paws.data;
    }
-
 }
 
 export default new GetGit(octo);

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {Truth} from './collapsible/main';
 import {propsObject} from '../About/collapsible/Truth/props'
-import '../../styles/Main/About.scss'
 
 const AboutTruth = () => {
    const [previous, setPrevious] = useState("");
@@ -40,7 +39,7 @@ const AboutTruth = () => {
             })}>
                {item.name}
             </button>
-            <Truth text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*10)} />
+            <Truth text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*1000)} />
             </>
          )
          

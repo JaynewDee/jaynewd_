@@ -3,7 +3,6 @@ import Git from '../../utils/API';
 const ProjectTwo = () => {
    const [data, setData] = useState({});
    const [populated, setPopped] = useState([false]);
-   console.log(data);
    useEffect(() => {
       Git
       .getPaws()
