@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
+const ProjectPage = ({ id, repoName, url, clone }) => {
 
-const ProjectPage = ({id, repoName, url, clone}) => {
+  
+  const redirect = (e) => {
+    window.open(e.target.value, "_blank");
+  };
 
-    const redirect = (e) => {
-        window.open(e.target.value, "_blank");
-      }
 
   return (
     <>
-    <h3 id={id}>| {repoName || "Project One"} |</h3>
-      <p>
-        
-      </p>
+      <h3 id={id}>| {repoName || "Project One"} |</h3>
+      <p></p>
       <button value={url} onClick={(e) => redirect(e)}>
         Git Repo
       </button>
@@ -64,8 +63,8 @@ const ProjectPage = ({id, repoName, url, clone}) => {
           away sleeping in the box but bite nose of your human.
         </p>
       </section>
-      </>
-  )
-}
+    </>
+  );
+};
 
 export default ProjectPage;

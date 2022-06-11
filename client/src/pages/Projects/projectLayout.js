@@ -1,22 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-const defaults = {
-    id: 0,
-    repoName: "Name of Repo",
-    url: "/",
-    clone: "/"
-}
-
-const projectLayout = (Page, data=defaults) => {
-    class HOC extends Component {
-        state = data;
-        render () {
-            return (
-                <Page id={this.state.id} repoName={this.state.name} url={this.state.html_url} clone={this.state.clone_url}/>
-            )
-        }
+function projectLayout(Page, fetchConfig) {
+  class HOC extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        data: null,
+        loading: true
+      }
     }
-    return HOC;
+    render() {
+      return <Page id={this.id} repoName={this.name} clone={this.clone} url={this.url} {...this.props}/>;
+    }
+  }
+  return HOC;
 }
 
 export default projectLayout;

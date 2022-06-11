@@ -16,8 +16,7 @@ import { IconContext } from "react-icons";
 const Portal = () => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
-  console.log(displayState);
-
+  console.log(displayState)
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
