@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-const Truth = ({text, header}) => {
+const Menu = ({text, header}) => {
    
   return (
      <>
@@ -17,4 +17,4 @@ const Truth = ({text, header}) => {
   )
 }
  
-export { Truth };
+export {Menu};

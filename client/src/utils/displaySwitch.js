@@ -1,27 +1,25 @@
-import AboutMain from "../pages/About/AboutMain";
-import AboutTruth from "../pages/About/AboutTruth";
-import AboutBeauty from "../pages/About/AboutBeauty";
-import AboutGoodness from "../pages/About/AboutGoodness";
+import AboutMain from '../pages/About/AboutMain';
+import AboutPage from '../pages/About/AboutPage';
+import aboutlayout from '../pages/About/aboutLayout';
 import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
 import ConverStation from "../pages/Experiments/converStation/ConverStation";
 
-import {GetProject} from './API';
-const getGit = new GetProject();
+import { dino, paws, ring, flower, truck } from "./config";
 
-
+let Wrapped = undefined;
 export const aboutSwitch = (state) => {
   switch (state) {
     case "aboutMain":
       return <AboutMain />;
     case "Fox":
-      return <AboutTruth />;
+      return
     case "Sword":
-      return <AboutBeauty />;
+      return 
     case "Heart":
-      return <AboutGoodness />;
+      return 
     default:
       break;
   }
@@ -32,18 +30,14 @@ export const projectSwitch = (state) => {
     case "projectMain":
       return <ProjectsMain />;
     case "Dino":
-      const Wrapped = 
-         projectLayout(ProjectPage, getGit.dino());
-         return <Wrapped/>
+      Wrapped = projectLayout(ProjectPage, dino);
+      return <Wrapped />;
     case "Paw":
-      projectLayout(ProjectPage, {
-        owner: "MikeMallonIT",
-        repo: "Project2-DaySpaw",
-      });
-      break;
+      Wrapped = projectLayout(ProjectPage, paws);
+      return <Wrapped />;
     case "Ring":
-      projectLayout(ProjectPage);
-      break;
+      Wrapped = projectLayout(ProjectPage, ring);
+      return <Wrapped />;
     case "Flower":
       projectLayout(ProjectPage);
       break;

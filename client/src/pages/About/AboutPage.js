@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {Truth} from './collapsible/main';
-import {propsObject} from '../About/collapsible/Truth/props'
+import {Menu} from './collapsible/Menu';
+import {propsObject} from './collapsible/props'
 
 const AboutTruth = () => {
    const [previous, setPrevious] = useState("");
@@ -39,7 +39,7 @@ const AboutTruth = () => {
             })}>
                {item.name}
             </button>
-            <Truth text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*1000)} />
+            <Menu text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*1000)} />
             </>
          )
          

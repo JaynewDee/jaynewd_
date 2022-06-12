@@ -1,16 +1,30 @@
 import React, { Component } from "react";
+import { Octokit } from 'octokit';
 
-function projectLayout(Page, fetchConfig) {
+const getProject = (config) => {
+  return new Octokit({auth: process.env.PRIVATE_KEY
+  }).rest.repos.get(config)
+}
+
+
+function projectLayout(Page, config) {
   class HOC extends Component {
     constructor(props) {
       super(props);
-      this.state = {
-        data: null,
-        loading: true
-      }
+      this.state = {};
+    }
+    componentDidMount() {
+      getProject(config).then((data) => {
+        this.setState(data.data)
+      })
     }
     render() {
-      return <Page id={this.id} repoName={this.name} clone={this.clone} url={this.url} {...this.props}/>;
+      return (
+      <Page
+          data={this.state}
+        />
+        )
+      
     }
   }
   return HOC;
