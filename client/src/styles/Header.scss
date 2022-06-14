@@ -1,12 +1,12 @@
-@font-face {
-  src: url("./assets/fonts/Epilogue[wght].woff2");
-  font-family: "Epilogue";
-}
+// @font-face {
+//   src: url("./assets/fonts/Epilogue[wght].woff2");
+//   font-family: "Epilogue";
+// }
 
-@font-face {
-  src: url("./assets/fonts/Trispace[wdth,wght].woff2");
-  font-family: "Trispace";
-}
+// @font-face {
+//   src: url("./assets/fonts/Trispace[wdth,wght].woff2");
+//   font-family: "Trispace";
+// }
 
 $epilogue: "Epilogue";
 $trispace: "Trispace";
@@ -58,12 +58,11 @@ nav {
     border: none;
     transform: scale(1.25) translateY(0.66rem);
     text-decoration: none;
-    color: rgba(170, 0, 0, 0.5);
+    color: rgba(220, 220, 220, 1);
     font-size: 1rem;
     font-weight: bolder;
-    transition: all 2s;
+    transition: all 1s;
     pointer-events: none;
-    animation: navLock 2s forwards;
     .curly {
       color: rgba(0, 121, 140, 0.8);
       text-decoration: line-through;

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./ai_API/index.js');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 require('dotenv').config();
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.static('public'));
 app.use(routes);
+app.use('/api', createProxyMiddleware({ target: 'http://localhost:3001', changeOrigin: true }));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));

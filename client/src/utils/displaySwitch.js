@@ -1,59 +1,61 @@
 import AboutMain from '../pages/About/AboutMain';
-import AboutTruth from '../pages/About/AboutTruth';
-import AboutBeauty from '../pages/About/AboutBeauty';
-import AboutGoodness from '../pages/About/AboutGoodness';
-import ProjectsMain from '../pages/Projects/ProjectsMain';
-import ProjectOne from '../pages/Projects/ProjectOne'
-import ProjectTwo from '../pages/Projects/ProjectTwo';
-import ProjectThree from '../pages/Projects/ProjectThree';
-import ProjectFour from '../pages/Projects/ProjectFour';
-import ProjectFive from '../pages/Projects/ProjectFive';
-import ExpMain from '../pages/Experiments/ExpMain';
-import ConverStation from '../pages/Experiments/converStation/ConverStation';
+import AboutPage from '../pages/About/AboutPage';
+import aboutlayout from '../pages/About/aboutLayout';
+import ProjectsMain from "../pages/Projects/ProjectsMain";
+import ProjectPage from "../pages/Projects/ProjectPage";
+import projectLayout from "../pages/Projects/projectLayout";
+import ExpMain from "../pages/Experiments/ExpMain";
+import ConverStation from "../pages/Experiments/converStation/ConverStation";
 
+import { dino, paws, ring, flower, truck } from "./config";
 
-
+let Wrapped = undefined;
 export const aboutSwitch = (state) => {
-   switch (state) {
-      case "aboutMain":
-         return <AboutMain />
-      case "Fox":
-         return <AboutTruth />
-      case "Sword":
-         return <AboutBeauty />
-      case "Heart":
-         return <AboutGoodness />
-      default:
-         break
-   }  
-}
+  switch (state) {
+    case "aboutMain":
+      return <AboutMain />;
+    case "Fox":
+      return
+    case "Sword":
+      return 
+    case "Heart":
+      return 
+    default:
+      break;
+  }
+};
 
 export const projectSwitch = (state) => {
-   switch (state) {
-      case "projectMain":
-         return <ProjectsMain />
-      case "Dino":
-         return <ProjectOne />
-      case "Paw":
-         return <ProjectTwo />
-      case "Ring":
-         return <ProjectThree />
-      case "Flower":
-         return <ProjectFour />
-      case "Truck":
-         return <ProjectFive />
-      default:
-         break
-   }
+  switch (state) {
+    case "projectMain":
+      return <ProjectsMain />;
+    case "Dino":
+      Wrapped = projectLayout(ProjectPage, dino);
+      return <Wrapped />;
+    case "Paw":
+      Wrapped = projectLayout(ProjectPage, paws);
+      return <Wrapped />;
+    case "Ring":
+      Wrapped = projectLayout(ProjectPage, ring);
+      return <Wrapped />;
+    case "Flower":
+      projectLayout(ProjectPage);
+      break;
+    case "Truck":
+      projectLayout(ProjectPage);
+      break;
+    default:
+      break;
+  }
 };
 
 export const experimentSwitch = (state) => {
-   switch (state) {
-      case "experimentMain":
-         return <ExpMain />
-      case "ConverStation":
-         return <ConverStation />
-      default:
-         break
-   }
-}
+  switch (state) {
+    case "experimentMain":
+      return <ExpMain />;
+    case "ConverStation":
+      return <ConverStation />;
+    default:
+      break;
+  }
+};

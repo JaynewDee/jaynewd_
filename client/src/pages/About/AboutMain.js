@@ -26,10 +26,7 @@ const AboutMain = () => {
           make.
         </p>
       </section>
-      <section className="section">
-        <p></p>
-        <p>I am honored by you if you've read this far.</p>
-      </section>
+
       <p>
         If the eye is a portal between the phenomenal world and the human mind,
         may this site be a portal between your world and mine.
