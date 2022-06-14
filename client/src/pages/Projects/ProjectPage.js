@@ -1,11 +1,13 @@
 import React from "react";
 
-const redirect = (e) => {
-  window.open(e.target.value, "_blank");
-};
+
 
 const ProjectPage = ({ data }) => {
-  console.log(data);
+
+  const redirect = (e) => {
+    window.open(e.target.value, "_blank");
+  };
+
   return (
     <>
       {!data ? (
@@ -17,7 +19,7 @@ const ProjectPage = ({ data }) => {
             Git Repo
           </button>
           <button
-            value={data.clone}
+            value={data.clone_url}
             onClick={(e) => {
               e.preventDefault();
               navigator.clipboard.writeText(e.target.value).catch((err) => {
@@ -27,6 +29,7 @@ const ProjectPage = ({ data }) => {
           >
             Copy Clone URL
           </button>
+          <button>Deployment</button>
           <p>
             Primary Language: <span>{data.language || "Loading..."}</span>
           </p>

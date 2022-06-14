@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Menu} from './collapsible/Menu';
 import {propsObject} from './collapsible/props'
 
-const AboutTruth = () => {
+const AboutPage= () => {
    const [previous, setPrevious] = useState("");
    
    const locked = "collapsed";
@@ -49,4 +49,4 @@ const AboutTruth = () => {
    
 }
 
-export default AboutTruth;
+export default AboutPage;

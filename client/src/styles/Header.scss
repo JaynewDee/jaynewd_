@@ -61,9 +61,8 @@ nav {
     color: rgba(220, 220, 220, 1);
     font-size: 1rem;
     font-weight: bolder;
-    transition: all 2s;
+    transition: all 1s;
     pointer-events: none;
-    animation: navLock 2s forwards;
     .curly {
       color: rgba(0, 121, 140, 0.8);
       text-decoration: line-through;
