@@ -1,29 +1,35 @@
 import React, { Component } from "react";
-import { Octokit } from 'octokit';
+import { Octokit } from "octokit";
 
 const getProject = (config) => {
-  return new Octokit({auth: process.env.PRIVATE_KEY
-  }).rest.repos.get(config)
-}
-
+  return new Octokit({ auth: process.env.PRIVATE_KEY }).rest.repos.get(config);
+};
+const getReadme = (config) => {
+  return new Octokit({ auth: process.env.PRIVATE_KEY }).request(
+    "GET /repos/{owner}/{repo}/readme",
+    config
+  );
+};
 
 function projectLayout(Page, config) {
   class HOC extends Component {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+        data: {},
+        readme: "",
+      };
     }
+
     componentDidMount() {
-      getProject(config).then((data) => {
-        this.setState(data.data)
-      })
+      getProject(config).then((data) => this.setState({data: data.data}));
+      getReadme(config).then((readme) => {
+        this.setState({readme: atob(readme.data.content)});
+      });
     }
+
     render() {
-      return (
-      <Page
-          data={this.state}
-        />
-        )
+      return <Page data={this.state.data} readme={this.state.readme} />;
     }
   }
   return HOC;

@@ -259,7 +259,7 @@ body {
         }
       }
       .contentBox > * {
-        animation: slideDown 2s ease-out forwards;
+        animation: slideDown 2s ease-in-out forwards;
       }
     }
     //  #utilityBox {
@@ -319,7 +319,7 @@ body {
 
 @keyframes slideDown {
   0% {
-    transform: translateY(-1000px);
+    transform: translateY(-750px);
   }
   100% {
     transform: translateY(0);

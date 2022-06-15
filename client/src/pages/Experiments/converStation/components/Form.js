@@ -28,7 +28,7 @@ const Form = ({ setCurrent }) => {
         let promptObject = JSON.parse(data.config.data);
         // Extract string value of prompt key in object
         let textOnly = promptObject.prompt;
-        // Replace any occurences of the prompt inside the entire text string,
+        // Replace any occurrences of the prompt inside the entire text string,
         // storing only the AI's response
         let replyOnly = choices.replace(textOnly, "");
         // Store final values in component state, to pass to parent portal

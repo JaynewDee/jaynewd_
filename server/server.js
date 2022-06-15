@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const routes = require('./ai_API/index.js');
+const converStationRoutes = require('./ai_API/index.js');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 require('dotenv').config();
 
@@ -11,7 +11,8 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.static('public'));
-app.use(routes);
+app.use(converStationRoutes);
+app.use(require("./routes/user"));
 app.use('/api', createProxyMiddleware({ target: 'http://localhost:3001', changeOrigin: true }));
 
 if (process.env.NODE_ENV === 'production') {

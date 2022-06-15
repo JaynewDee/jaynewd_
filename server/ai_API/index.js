@@ -1,8 +1,8 @@
 const curie = require("express").Router();
 
 const { getEngines, postCompletion } = require("./fetch.js");
-const urls = require("./urls.js");
 
+const urls = require("./urls.js");
 const { get, post } = urls;
 
 curie.get("/api/engines", async (req, response) => {
