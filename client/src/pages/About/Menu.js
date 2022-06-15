@@ -1,52 +1,27 @@
-import React, { useState } from 'react';
-import { Principle } from './collapsible/Principle';
+import React, { useState } from "react";
+import MenuControl from "./collapsible/Btn";
+import MenuSection from "./collapsible/Section";
 
-const Menu = ({props}) => {
-   const [previous, setPrevious] = useState("");
-   console.log(props)
-   const locked = "collapsed";
-   const unlocked = "expanded";
+const Menu = ({ props }) => {
 
-  const clickHandler = (e) => {
-    if (previous !== "") {
-      if (e.target === previous) {
-        return;
-      }
-      setPrevious(e.target);
-      e.target.className = unlocked;
-      previous.className = locked;
-      return;
-    }
-    if (e.target.className === unlocked) {
-      e.target.className = locked;
-    } else {
-      e.target.className = unlocked;
-    }
-    setPrevious(e.target);
-  };
 
   return (
-    <div key={Math.floor(Math.random()*1000)} id="truthBox">
+    <div key={Math.floor(Math.random() * 1000)} id="truthBox">
       {props.map((item, index) => {
         return (
           <>
-            <button
-              className={locked}
-              text={item.name}
-              key={index}
-              onClick={(e) => {
-                clickHandler(e);
-              }}
-            >
-              {item.name}
-            </button>
-            <Principle key={item.key} text={item.text} header={item.header.text} />
-            </>
-         )
-        })}
-      </div>
-      )
-   
-}
+            <MenuControl
+              name={item.name}
+            />
+            <MenuSection
+              headerText={item.header.text}
+              bodyText={item.section.text}
+            />
+          </>
+        );
+      })}
+    </div>
+  );
+};
 
 export default Menu;

@@ -81,9 +81,11 @@ body {
   margin-top: -0.33rem;
   z-index: -1;
 }
+
 #bodyBox[value="Dino"]:hover {
   cursor: url("./assets/cursors/spear.png") 15 10, move;
 }
+
 #bodyBox {
   position: fixed;
   width: 100vw;

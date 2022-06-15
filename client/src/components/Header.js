@@ -4,12 +4,10 @@ import { routes } from "../data/navRoutes";
 const curlyLeft = "{";
 const curlyRight = "}";
 
-const Header = ({ setNav, setDisplay }) => {
+const Nav = ({ setNav, setDisplay, location}) => {
   const [previousClicked, setPrevious] = useState("");
-
   const locked = "navLinkLocked";
   const unlocked = "navLinkUnlocked";
-
   const tabSwitch = (e) => {
     e.preventDefault();
 
@@ -23,11 +21,18 @@ const Header = ({ setNav, setDisplay }) => {
     }
     setPrevious(e.target);
   };
-
+  const onDrag = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+ 
   return (
-    <section className="navHeader">
-      
-      <nav>
+      <nav
+        className="draggable"
+        draggable="true"
+        onDrag={(e) => onDrag(e)}
+        style={location}
+      >
         {routes.map((route) => {
           return (
             <button
@@ -39,7 +44,7 @@ const Header = ({ setNav, setDisplay }) => {
                 setNav(e.target.value);
                 setDisplay(e.target.value);
               }}
-              className={route.className + ' navLink'}
+              className={route.className + " navLink"}
               style={{ textDecoration: "none" }}
               key={route.key}
             >
@@ -50,8 +55,7 @@ const Header = ({ setNav, setDisplay }) => {
           );
         })}
       </nav>
-    </section>
   );
 };
 
-export default Header;
+export default Nav;

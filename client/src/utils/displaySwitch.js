@@ -1,4 +1,5 @@
 import AboutMain from '../pages/About/AboutMain';
+import aboutLayout from '../pages/About/AboutLayout';
 import Menu from '../pages/About/Menu';
 import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
@@ -14,7 +15,8 @@ export const aboutSwitch = (state) => {
     case "aboutMain":
       return <AboutMain />;
     case "Fox":
-      return <Menu props={truthProps}/>;
+      Wrapped = aboutLayout(Menu);
+      return <Wrapped props={truthProps} />
     case "Sword":
       return <Menu props={beautyProps}/>;
     case "Heart":

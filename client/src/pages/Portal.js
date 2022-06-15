@@ -13,7 +13,7 @@ import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
 import { IconContext } from "react-icons";
 
-const Portal = () => {
+const Portal = ({location}) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
 
@@ -36,7 +36,7 @@ const Portal = () => {
 
   return (
     <>
-      <Header setDisplay={setDisplay} setNav={setNav} />
+      <Header setDisplay={setDisplay} setNav={setNav} location={location}/>
       <div value={displayState} id="bodyBox">
         <IconContext.Provider value={{ className: "icons" }}>
           <aside id="leftBox">

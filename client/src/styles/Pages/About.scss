@@ -1,11 +1,11 @@
-.section {
-  p {
-    margin-left: 3rem;
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
-  }
-  
-}
+// .section {
+//   p {
+//     margin-left: 3rem;
+//     margin-bottom: 1rem;
+//     font-size: 0.8rem;
+//   }
+
+// }
 .section > h3 + p::before {
   content: "-";
   margin-right: 1rem;
@@ -20,10 +20,9 @@
   font-size: 0.8rem;
 }
 
-
 .footSpacer {
   height: 20rem;
-  color:rgba(0, 121, 140, 0.7);
+  color: rgba(0, 121, 140, 0.7);
 }
 .section > h3::before {
   content: ">";
@@ -38,90 +37,82 @@
   justify-content: center;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.33;
-  margin: auto;
+  margin: 1rem auto;
 
-  .aboutMenu {
-    display: flex;
+  button {
+    padding: 0.66rem 1rem;
     text-align: center;
-    align-items: center;
-    flex-flow: column wrap;
   }
-
-  .collapsed {
+  button[value="collapsed"] {
     padding: 0.5rem 0.66rem;
     border-radius: 0.33rem;
-    animation: retreat 2s ease-in-out forwards;
+    animation: floatBack 1s ease-in-out forwards;
+  }
+  button[value="expanded"] {
+    transition: all 2s;
+    color: rgba(170,0,0,.7);
+    animation: spreadFloat 1s ease-in-out forwards;
   }
 
-  .collapsed + section {
-    display: none;
-    animation: floatBack 1s ease-in forwards;
-  }
 
-  .expanded {
-    padding: 0.66rem 1rem;
-    animation: buttonRelaxer 1s ease-in-out forwards;
-    transition: all 3s;
-  }
-
-  .expanded + section::before {
-    content: "";
-    border: 3px solid white;
-    background-color: rgba(170, 0, 0, 0.95);
-    height: 1px;
-    width: 66%;
-    margin: 2rem auto 1rem;
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
-      0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
-      0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-
-  .expanded + section {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 13%;
-    margin-bottom: 5rem;
-    pointer-events: none;
-    font-size: 0.66rem;
-    animation: spreadFloat 1s ease-out forwards, fadeInBody 4s forwards;
-  }
-  // .collapseMenu {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-align: center;
+  // button[value="expanded"]::before {
+  //   content: "";
+  //   border: 3px solid white;
+  //   background-color: rgba(170, 0, 0, 0.95);
+  //   height: 1px;
+  //   width: 66%;
+  //   margin: 2rem auto 1rem;
+  //   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
+  //     0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
+  //     0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+  //   border-radius: 5px;
   // }
-  .expanded + section::after {
-    content: "";
-    border: 2px solid white;
-    background-color: rgba(170, 0, 0, 0.95);
-    height: 1px;
-    width: 33%;
-    position: relative;
-    top: 3rem;
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
-      0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
-      0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+  button[value="collapsed"] + section {
+    transform: scale(0);
+    transition: all 1s;
+    margin: 0;
+    padding: 0;
   }
+  button[value="expanded"] + section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: scale(100%);
+    flex-flow: column nowrap;
+    transition: all 1s;
+  }
+
+  // button[value="expanded"]::after {
+  //   content: "";
+  //   border: 2px solid white;
+  //   background-color: rgba(170, 0, 0, 0.95);
+  //   height: 1px;
+  //   width: 33%;
+  //   position: relative;
+  //   top: 3rem;
+  //   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
+  //     0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
+  //     0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+  //   border-radius: 3px;
+  // }
 }
 
 @keyframes spreadFloat {
   0% {
-    height: 15%;
+    transform: rotate(-360deg);
   }
   100% {
-    height: 37%;
+    transform: rotate(0deg);
   }
 }
 
 @keyframes floatBack {
   from {
-    height: 30%;
+    transform: rotate(0deg);
   }
   to {
-    height: 0%;
+    transform: rotate(-360deg)
   }
 }
 
@@ -146,7 +137,6 @@
     color: rgba(170, 0, 0, 1);
   }
   to {
-    transform: rotate(360deg);
     margin: 0;
   }
 }
