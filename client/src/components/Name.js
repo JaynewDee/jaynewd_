@@ -19,11 +19,11 @@ const Name = () => {
             </data>
             <ul className="traitList">
               <span>{"-------"}</span>
-              <li>Engineer</li>
+              <li>Developer</li>
               <span>{"-----"}</span>
               <li>Explorer</li>
               <span>{"---"}</span>
-              <li>Optimist</li>
+              <li>Artist</li>
             </ul>
           </div>
         </h1>

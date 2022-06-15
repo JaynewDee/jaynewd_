@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
+import NavTab from "../components/NavTab";
 // import UtilityBar from "../components/UtilityBar";
 import {
   aboutSwitch,
@@ -13,7 +13,7 @@ import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
 import { IconContext } from "react-icons";
 
-const Portal = ({location}) => {
+const Portal = ({navLocation}) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
 
@@ -36,7 +36,7 @@ const Portal = ({location}) => {
 
   return (
     <>
-      <Header setDisplay={setDisplay} setNav={setNav} location={location}/>
+      <NavTab setDisplay={setDisplay} setNav={setNav} location={navLocation}/>
       <div value={displayState} id="bodyBox">
         <IconContext.Provider value={{ className: "icons" }}>
           <aside id="leftBox">

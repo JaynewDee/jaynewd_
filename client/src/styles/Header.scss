@@ -20,17 +20,17 @@ nav {
   flex-flow: column nowrap;
   align-items: flex-end;
   position: absolute;
-  z-index: 7;
+  z-index: 5;
   font-weight: 300;
   font-family: $trispace;
   border: none;
-  border-right: 2px solid rgba(0, 121, 140, 0.8);
-  background-color: rgba(255,255,255, .95);
-  border-radius: .66rem;
-  padding: .66rem;
-  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
-      0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
-      0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+  padding: .33rem .66rem;
+  border-right: 5px solid rgba(215, 215, 215, 1);
+  background-color: rgba(255,255,255, .7);
+  border-radius: .66rem 0 0 .66rem;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1),
+      0 7px 20px rgba(0, 0, 0, 0.1), 0 10px 24px rgba(0, 0, 0, 0.1),
+      0 14px 32px rgba(0, 0, 0, 0.1), 0 18px 64px rgba(0, 0, 0, 0.1);
   .navLinkUnlocked {
     background: transparent;
     border: none;
@@ -54,13 +54,13 @@ nav {
   }
 
   .navLinkLocked {
-    margin: 0 1rem;
     background: transparent;
     border: none;
-    transform: scale(1.1) translateX(-.66rem);
-    transition: all 2s;
+    margin: .33rem;
+    transform: scale(1.3);
+    transition: all 1s;
     text-decoration: none;
-    color: rgb(170, 0, 0);
+    color: rgba(170, 0, 0, .7);
     font-size: 1rem;
     font-weight: bolder;
     pointer-events: none;

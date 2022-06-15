@@ -6,7 +6,7 @@ const Menu = ({ props }) => {
 
 
   return (
-    <div key={Math.floor(Math.random() * 1000)} id="truthBox">
+    <div key={Math.floor(Math.random() * 1000)} className="menuBox">
       {props.map((item, index) => {
         return (
           <>

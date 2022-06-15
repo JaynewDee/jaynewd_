@@ -1,48 +1,18 @@
 import React from "react";
-
-
+import LinkBox from "../../components/LinkBox";
+import StatBox from '../../components/StatBox';
 const ProjectPage = ({ data }) => {
-
-  const redirect = (e) => {
-    window.open(e.target.value, "_blank");
-  };
-
   return (
     <>
       {!data ? (
         <div>Loading, please wait ...</div>
       ) : (
         <>
-          <h3 id={data.id}>| {data.name} |</h3>
-          <button value={data.html_url} onClick={(e) => redirect(e)}>
-            Git Repo
-          </button>
-          <button
-            value={data.clone_url}
-            onClick={(e) => {
-              e.preventDefault();
-              navigator.clipboard.writeText(e.target.value).catch((err) => {
-                console.error(err);
-              });
-            }}
-          >
-            Copy Clone URL
-          </button>
-          <button>Deployment</button>
-          <p className="stat">
-            Primary Language: <span>{data.language || "Loading..."}</span>
-          </p>
-          <p className="stat">
-            Date Created:{" "}
-            <span>{new Date(data.created_at).toLocaleString('en-US', {month:'long', day: 'numeric', year: 'numeric'}) || "Loading..."}</span>
-          </p>
-          <p className="stat">
-            Last Updated:{" "}
-            <span>{new Date(data.updated_at).toLocaleString('en-US', {month:'long', day: 'numeric', year: 'numeric'}) || "Loading..."}</span>
-          </p>
-          <p className="stat">
-            License: <span>{data.license ? data.license.spdx_id : "Unknown"}</span>
-          </p>
+          <h3 id={data.id}>| {data.name || "Fetching data..."} |</h3>
+
+          <LinkBox htmlUrl={data.html_url} cloneUrl={data.clone_url} />
+          <StatBox language={data.language} created={data.created_at} updated={data.updated_at} license={data.license}/>
+          
           <section>
             <p>
               so cat jumps and falls onto the couch purrs and wakes up in a new

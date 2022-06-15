@@ -39,9 +39,7 @@ const AboutMain = () => {
       </h4>
       <div className="footSpacer">---</div>
       <div className="footSpacer">-----</div>
-      <div style={{ marginBottom: "3rem" }} className="footSpacer">
-        ---
-      </div>
+      <div className="footSpacer">---</div>
     </>
   );
 };

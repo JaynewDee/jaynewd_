@@ -98,7 +98,7 @@ export const goodnessProps = [
     },
     {
       key: 1,
-      name: "Joy",
+      name: "Compassion",
       header: {
         text: "Creative Speech",
         name: "logosHead",
@@ -110,7 +110,7 @@ export const goodnessProps = [
     },
     {
       key: 2,
-      name: "Compassion",
+      name: "Joy",
       header: {
         text: "or Ration: To Measure the World",
         name: "reasonHead",

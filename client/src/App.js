@@ -3,10 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 import Portal from "./pages/Portal";
 
 const App = () => {
-  const [navLocation, setNavLocation] = useState({ top: "2rem", left: "80vw" });
+  const [navLocation, setNavLocation] = useState({ top: "2rem", right: '.36rem' });
 
   const handleDrop = (e) => {
-    setNavLocation({ left: `${e.clientX}px`, top: `${e.clientY}px` });
+    const y = e.clientY - 45;
+    setNavLocation({ top: `${y}px`, right: `.36rem` });
   };
   const handleEnter = (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ const App = () => {
   const handleOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    e.dataTransfer.dropEffect = 'move'
   };
 
   return (
@@ -25,7 +27,7 @@ const App = () => {
         onDragEnter={(e) => handleEnter(e)}
         onDrop={(e) => handleDrop(e)}
       >
-        <Portal location={navLocation} />
+        <Portal navLocation={navLocation} />
       </div>
     </BrowserRouter>
   );

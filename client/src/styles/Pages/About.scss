@@ -21,7 +21,6 @@
 }
 
 .footSpacer {
-  height: 20rem;
   color: rgba(0, 121, 140, 0.7);
 }
 .section > h3::before {
@@ -30,14 +29,14 @@
   margin-right: 1rem;
 }
 
-#truthBox {
+.menuBox {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.33;
-  margin: 1rem auto;
+  margin: auto;
 
   button {
     padding: 0.66rem 1rem;
@@ -52,23 +51,25 @@
     transition: all 2s;
     color: rgba(170,0,0,.7);
     animation: spreadFloat 1s ease-in-out forwards;
+    font-size: 1.33rem;
   }
 
 
-  // button[value="expanded"]::before {
-  //   content: "";
-  //   border: 3px solid white;
-  //   background-color: rgba(170, 0, 0, 0.95);
-  //   height: 1px;
-  //   width: 66%;
-  //   margin: 2rem auto 1rem;
-  //   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
-  //     0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
-  //     0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
-  //   border-radius: 5px;
-  // }
+  button[value="expanded"] + section::before {
+    content: "";
+    border: 3px solid white;
+    background-color: rgba(170, 0, 0, 0.95);
+    height: 1px;
+    width: 66%;
+    margin: 2rem auto 0rem;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
+      0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
+      0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
   button[value="collapsed"] + section {
     transform: scale(0);
+    font-size: 0;
     transition: all 1s;
     margin: 0;
     padding: 0;
@@ -81,21 +82,22 @@
     transform: scale(100%);
     flex-flow: column nowrap;
     transition: all 1s;
+    margin-bottom: 20%;
   }
 
-  // button[value="expanded"]::after {
-  //   content: "";
-  //   border: 2px solid white;
-  //   background-color: rgba(170, 0, 0, 0.95);
-  //   height: 1px;
-  //   width: 33%;
-  //   position: relative;
-  //   top: 3rem;
-  //   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
-  //     0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
-  //     0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
-  //   border-radius: 3px;
-  // }
+  button[value="expanded"] + section::after {
+    content: "";
+    border: 2px solid white;
+    background-color: rgba(170, 0, 0, 0.95);
+    height: 1px;
+    width: 33%;
+    position: relative;
+    top: 3rem;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
+      0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
+      0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
 }
 
 @keyframes spreadFloat {
