@@ -1,12 +1,11 @@
 import AboutMain from '../pages/About/AboutMain';
-import AboutPage from '../pages/About/AboutPage';
-import aboutlayout from '../pages/About/aboutLayout';
+import Menu from '../pages/About/Menu';
 import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
 import ConverStation from "../pages/Experiments/converStation/ConverStation";
-
+import {truthProps, beautyProps, goodnessProps} from '../pages/About/collapsible/props'
 import { dino, paws, ring, flower, truck } from "./config";
 
 let Wrapped = undefined;
@@ -15,11 +14,11 @@ export const aboutSwitch = (state) => {
     case "aboutMain":
       return <AboutMain />;
     case "Fox":
-      return
+      return <Menu props={truthProps}/>;
     case "Sword":
-      return 
+      return <Menu props={beautyProps}/>;
     case "Heart":
-      return 
+      return <Menu props={goodnessProps}/>;
     default:
       break;
   }
@@ -39,8 +38,8 @@ export const projectSwitch = (state) => {
       Wrapped = projectLayout(ProjectPage, ring);
       return <Wrapped />;
     case "Flower":
-      projectLayout(ProjectPage);
-      break;
+      Wrapped = projectLayout(ProjectPage);
+      return <Wrapped />;
     case "Truck":
       projectLayout(ProjectPage);
       break;

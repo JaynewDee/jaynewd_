@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import {Menu} from './collapsible/Menu';
-import {propsObject} from './collapsible/Truth/props'
+import { Principle } from './collapsible/Principle';
 
-const AboutPage= () => {
+const Menu = ({props}) => {
    const [previous, setPrevious] = useState("");
-   
+   console.log(props)
    const locked = "collapsed";
    const unlocked = "expanded";
 
@@ -27,28 +26,27 @@ const AboutPage= () => {
   };
 
   return (
-    <div key="55" id="truthBox">
-      {propsObject.map((item, index) => {
+    <div key={Math.floor(Math.random()*1000)} id="truthBox">
+      {props.map((item, index) => {
         return (
           <>
             <button
               className={locked}
               text={item.name}
-              key={item.key}
+              key={index}
               onClick={(e) => {
                 clickHandler(e);
               }}
             >
               {item.name}
             </button>
-            <Menu text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*1000)} />
+            <Principle key={item.key} text={item.text} header={item.header.text} />
             </>
          )
-         
         })}
       </div>
       )
    
 }
 
-export default AboutPage;
+export default Menu;

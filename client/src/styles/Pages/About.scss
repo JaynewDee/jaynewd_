@@ -60,7 +60,6 @@
 
   .expanded {
     padding: 0.66rem 1rem;
-    margin: 2rem auto 1rem;
     animation: buttonRelaxer 1s ease-in-out forwards;
     transition: all 3s;
   }
@@ -71,6 +70,7 @@
     background-color: rgba(170, 0, 0, 0.95);
     height: 1px;
     width: 66%;
+    margin: 2rem auto 1rem;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
       0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
       0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
@@ -86,7 +86,12 @@
     font-size: 0.66rem;
     animation: spreadFloat 1s ease-out forwards, fadeInBody 4s forwards;
   }
-
+  // .collapseMenu {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-align: center;
+  // }
   .expanded + section::after {
     content: "";
     border: 2px solid white;
@@ -141,7 +146,7 @@
     color: rgba(170, 0, 0, 1);
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     margin: 0;
   }
 }

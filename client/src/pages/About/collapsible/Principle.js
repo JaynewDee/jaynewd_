@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-const Menu = ({ text, header }) => {
+import React from "react";
+const Principle = ({ text, header }) => {
   return (
     <>
       <section className="collapseMenu" key={Math.floor(Math.random() * 1000)}>
@@ -10,4 +10,4 @@ const Menu = ({ text, header }) => {
   );
 };
 
-export { Menu };
+export { Principle };

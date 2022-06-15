@@ -1,8 +1,5 @@
 import React from "react";
 
-function cutSpecials(str) {
-  return str.replace(/[^a-zA-Z ]/g, "");
-}
 
 const ProjectPage = ({ data }) => {
 
@@ -16,7 +13,7 @@ const ProjectPage = ({ data }) => {
         <div>Loading, please wait ...</div>
       ) : (
         <>
-          <h3 id={data.id}>| {cutSpecials(data.name)} |</h3>
+          <h3 id={data.id}>| {data.name} |</h3>
           <button value={data.html_url} onClick={(e) => redirect(e)}>
             Git Repo
           </button>
@@ -32,18 +29,18 @@ const ProjectPage = ({ data }) => {
             Copy Clone URL
           </button>
           <button>Deployment</button>
-          <p>
+          <p className="stat">
             Primary Language: <span>{data.language || "Loading..."}</span>
           </p>
-          <p>
+          <p className="stat">
             Date Created:{" "}
-            <span>{new Date(data.created_at).toLocaleString() || "Loading..."}</span>
+            <span>{new Date(data.created_at).toLocaleString('en-US', {month:'long', day: 'numeric', year: 'numeric'}) || "Loading..."}</span>
           </p>
-          <p>
+          <p className="stat">
             Last Updated:{" "}
-            <span>{new Date(data.updated_at).toLocaleString() || "Loading..."}</span>
+            <span>{new Date(data.updated_at).toLocaleString('en-US', {month:'long', day: 'numeric', year: 'numeric'}) || "Loading..."}</span>
           </p>
-          <p>
+          <p className="stat">
             License: <span>{data.license ? data.license.spdx_id : "Unknown"}</span>
           </p>
           <section>

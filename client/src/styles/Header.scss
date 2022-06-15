@@ -16,6 +16,9 @@ span {
 }
 
 nav {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
   position: absolute;
   z-index: 6;
   right: 5rem;
@@ -23,7 +26,6 @@ nav {
   font-weight: 100;
   font-family: $trispace;
   border: none;
-
   .navLinkUnlocked {
     background: transparent;
     border: none;
@@ -45,23 +47,17 @@ nav {
       color: rgba(0, 121, 140, 0.8);
     }
   }
-  .navLinkUnlocked:hover::after {
-    content: "";
-    width: 2px;
-    height: 2px;
-    transition: all 3s;
-    transform: translateX(2rem);
-  }
+
   .navLinkLocked {
     margin: 0 1rem;
     background: transparent;
     border: none;
-    transform: scale(1.25) translateY(0.66rem);
+    transform: scale(1.2) translateX(-.66rem);
+    transition: all 2s;
     text-decoration: none;
-    color: rgba(220, 220, 220, 1);
+    color: rgba(0, 121, 140, 0.5);
     font-size: 1rem;
     font-weight: bolder;
-    transition: all 1s;
     pointer-events: none;
     .curly {
       color: rgba(0, 121, 140, 0.8);
@@ -99,15 +95,6 @@ nav {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes navLock {
-  0% {
-    box-shadow: none;
-  }
-  100% {
-    z-index: 10;
   }
 }
 
