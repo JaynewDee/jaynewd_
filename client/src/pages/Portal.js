@@ -17,7 +17,11 @@ import { IconContext } from "react-icons";
 const Portal = ({ navLocation }) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
+  const [modalType, setModalType] = useState("");
+  const [modalVisibility, setVisibility] = useState("hidden");
   const [loggedIn, setLogin] = useState(false);
+  console.log(modalType);
+  console.log(modalVisibility);
 
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
@@ -47,17 +51,21 @@ const Portal = ({ navLocation }) => {
             <SocialBox />
           </aside>
         </IconContext.Provider>
-
+        
         <article id="rightBox">
           <section className="displayBox">
+          <Modal visibility={modalVisibility} setVisibility={setVisibility} modalState={modalType} />
             <aside className="contentBox">
               {aboutSwitch(displayState)}
               {projectSwitch(displayState)}
               {experimentSwitch(displayState)}
             </aside>
           </section>
-          <UtilityBar />
-          
+          <UtilityBar
+            setModalType={setModalType}
+            loginStatus={loggedIn}
+            setVisibility={setVisibility}
+          />
         </article>
       </div>
     </>

@@ -1,10 +1,13 @@
 import React from 'react'
-import LoginBtn from './LoginBtn';
-const UtilityBar = () => {
+import LoginBtn from './Log/LoginBtn';
+import LogoutBtn from './Log/LogoutBtn';
+const UtilityBar = ({loginStatus, setModalType, setVisibility}) => {
   return (
      
     <div className="utilityBox">
-       <LoginBtn className="utilityBtn loginBtn"><span className="buttonTextVert">LOGIN</span> </LoginBtn>
+      {
+        loginStatus ? <LogoutBtn /> : <LoginBtn setVisibility={setVisibility} setMode={setModalType}/>
+      }
     </div>
   )
 }
