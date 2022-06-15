@@ -1,5 +1,8 @@
-@import "./styles/main.scss", "./styles/Header.scss", "./styles/Pages/About.scss",  "./styles/Nav/AboutNav.scss",
-  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss", "./styles/Pages/FootBar.scss";
+@import "./styles/main.scss", "./styles/Header.scss",
+  "./styles/Pages/About.scss", "./styles/Nav/AboutNav.scss",
+  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss",
+  "./styles/Pages/FootBar.scss", "./styles/components/Modal.scss",
+  "./styles/components/Utility.scss";
 
 @media screen and (max-width: 769px) {
   :root {
@@ -12,10 +15,9 @@
   }
   .navHeader {
     nav {
-
       .navLinkLocked {
-         transform: translateX(-.66rem);
-         padding: .33rem 0;
+        transform: translateX(-0.66rem);
+        padding: 0.33rem 0;
       }
     }
   }

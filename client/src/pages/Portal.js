@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavTab from "../components/NavTab";
-// import UtilityBar from "../components/UtilityBar";
+import UtilityBar from "../components/UtilityBar";
 import {
   aboutSwitch,
   projectSwitch,
@@ -11,11 +11,13 @@ import AboutNav from "../pages/About/AboutNav";
 import ExpNav from "../pages/Experiments/Nav/ExpNav";
 import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
+import Modal from "../components/Modal";
 import { IconContext } from "react-icons";
 
-const Portal = ({navLocation}) => {
+const Portal = ({ navLocation }) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
+  const [loggedIn, setLogin] = useState(false);
 
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
@@ -36,7 +38,7 @@ const Portal = ({navLocation}) => {
 
   return (
     <>
-      <NavTab setDisplay={setDisplay} setNav={setNav} location={navLocation}/>
+      <NavTab setDisplay={setDisplay} setNav={setNav} location={navLocation} />
       <div value={displayState} id="bodyBox">
         <IconContext.Provider value={{ className: "icons" }}>
           <aside id="leftBox">
@@ -54,7 +56,8 @@ const Portal = ({navLocation}) => {
               {experimentSwitch(displayState)}
             </aside>
           </section>
-          {/* <UtilityBar /> */}
+          <UtilityBar />
+          
         </article>
       </div>
     </>

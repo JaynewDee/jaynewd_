@@ -1,13 +1,10 @@
 import React from 'react'
-
+import LoginBtn from './LoginBtn';
 const UtilityBar = () => {
   return (
      
-    <div id="utilityBox">
-       {/* <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
-       <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button>
-       <button className="utilityBtn"><span className="buttonTextVert">ADMIN</span></button> */}
-
+    <div className="utilityBox">
+       <LoginBtn className="utilityBtn loginBtn"><span className="buttonTextVert">LOGIN</span> </LoginBtn>
     </div>
   )
 }
