@@ -24,7 +24,6 @@ function projectLayout(Page, config) {
           data={this.state}
         />
         )
-      
     }
   }
   return HOC;

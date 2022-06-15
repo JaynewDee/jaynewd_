@@ -1,25 +1,12 @@
-<<<<<<< HEAD:client/src/pages/About/AboutTruth.js
-import React, { useState } from "react";
-import { Truth } from "./collapsible/main";
-import { propsObject } from "../About/collapsible/Truth/props";
-import "../../styles/Pages/About.scss";
-
-const AboutTruth = () => {
-  const [previous, setPrevious] = useState("");
-=======
 import React, { useState } from 'react';
 import {Menu} from './collapsible/Menu';
-import {propsObject} from './collapsible/props'
+import {propsObject} from './collapsible/Truth/props'
 
 const AboutPage= () => {
    const [previous, setPrevious] = useState("");
    
    const locked = "collapsed";
    const unlocked = "expanded";
->>>>>>> HOClayout:client/src/pages/About/AboutPage.js
-
-  const locked = "collapsed";
-  const unlocked = "expanded";
 
   const clickHandler = (e) => {
     if (previous !== "") {
@@ -54,21 +41,6 @@ const AboutPage= () => {
             >
               {item.name}
             </button>
-<<<<<<< HEAD:client/src/pages/About/AboutTruth.js
-            <Truth
-              text={item.section.text}
-              header={item.header.text}
-              key={index}
-            />
-          </>
-        );
-      })}
-    </div>
-  );
-};
-
-export default AboutTruth;
-=======
             <Menu text={item.section.text} header={item.header.text} key={Math.floor(Math.random()*1000)} />
             </>
          )
@@ -80,4 +52,3 @@ export default AboutTruth;
 }
 
 export default AboutPage;
->>>>>>> HOClayout:client/src/pages/About/AboutPage.js
