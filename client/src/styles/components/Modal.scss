@@ -21,21 +21,29 @@
     display: flex;
     flex-flow: column nowrap;
     input {
-      margin: .5rem auto 1.5rem;
+      margin: 0.5rem auto 1.5rem;
       padding: 0.33rem;
       box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
     }
     label {
-        color:rgba(0, 121, 140, 0.9)
+      color: rgba(0, 121, 140, 0.9);
+      font-size: .88rem;
+      margin-left: -1rem;
     }
     .submitBtn {
       align-self: flex-end;
       margin: 1rem -3rem 5rem 0;
       padding: 0.33rem 0.66rem;
       border-radius: 5px;
+      background: none;
+      border: 3px solid rgba(0, 121, 140, 0.8);
+      font-size: .88rem;
     }
     .submitBtn:hover {
-        background-color:rgba(0, 121, 140, 0.6)
+      background: transparent;
+      outline: 2px solid rgba(0, 0, 0, 0.8);
+      transform: scale(1.03);
+      box-shadow:0px .66rem 2rem rgba(0, 0, 0, 0.3)
     }
   }
   .modalExitBtn {
@@ -43,7 +51,7 @@
     margin: 0;
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    left: 2rem;
   }
   .modalExitBtn:hover {
     color: rgba(170, 0, 0, 0.8);
@@ -52,24 +60,15 @@
 }
 .modal[value="hidden"] {
   position: absolute;
-  animation: shrink 1s ease-in-out forwards;
+  transform: scale(0);
 }
 
 @keyframes grow {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes shrink {
-    from {
-        transform: scale(1)
-    }
-    to {
-        transform: scale(0);
-    }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

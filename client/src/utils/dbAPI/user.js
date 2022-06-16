@@ -1,12 +1,29 @@
-import axios from 'axios';
-
 export const userAPI = {
-    async createUser(data = {}) {
-        try {
-          var res = await axios.post("/api/login", data);
-        } catch (err) {
-            console.error(err)
-        }
-        return res;
+  async loginUser(data) {
+    try {
+      await fetch(`/user/login`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((response) => response);
+    } catch (err) {
+      console.error(err);
     }
-}
+  },
+  async createUser(data) {
+    console.log(data);
+    try {
+      await fetch("/user/signup", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((response) => response);
+    } catch (err) {
+      console.error(err);
+    }
+  },
+};

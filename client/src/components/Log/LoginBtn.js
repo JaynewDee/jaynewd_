@@ -11,7 +11,8 @@ const LoginBtn = ({ setMode, setVisibility }) => {
 
   return (
     <>
-      <button value="login" onClick={(e) => handleBtnClick(e)}className="utilityBtn loginBtn">Login</button>
+      <button value="login" onClick={(e) => handleBtnClick(e)} className="utilityBtn loginBtn">LOGIN</button>
+      <button value="signup" onClick={(e) => handleBtnClick(e)} className="utilityBtn loginBtn">SIGNUP</button>
     </>
   );
 };

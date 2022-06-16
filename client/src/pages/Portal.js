@@ -19,9 +19,8 @@ const Portal = ({ navLocation }) => {
   const [navState, setNav] = useState("");
   const [modalType, setModalType] = useState("");
   const [modalVisibility, setVisibility] = useState("hidden");
-  const [loggedIn, setLogin] = useState(false);
-  console.log(modalType);
-  console.log(modalVisibility);
+  const [loggedIn, setLoggedIn] = useState(false);
+  console.log(loggedIn);
 
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
@@ -51,10 +50,15 @@ const Portal = ({ navLocation }) => {
             <SocialBox />
           </aside>
         </IconContext.Provider>
-        
+
         <article id="rightBox">
           <section className="displayBox">
-          <Modal visibility={modalVisibility} setVisibility={setVisibility} modalState={modalType} />
+            <Modal
+              visibility={modalVisibility}
+              setVisibility={setVisibility}
+              setLoggedIn={setLoggedIn}
+              modalState={modalType}
+            />
             <aside className="contentBox">
               {aboutSwitch(displayState)}
               {projectSwitch(displayState)}
@@ -63,7 +67,6 @@ const Portal = ({ navLocation }) => {
           </section>
           <UtilityBar
             setModalType={setModalType}
-            loginStatus={loggedIn}
             setVisibility={setVisibility}
           />
         </article>
