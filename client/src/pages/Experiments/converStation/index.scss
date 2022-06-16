@@ -135,7 +135,6 @@ $secondary: rgba(49, 49, 49, 1);
           font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
             monospace;
           h4 {
-            margin-left: 10%;
             max-width: 50%;
             animation: fade-in-prompt 2s ease-in forwards;
             font-weight: 300;
@@ -152,6 +151,8 @@ $secondary: rgba(49, 49, 49, 1);
             text-align: right;
             max-width: 50%;
             font-weight: 300;
+            opacity: 0;
+            animation: fade-in-prompt 2s ease-in-out 2s forwards;
           }
           p::after {
             content: "<<";

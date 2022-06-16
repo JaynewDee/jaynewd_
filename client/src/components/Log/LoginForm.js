@@ -23,13 +23,13 @@ const LoginForm = ({ setLoggedIn }) => {
     try {
       await userAPI
         .loginUser(formState)
-        .then((response) =>
-          response.ok ? setLoggedIn(true) : setLoggedIn(false)
+        .then(() =>
+          setLoggedIn(true)
         );
     } catch (e) {
       console.error(e);
+      setLoggedIn(false)
     }
-
     // clear form values
     setFormState({
       email: "",
