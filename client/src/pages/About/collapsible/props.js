@@ -14,7 +14,7 @@ export const truthProps = [
   },
   {
     key: 1,
-    name: "Logos",
+    name: "Integrity",
     header: {
       text: "Creative Speech",
       name: "logosHead",
@@ -56,7 +56,7 @@ export const beautyProps = [
   },
   {
     key: 1,
-    name: "Structure",
+    name: "Elegance",
     header: {
       text: "Creative Speech",
       name: "logosHead",
@@ -69,7 +69,7 @@ export const beautyProps = [
   },
   {
     key: 2,
-    name: "Sensation",
+    name: "Form",
     header: {
       text: "or Ration: To Measure the World",
       name: "reasonHead",

@@ -8,8 +8,8 @@ const handleLogChange = () => {};
 
 const App = () => {
   const [navLocation, setNavLocation] = useState({
-    top: "2rem",
-    right: ".36rem",
+    top: "0rem",
+    left: "25%",
   });
 
   return (

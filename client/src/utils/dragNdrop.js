@@ -1,6 +1,6 @@
 const handleDrop = (e, setNavLocation) => {
-    const y = e.clientY - 45;
-    setNavLocation({ top: `${y}px`, right: `.36rem` });
+    const x = e.clientX - 45
+    setNavLocation({ top: '0rem', left: `${x}px` });
   };
   const handleEnter = (e) => {
     e.preventDefault();

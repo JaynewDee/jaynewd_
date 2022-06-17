@@ -16,7 +16,7 @@ const Form = ({ setCurrent }) => {
     event.preventDefault();
     await axios({
       method: "post",
-      url: "/api/completion",
+      url: "converstation/api/completion",
       data: {
         prompt: formText,
       },

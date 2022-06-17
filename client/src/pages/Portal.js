@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import NavTab from "../components/NavTab";
 import UtilityBar from "../components/UtilityBar";
 import {
@@ -72,11 +72,13 @@ const Portal = ({ navLocation }) => {
               {experimentSwitch(displayState)}
             </aside>
           </section>
-          <UtilityBar
-            setModalType={setModalType}
-            setVisibility={setModalVisibility}
-            loginStatus={user.loggedIn}
-          />
+          <footer className="footer">
+            <UtilityBar
+              setModalType={setModalType}
+              setVisibility={setModalVisibility}
+              loginStatus={user.loggedIn}
+            />
+          </footer>
         </article>
       </div>
     </>

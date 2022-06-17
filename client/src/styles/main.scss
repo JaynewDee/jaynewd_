@@ -155,7 +155,6 @@ body {
       cursor: pointer;
     }
     #buttonBox {
-      // align-self: center;
       display: flex;
       flex-flow: column wrap;
       justify-content: space-evenly;
@@ -285,14 +284,6 @@ body {
   pointer-events: none;
 }
 
-// @keyframes fadeInBody {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
 
 @keyframes slideDown {
   0% {

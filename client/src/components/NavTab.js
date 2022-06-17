@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { routes } from "../data/navRoutes";
-
+import {BiUpArrowCircle} from 'react-icons/bi'
 const curlyLeft = "{";
 const curlyRight = "}";
 
 const Nav = ({ setNav, setDisplay, location}) => {
   const [previousClicked, setPrevious] = useState("");
+  const [collapseState, setCollapse] = useState("collapsed")
   const locked = "navLinkLocked";
   const unlocked = "navLinkUnlocked";
   const tabSwitch = (e) => {
@@ -21,6 +22,15 @@ const Nav = ({ setNav, setDisplay, location}) => {
     }
     setPrevious(e.target);
   };
+
+  const handleNavCollapse = (e) => {
+    if(collapseState === "collapsed") {
+      setCollapse("expanded")
+    }
+    else {
+      setCollapse("collapsed");
+    }
+  }
   const onDrag = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -28,7 +38,7 @@ const Nav = ({ setNav, setDisplay, location}) => {
  
   return (
       <nav
-        className="draggable"
+        className={collapseState}
         draggable="true"
         onDrag={(e) => onDrag(e)}
         style={location}
@@ -54,6 +64,7 @@ const Nav = ({ setNav, setDisplay, location}) => {
             </button>
           );
         })}
+        <BiUpArrowCircle onClick={(e) => handleNavCollapse(e)}className="navCollapseBtn" size={"2rem"}/>
       </nav>
   );
 };
