@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import NavTab from "../components/NavTab";
 import UtilityBar from "../components/UtilityBar";
 import {
@@ -12,16 +12,25 @@ import ExpNav from "../pages/Experiments/Nav/ExpNav";
 import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
 import Modal from "../components/Modal";
+import UserPlate from "../components/UserPlate";
+
 import { IconContext } from "react-icons";
+import { useUserContext } from "../context/UserContext";
 
 const Portal = ({ navLocation }) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
   const [modalType, setModalType] = useState("");
-  const [modalVisibility, setVisibility] = useState("hidden");
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [modalVisibility, setModalVisibility] = useState("hidden");
 
-  console.log(loggedIn);
+  const user = useUserContext();
+
+  useEffect(() => {
+    if (user.loggedIn) {
+      setModalVisibility("hidden");
+    }
+  }, [user]);
+
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
@@ -52,16 +61,13 @@ const Portal = ({ navLocation }) => {
         </IconContext.Provider>
 
         <article id="rightBox">
-        
           <section className="displayBox">
-          <Modal
+            <Modal
               visibility={modalVisibility}
-              setVisibility={setVisibility}
-              setLoggedIn={setLoggedIn}
+              setVisibility={setModalVisibility}
               modalState={modalType}
             />
             <aside className="contentBox">
-            
               {aboutSwitch(displayState)}
               {projectSwitch(displayState)}
               {experimentSwitch(displayState)}
@@ -69,7 +75,8 @@ const Portal = ({ navLocation }) => {
           </section>
           <UtilityBar
             setModalType={setModalType}
-            setVisibility={setVisibility}
+            setVisibility={setModalVisibility}
+            loginStatus={user.loggedIn}
           />
         </article>
       </div>

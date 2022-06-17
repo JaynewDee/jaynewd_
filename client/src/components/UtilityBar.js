@@ -1,13 +1,19 @@
 import React from 'react'
 import LoginBtn from './Log/LoginBtn';
 import LogoutBtn from './Log/LogoutBtn';
-const UtilityBar = ({loginStatus, setModalType, setVisibility}) => {
+import UserPlate from './UserPlate';
+import { useUserContext } from '../context/UserContext';
+
+const UtilityBar = ({ setModalType, setVisibility}) => {
+
+  const user = useUserContext();
   return (
      
     <div className="utilityBox">
       {
-        loginStatus ? <LogoutBtn /> : <LoginBtn setVisibility={setVisibility} setMode={setModalType}/>
+        user.loggedIn ? <LogoutBtn /> : <LoginBtn setVisibility={setVisibility} setMode={setModalType}/>
       }
+      <UserPlate />
     </div>
   )
 }

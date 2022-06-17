@@ -22,14 +22,18 @@ function projectLayout(Page, config) {
     }
 
     componentDidMount() {
-      getProject(config).then((data) => this.setState({data: data.data}));
+      getProject(config).then((data) => this.setState({ data: data.data }));
       getReadme(config).then((readme) => {
-        this.setState({readme: atob(readme.data.content)});
+        this.setState({ readme: atob(readme.data.content) });
       });
     }
 
     render() {
-      return <Page data={this.state.data} readme={this.state.readme} />;
+      return (
+        <section className="projectWrapper">
+          <Page data={this.state.data} readme={this.state.readme} />
+        </section>
+      );
     }
   }
   return HOC;

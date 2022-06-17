@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import LoginForm from "./Log/LoginForm";
 import SignupForm from "./Log/SignupForm";
 import { GiExitDoor } from "react-icons/gi";
-const Modal = ({ modalState, visibility, setVisibility, setLoggedIn }) => {
+
+
+
+const Modal = ({ modalState, visibility, setVisibility, setUser }) => {
 
   const modalSwitch = (state) => {
     switch (state) {
       case "login":
-        return <LoginForm setLoggedIn={setLoggedIn}/>;
+        return <LoginForm setUser={setUser} />;
       case "signup":
-        return <SignupForm setLoggedIn={setLoggedIn}/>;
+        return <SignupForm setUser={setUser} />;
       default:
         break;
     }

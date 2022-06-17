@@ -36,7 +36,8 @@ const Form = ({ setCurrent }) => {
       })
       .then((current) => {
         setCurrent(current);
-      });
+      })
+      .catch((err) => console.error(err))
     // clear form values
     setFormText("");
   };

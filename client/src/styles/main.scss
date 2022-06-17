@@ -206,6 +206,7 @@ body {
       inset 0 14px 16px rgba(0, 0, 0, 0.15),
       inset 0 18px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0 1.33rem 1.33rem 0;
+
     .displayBox {
       z-index: 5;
       overflow: auto;
@@ -232,13 +233,20 @@ body {
         justify-content: flex-start;
         flex-flow: column nowrap;
         align-items: center;
-        .linkBox {
+        .projectWrapper {
           display: flex;
+          justify-content: center;
+          align-items: center;
           flex-flow: column nowrap;
-          margin: 1rem auto 2rem;
-          button {
-            margin: auto;
-            border-radius: 0.22rem;
+          animation: slideDown 2s ease-in-out forwards;
+          .linkBox {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 1rem auto 2rem;
+            button {
+              margin: auto;
+              border-radius: 0.22rem;
+            }
           }
         }
 
@@ -254,9 +262,6 @@ body {
         .stat {
           line-height: 0.3;
         }
-      }
-      .contentBox > * {
-        animation: slideDown 2s ease-in-out forwards;
       }
     }
   }

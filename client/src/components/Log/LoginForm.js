@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { userAPI } from "../../utils/dbAPI/user";
-
-const LoginForm = ({ setLoggedIn }) => {
+import { loginUser } from "../../utils/dbAPI/user";
+import { useUserContext } from "../../context/UserContext";
+const LoginForm = () => {
+  const user = useUserContext();
   const [formState, setFormState] = useState({
     email: "",
     password: "",
   });
-  console.log(formState);
-  // update state based on form input changes
+
+  const [userState, setUser] = useState({});
+  console.log(userState);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -19,17 +21,12 @@ const LoginForm = ({ setLoggedIn }) => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
-    try {
-      await userAPI
-        .loginUser(formState)
-        .then(() =>
-          setLoggedIn(true)
-        );
-    } catch (e) {
-      console.error(e);
-      setLoggedIn(false)
-    }
+    console.log(formState)
+
+    await loginUser(formState)
+      .then((data) => setUser(data))
+      .catch((err) => console.error(err));
+
     // clear form values
     setFormState({
       email: "",
