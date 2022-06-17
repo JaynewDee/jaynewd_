@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { createUser } from "../../utils/dbAPI/user";
+import { useUserContext } from "../../context/UserContext";
 const SignupForm = () => {
-  const [user, setUser] = useState()
+  const { signin } = useUserContext();
   const [formState, setFormState] = useState({
     lastName: "",
     email: "",
@@ -14,12 +15,11 @@ const SignupForm = () => {
       [name]: value,
     });
   };
-  console.log(user)
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-        const userData = await createUser(formState)
-        setUser(userData)
+    const userData = await createUser(formState);
+    signin(userData);
 
     setFormState({
       lastName: "",
@@ -30,7 +30,11 @@ const SignupForm = () => {
 
   return (
     <div>
-      <form onSubmit={(e) => handleFormSubmit(e)} id="modalSignup" className="loginForm">
+      <form
+        onSubmit={(e) => handleFormSubmit(e)}
+        id="modalSignup"
+        className="loginForm"
+      >
         <label htmlFor="lastName">Last Name</label>
         <input
           value={formState.lastName}

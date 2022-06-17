@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { loginUser } from "../../utils/dbAPI/user";
 import { useUserContext } from "../../context/UserContext";
 const LoginForm = () => {
-  const user = useUserContext();
+  const { signin } = useUserContext();
+
   const [formState, setFormState] = useState({
     email: "",
     password: "",
   });
 
-  const [userState, setUser] = useState({});
-  console.log(userState);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -22,10 +21,9 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-      const data = await loginUser(formState)
-      console.log(data)
+    const data = await loginUser(formState);
+    signin(data);
 
-    // clear form values
     setFormState({
       email: "",
       password: "",

@@ -12,32 +12,28 @@ export const loginUser = async (data) => {
       } else {
         console.log(`Login failed...`);
       }
-      return response.json()
+      return response.json();
     })
     .catch((err) => console.error(err));
 };
 
 export const createUser = async (data) => {
-  try {
-    return await fetch("/user/signup", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
+  return await fetch("/user/signup", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then(async (response) => {
+      if (response.status === 200) {
+        console.log(`Signup Successful.`);
+      } else {
+        console.log(`Signup failed...`);
+      }
+      return response.json();
     })
-      .then(async (response) => {        
-        if (response.status === 200) {
-          console.log(`Signup Successful.`);
-        } else {
-          console.log(`Signup failed...`);
-        }
-        return response.json()
-      })
-      .catch((err) => console.error(err));
-  } catch (err) {
-    console.error(err);
-  }
+    .catch((err) => console.error(err));
 };
 
 export const deleteAll = async () => {
