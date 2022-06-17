@@ -9,10 +9,11 @@ export const loginUser = async (data) => {
     .then(async (response) => {
       if (response.ok) {
         console.log(`Login successful.`);
+        return response.json();
       } else {
         console.log(`Login failed...`);
+        throw new Error(`Login failed at front-end fetch request.`)
       }
-      return response.json();
     })
     .catch((err) => console.error(err));
 };

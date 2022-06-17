@@ -28,7 +28,11 @@
   border: 2px solid rgba(0,0,0, .6);
   outline: 2px solid rgba(0, 121, 140, 0.9);
   border-radius: 1rem;
-
+  .logError {
+    width: 66%;
+    margin: auto;
+    text-align: center;
+  }
   .loginForm {
     display: flex;
     flex-flow: column nowrap;

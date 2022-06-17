@@ -5,11 +5,11 @@ router.post("/login", async ({ body }, res, next) => {
   const user = await User.findOne({ email: body.email })
     
       if (!user) {
-        res.status(401).send(`User does not exist`);
+        return res.status(401).send(`User does not exist`);
       }
       const correctPassword = await user.isCorrectPassword(body.password);
       if (!correctPassword) {
-        res.status(401).send(`Incorrect Password`);
+        return res.status(401).send(`Incorrect Password`);
       }
     
   return res.json(user);

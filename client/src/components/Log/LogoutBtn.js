@@ -1,10 +1,11 @@
 import React from "react";
 import { useUserContext } from "../../context/UserContext";
 const LogoutBtn = () => {
-  const user = useUserContext();
+  const {signout, user}= useUserContext();
 
   const handleLogout = () => {
-    user.logout()
+    console.log(`User ${user.lastName} signing out ...`)
+    signout();
   };
 
 

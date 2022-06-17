@@ -12,7 +12,6 @@ import ExpNav from "../pages/Experiments/Nav/ExpNav";
 import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
 import Modal from "../components/Modal";
-import UserPlate from "../components/UserPlate";
 
 import { IconContext } from "react-icons";
 import { useUserContext } from "../context/UserContext";
