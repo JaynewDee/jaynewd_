@@ -26,11 +26,13 @@ export const createUser = async (data) => {
       body: JSON.stringify(data),
     })
       .then(async (res) => {
-        if (res.ok) {
+        console.log(res)
+        if (res.status === 200) {
           console.log(`Signup Successful.`);
         } else {
           console.log(`Signup failed...`);
         }
+        return res;
       })
       .catch((err) => console.error(err));
   } catch (err) {

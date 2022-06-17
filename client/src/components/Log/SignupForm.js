@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { createUser } from "../../utils/dbAPI/user";
 const SignupForm = () => {
+  const [user, setUser] = useState({})
   const [formState, setFormState] = useState({
     lastName: "",
     email: "",
     password: "",
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
@@ -18,24 +18,11 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch(`/user/signup`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formState),
-    })
-      .then(async (res) => {
-        if (res.ok) {
-          console.log(`Signup Successful.`);
-        } else {
-          console.log(`Signup failed...`);
-        }
-        return res;
-      })
-      .catch((err) => console.error(err));
-    console.log(response);
-
+    async function createNewUser() {
+        return await createUser(formState)
+    }
+    createNewUser()
+    
     setFormState({
       lastName: "",
       email: "",

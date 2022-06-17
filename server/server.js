@@ -13,11 +13,8 @@ app.use(
   })
 );
 app.use(express.static("public"));
-const { createProxyMiddleware } = require("http-proxy-middleware");
-app.use(
-  "/api",
-  createProxyMiddleware({ target: "http://localhost:3001", changeOrigin: true })
-);
+// const { createProxyMiddleware } = require("http-proxy-middleware");
+
 const converStationRoutes = require("./ai_API/index.js");
 const userRoutes = require("./routes/user");
 app.use("/converstation", converStationRoutes);
