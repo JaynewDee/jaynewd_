@@ -2,8 +2,8 @@ const router = require("express").Router();
 const User = require("../models/User");
 
 router.post("/login", async ({ body }, res, next) => {
-  const returnData = await User.findOne({ email: body.email }).then(
-    async (user) => {
+  const user = await User.findOne({ email: body.email })
+    
       if (!user) {
         res.status(401).send(`User does not exist`);
       }
@@ -11,25 +11,22 @@ router.post("/login", async ({ body }, res, next) => {
       if (!correctPassword) {
         res.status(401).send(`Incorrect Password`);
       }
-    }
-  );
-  res.status(200).json(returnData);
+    
+  return res.json(user);
 });
 
 router.post("/signup", async ({ body }, res, next) => {
-  const user = await User.create(body);
-  console.log("User", user);
-  await user.save((err) => {
+  const user = new User(body);
+  user.save((err) => {
     if (err) {
       if (err.name === "MongoError" && err.code === 11000) {
-        // Duplicate username
         return res
           .status(422)
           .send({ success: false, message: "User already exists!" });
       }
     }
-    res.status(200).json(user);
-  });
+  })
+  return res.json(user);
 });
 
 router.delete("/deleteall", async (req, res, next) => {

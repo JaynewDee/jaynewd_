@@ -1,38 +1,38 @@
 export const loginUser = async (data) => {
-  await fetch("/user/login", {
+  return await fetch("/user/login", {
     method: "POST",
     headers: {
       "content-type": "application/json",
     },
     body: JSON.stringify(data),
   })
-    .then((res) => {
-      if (res.ok) {
+    .then(async (response) => {
+      if (response.ok) {
         console.log(`Login successful.`);
       } else {
         console.log(`Login failed...`);
       }
+      return response.json()
     })
     .catch((err) => console.error(err));
 };
 
 export const createUser = async (data) => {
   try {
-    await fetch("/user/signup", {
+    return await fetch("/user/signup", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then(async (res) => {
-        console.log(res)
-        if (res.status === 200) {
+      .then(async (response) => {        
+        if (response.status === 200) {
           console.log(`Signup Successful.`);
         } else {
           console.log(`Signup failed...`);
         }
-        return res;
+        return response.json()
       })
       .catch((err) => console.error(err));
   } catch (err) {

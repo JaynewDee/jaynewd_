@@ -21,12 +21,9 @@ const LoginForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
-    async function login() {
-      return await loginUser(formState).then((data) => setUser(data));
-    }
-    login();
+      const data = await loginUser(formState)
+      console.log(data)
 
     // clear form values
     setFormState({
