@@ -7,6 +7,7 @@ export const loginUser = async (data) => {
     body: JSON.stringify(data),
   })
     .then(async (response) => {
+      console.log(response)
       if (response.ok) {
         console.log(`Login successful.`);
         return response.json();
@@ -27,12 +28,15 @@ export const createUser = async (data) => {
     body: JSON.stringify(data),
   })
     .then(async (response) => {
+      console.log(response)
       if (response.status === 200) {
-        console.log(`Signup Successful.`);
+        console.log(`Server response OK`)
+        return response.json()
       } else {
         console.log(`Signup failed...`);
+        throw new Error(`Signup failed ...`)
       }
-      return response.json();
+      
     })
     .catch((err) => console.error(err));
 };

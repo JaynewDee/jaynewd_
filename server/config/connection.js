@@ -14,7 +14,7 @@ async function connect() {
     )
     .catch((err) => {
       console.error(err);
-    });
+    })
 }
 
 module.exports = mongoose.connection;
