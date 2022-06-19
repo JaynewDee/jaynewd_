@@ -19,6 +19,10 @@ const userRoutes = require("./routes/user");
 app.use("/converstation", converStationRoutes);
 app.use("/user", userRoutes);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/index.html"))
 );
