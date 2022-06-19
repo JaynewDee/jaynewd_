@@ -7,7 +7,6 @@ export const loginUser = async (data) => {
     body: JSON.stringify(data),
   })
     .then(async (response) => {
-      console.log(response)
       if (response.ok) {
         console.log(`Login successful.`);
         return response.json();

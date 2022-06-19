@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 const axios = require("axios").default;
 
-// import FormSubmit from './Buttons/FormSubmit';
-// import GetAll from './Buttons/GetAll';
-
 const Form = ({ setCurrent }) => {
   const [formText, setFormText] = useState("");
 

@@ -1,6 +1,7 @@
 import React from "react";
-import MenuControl from "./collapsible/Btn";
+import MenuBtn from "./collapsible/Btn";
 import MenuSection from "./collapsible/Section";
+import { useMemo } from "react";
 
 const Menu = ({ props }) => {
 
@@ -10,7 +11,7 @@ const Menu = ({ props }) => {
       {props.map((item, index) => {
         return (
           <>
-            <MenuControl
+            <MenuBtn
               name={item.name}
             />
             <MenuSection

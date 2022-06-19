@@ -6,7 +6,7 @@ const curlyRight = "}";
 
 const Nav = ({ setNav, setDisplay, location}) => {
   const [previousClicked, setPrevious] = useState("");
-  const [collapseState, setCollapse] = useState("collapsed")
+  const [collapseState, setCollapse] = useState("expanded")
   const locked = "navLinkLocked";
   const unlocked = "navLinkUnlocked";
   const tabSwitch = (e) => {
@@ -40,13 +40,12 @@ const Nav = ({ setNav, setDisplay, location}) => {
       <nav
         className={collapseState}
         draggable="true"
-        onDrag={(e) => onDrag(e)}
+        // onDrag={(e) => onDrag(e)}
         style={location}
       >
         {routes.map((route) => {
           return (
             <button
-              autoFocus={route.autofocus}
               type="reset"
               value={route.value}
               onClick={(e) => {

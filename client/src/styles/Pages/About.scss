@@ -12,6 +12,7 @@
   margin-left: -1.5rem;
   color: rgba(0, 121, 140, 0.7);
   font-size: 1.33rem;
+  height: 66%;
 }
 .section + p {
   font-size: 0.9rem;
@@ -30,7 +31,6 @@
   color: rgba(170, 0, 0, 0.95);
   margin-right: 1rem;
 }
-
 .menuBox {
   display: flex;
   flex-flow: column nowrap;
@@ -44,26 +44,34 @@
     padding: 0.66rem 1rem;
     text-align: center;
   }
+  button + section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   button[value="collapsed"] {
     padding: 0.5rem 0.66rem;
     border-radius: 0.33rem;
     animation: floatBack 1s ease-in-out forwards;
   }
   button[value="expanded"] {
+    border-radius: .22rem;
     transition: all 2s;
     color: rgba(170,0,0,.7);
     animation: spreadFloat 1s ease-in-out forwards;
-    font-size: 1.33rem;
+    font-size: 1.11rem;
+    margin-top: 3rem;
+
   }
-
-
   button[value="expanded"] + section::before {
     content: "";
     border: 3px solid white;
     background-color: rgba(170, 0, 0, 0.95);
     height: 1px;
     width: 66%;
-    margin: 2rem auto 0rem;
+    margin-top: 1rem;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.2),
       0 10px 12px rgba(0, 0, 0, 0.2), 0 14px 16px rgba(0, 0, 0, 0.2),
       0 18px 32px rgba(0, 0, 0, 0.2), 0 32px 64px rgba(0, 0, 0, 0.2);
@@ -77,12 +85,7 @@
     padding: 0;
   }
   button[value="expanded"] + section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     transform: scale(100%);
-    flex-flow: column nowrap;
     transition: all 1s;
     margin-bottom: 20%;
   }

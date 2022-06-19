@@ -2,7 +2,6 @@ const router = require("express").Router();
 const User = require("../models/User");
 
 router.post("/login", async ({ body }, res, next) => {
-  console.log(body);
   await User.findOne({ email: body.email }).then(async (user, err) => {
     if (err) throw err;
     if (!user) {
@@ -17,20 +16,9 @@ router.post("/login", async ({ body }, res, next) => {
       }
     }
   });
-
-  // if (!user) {
-  //   return res.status(401).send(`User does not exist`);
-  // }
-  // const correctPassword = await user.isCorrectPassword(body.password);
-  // if (!correctPassword) {
-  //   return res.status(401).send(`Incorrect Password`);
-  // }
-
-  // return res.json(user);
 });
 
 router.post("/signup", async ({ body }, res, next) => {
-  console.log(body)
   try {
     const exists = await User.findOne({ email: body.email })
     if(exists) {

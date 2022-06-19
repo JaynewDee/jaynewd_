@@ -19,11 +19,11 @@ const HistorySection = ({ data }) => {
           {history.map((exchange) => {
             return (
               <div key={exchange.length} className="exchange">
-                <h4>
+                <p className="human">
                   {<GiPerson className="icon" size={32} />}
                   {exchange.prompt}
-                </h4>
-                <p>
+                </p>
+                <p className="curie">
                   {exchange.response}
                   {<AiFillRobot className="icon" size={28} />}
                 </p>

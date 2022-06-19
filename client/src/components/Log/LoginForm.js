@@ -40,7 +40,6 @@ const LoginForm = ({ setVisibility }) => {
         ),
       });
     }
-      
     setFormState({
       email: "",
       password: "",

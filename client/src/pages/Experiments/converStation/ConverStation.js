@@ -1,7 +1,7 @@
 import React from 'react';
 import  Header  from './components/Header';
 import Portal from './components/Portal';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './index.scss';
 
 
@@ -15,7 +15,7 @@ const ConverStation = () => {
         <Header />
             {/* or, gateway between form, display and history */}
           <Portal />
-        {/* <Footer /> */}
+        <Footer />
       </div>
       </div>
       </>

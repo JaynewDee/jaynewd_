@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Btn = ({name, index}) => {
+const Btn = ({name}) => {
 
     const locked = "collapsed";
     const unlocked = "expanded";

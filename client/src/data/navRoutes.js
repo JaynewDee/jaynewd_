@@ -5,7 +5,6 @@ export const routes = [
       className: 'navLinkUnlocked',
       href: "/projects",
       value: "projectMain",
-      autofocus: false
    },
    {
       key: 1,
@@ -13,7 +12,6 @@ export const routes = [
       className: 'navLinkUnlocked',
       href: "/about",
       value: "aboutMain",
-      autofocus: true
    },
    {
       key: 3,
@@ -21,6 +19,5 @@ export const routes = [
       className: 'navLinkUnlocked',
       href: "/experiments",
       value: "experimentMain",
-      autofocus: false
    },
 ]
