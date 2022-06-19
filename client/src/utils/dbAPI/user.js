@@ -7,12 +7,13 @@ export const loginUser = async (data) => {
     body: JSON.stringify(data),
   })
     .then(async (response) => {
+      console.log(response)
       if (response.ok) {
         console.log(`Login successful.`);
         return response.json();
       } else {
         console.log(`Login failed...`);
-        throw new Error(`Login failed at front-end fetch request.`)
+        throw new Error(`Login failed.`)
       }
     })
     .catch((err) => console.error(err));

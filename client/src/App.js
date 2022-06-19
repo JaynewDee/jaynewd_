@@ -4,7 +4,7 @@ import Portal from "./pages/Portal";
 import { useUserContext, UserContextProvider } from "./context/UserContext";
 import { handleOver, handleEnter, handleDrop } from "./utils/dragNdrop";
 
-const handleLogChange = () => {};
+
 
 const App = () => {
   const [navLocation, setNavLocation] = useState({

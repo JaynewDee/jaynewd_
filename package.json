@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JaynewDee/jaynewd_#readme",
   "devDependencies": {
+    "@vercel/node": "^2.2.0",
     "concurrently": "^7.1.0"
   },
   "dependencies": {

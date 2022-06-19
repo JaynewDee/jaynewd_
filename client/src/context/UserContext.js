@@ -12,7 +12,7 @@ const useUserContext = () => {
   const context = useContext(UserContext);
   if (context === undefined) {
     throw new Error(
-      "useUserContext consumption was attempted outside of provider component"
+      `useUserContext consumption was attempted outside of provider component`
     );
   }
   return context;

@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 
 router.post("/login", async ({ body }, res, next) => {
+  console.log(body)
   await User.findOne({ email: body.email }).then(async (user, err) => {
     if (err) throw err;
     if (!user) {
