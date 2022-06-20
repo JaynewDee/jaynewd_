@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useReducer } from "react";
 import NavTab from "../components/NavTab";
 import UtilityBar from "../components/UtilityBar";
 import {
@@ -12,24 +12,17 @@ import ExpNav from "../pages/Experiments/Nav/ExpNav";
 import SocialBox from "../components/SocialBox";
 import Name from "../components/Name";
 import Modal from "../components/Modal";
+import { modalReducer } from "../context/reducers";
 
 import { IconContext } from "react-icons";
 import { useUserContext } from "../context/UserContext";
+import { UtilityContextProvider } from "../context/UtilityContext";
 
 const Portal = ({ navLocation }) => {
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
-  const [modalType, setModalType] = useState("");
-  const [modalVisibility, setModalVisibility] = useState("hidden");
-
+  const [modalState, dispatch] = useReducer(modalReducer, <div></div>);
   const user = useUserContext();
-
-  useEffect(() => {
-    if (user.loggedIn) {
-      setModalVisibility("hidden");
-    }
-  }, [user]);
-
   const navSwitch = (state) => {
     const about = state.includes("about") ? state : false;
     const project = state.includes("project") ? state : false;
@@ -49,38 +42,38 @@ const Portal = ({ navLocation }) => {
 
   return (
     <>
-      <NavTab setDisplay={setDisplay} setNav={setNav} location={navLocation} />
-      <div value={displayState} id="bodyBox">
-        <IconContext.Provider value={{ className: "icons" }}>
-          <aside id="leftBox">
-            <Name />
-            <section id="buttonBox">{navSwitch(navState)}</section>
-            <SocialBox />
-          </aside>
-        </IconContext.Provider>
+      <UtilityContextProvider>
+        <NavTab
+          setDisplay={setDisplay}
+          setNav={setNav}
+          location={navLocation}
+        />
 
-        <article id="rightBox">
-          <section className="displayBox">
-            <Modal
-              visibility={modalVisibility}
-              setVisibility={setModalVisibility}
-              modalState={modalType}
-            />
-            <aside className="contentBox">
-              {aboutSwitch(displayState)}
-              {projectSwitch(displayState)}
-              {experimentSwitch(displayState)}
+        <div value={displayState} id="bodyBox">
+          <IconContext.Provider value={{ className: "icons" }}>
+            <aside id="leftBox">
+              <Name />
+              <section id="buttonBox">{navSwitch(navState)}</section>
+              <SocialBox />
             </aside>
-          </section>
-          <footer className="footer">
-            <UtilityBar
-              setModalType={setModalType}
-              setVisibility={setModalVisibility}
-              loginStatus={user.loggedIn}
-            />
-          </footer>
-        </article>
-      </div>
+          </IconContext.Provider>
+
+          <article id="rightBox">
+            <section className="displayBox">
+              <aside className="contentBox">
+                {aboutSwitch(displayState)}
+                {projectSwitch(displayState)}
+                {experimentSwitch(displayState)}
+              </aside>
+            </section>
+            <footer className="footer">
+              <UtilityBar modalReducer={dispatch} />
+            </footer>
+          </article>
+        </div>
+      </UtilityContextProvider>
+      {/* <Modal state={modalState} /> */}
+
     </>
   );
 };

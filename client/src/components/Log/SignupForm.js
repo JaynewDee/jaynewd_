@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createUser } from "../../utils/dbAPI/user";
 import { useUserContext } from "../../context/UserContext";
-const SignupForm = ({ setVisibility }) => {
+const SignupForm = ({}) => {
   const { signin } = useUserContext();
   const [formState, setFormState] = useState({
     lastName: "",
@@ -21,7 +21,6 @@ const SignupForm = ({ setVisibility }) => {
     const userData = await createUser(formState);
     if (userData) {
       signin(userData);
-      setVisibility("hidden");
     }
 
     setFormState({

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Portal from "./pages/Portal";
-import { useUserContext, UserContextProvider } from "./context/UserContext";
+import { UserContextProvider } from "./context/UserContext";
 import { handleOver, handleEnter, handleDrop } from "./utils/dragNdrop";
 
 

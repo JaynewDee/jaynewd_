@@ -42,7 +42,7 @@ export const truthProps = [
 
 export const beautyProps = [
   {
-    key: 0,
+    key: 3,
     name: "Beauty",
     header: {
       text: "The Organizing Principle",
@@ -55,7 +55,7 @@ export const beautyProps = [
     },
   },
   {
-    key: 1,
+    key: 4,
     name: "Elegance",
     header: {
       text: "Creative Speech",
@@ -68,7 +68,7 @@ export const beautyProps = [
     },
   },
   {
-    key: 2,
+    key: 5,
     name: "Form",
     header: {
       text: "or Ration: To Measure the World",
@@ -85,7 +85,7 @@ export const beautyProps = [
 export const goodnessProps = [
   
     {
-      key: 0,
+      key: 6,
       name: "Goodness",
       header: {
         text: "The Organizing Principle",
@@ -97,7 +97,7 @@ export const goodnessProps = [
       },
     },
     {
-      key: 1,
+      key: 7,
       name: "Compassion",
       header: {
         text: "Creative Speech",
@@ -109,7 +109,7 @@ export const goodnessProps = [
       },
     },
     {
-      key: 2,
+      key: 8,
       name: "Joy",
       header: {
         text: "or Ration: To Measure the World",

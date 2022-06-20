@@ -13,4 +13,4 @@ const Controls = () => {
   )
 }
 
-export default Controls;
+export default React.memo(Controls);

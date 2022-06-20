@@ -1,32 +1,42 @@
-import React, { useState } from "react";
-import LoginForm from "./Log/LoginForm";
-import SignupForm from "./Log/SignupForm";
-import { GiExitDoor } from "react-icons/gi";
+import React, { useState, useReducer } from "react";
+import { createRoot } from 'react-dom/client'
+import { createPortal } from 'react-dom';
 
-const Modal = ({ modalState, visibility, setVisibility }) => {
-  const modalSwitch = (state) => {
-    switch (state) {
+import { GiExitDoor } from "react-icons/gi";
+import { useUserContext } from '../context/UserContext'
+import { modalReducer } from "../context/reducers";
+import { TOGGLE_MODAL } from "../context/actions";
+import LoginForm from "../components/Log/LoginForm";
+import SignupForm from "../components/Log/SignupForm";
+
+const Modal = ({state}) => {
+  const [loading, setLoadState] = useState(true)
+  const renderSwitch = (state) => {
+    switch(state){
       case "login":
-        return <LoginForm setVisibility={setVisibility}/>;
+        return <LoginForm />
       case "signup":
-        return <SignupForm setVisibility={setVisibility}/>;
-      default:
-        break;
+        return <SignupForm />
+        default:
+          break
     }
-  };
+  }
 
   return (
-    <div value={visibility} className="modal">
+  createPortal(
+    
+    <div value={state} className="modal">
       <GiExitDoor
         onClick={() => {
-          setVisibility("hidden");
+          dispatch(null)
         }}
         className="modalExitBtn"
         size={"3rem"}
       />
-      {modalSwitch(modalState)}
-    </div>
-  );
+      {renderSwitch(state)}
+    </div>,
+    document.getElementById('root')
+  ))
 };
 
 export default Modal;

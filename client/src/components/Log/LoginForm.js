@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { loginUser } from "../../utils/dbAPI/user";
 import { useUserContext } from "../../context/UserContext";
+import { useUtilsContext } from "../../context/UtilityContext";
+
 import Error from "./Error";
 
 const LoginForm = ({ setVisibility }) => {
@@ -10,6 +12,7 @@ const LoginForm = ({ setVisibility }) => {
     email: "",
     password: "",
   });
+  const {toggleModal} = useUtilsContext();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -26,7 +29,7 @@ const LoginForm = ({ setVisibility }) => {
     const data = await loginUser(formState);
     if (data) {
       signin(data);
-      setVisibility("hidden")
+      toggleModal()
     }
     else {
       setErrorState({

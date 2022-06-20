@@ -33,4 +33,4 @@ const StatBox = ({language, created, updated, license}) => {
   );
 };
 
-export default StatBox;
+export default React.memo(StatBox);

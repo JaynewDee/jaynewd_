@@ -31,4 +31,4 @@ const Btn = ({name}) => {
   );
 };
 
-export default Btn;
+export default React.memo(Btn);

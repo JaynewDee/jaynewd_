@@ -110,7 +110,7 @@ body {
       h1 {
         display: flex;
         flex-flow: column nowrap;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         line-height: 1.5rem;
         z-index: 5;
         // *SYNTHETIC RAIN* //
@@ -120,7 +120,7 @@ body {
           text-align: right;
           padding-right: 0.5rem;
           border-right: 2px solid rgba(225, 225, 225, 0.9);
-          font-size: 1rem;
+          font-size: 1.3rem;
           #firstName {
             animation: fadeInSynthetic 2s ease-out;
             color: white;
@@ -179,7 +179,8 @@ body {
         padding: 0.3rem;
       }
       a:hover {
-        border-radius: 5px;
+        border-radius: 50%;
+        filter: saturate(1.5);
         background: linear-gradient(
           135deg,
           rgba(170, 0, 0, 0.9) 2%,

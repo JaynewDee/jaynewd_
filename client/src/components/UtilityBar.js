@@ -1,21 +1,23 @@
-import React from "react";
-import LoginBtn from "./Log/LoginBtn";
-import LogoutBtn from "./Log/LogoutBtn";
+import React, { useReducer } from "react";
+import { LogBtns } from "./Log/LogBtns";
 import Controls from "./Controls";
+import Modal from "../components/Modal";
 import { useUserContext } from "../context/UserContext";
 
-const UtilityBar = ({ setModalType, setVisibility }) => {
+const UtilityBar = ({ modalReducer }) => {
   const { user } = useUserContext();
 
   return (
+    <>
     <div className="utilityBox">
       {user ? <Controls /> : <div></div>}
       {user ? (
         <LogoutBtn />
       ) : (
-        <LoginBtn setVisibility={setVisibility} setMode={setModalType} />
+        <LogBtns dispatch={modalReducer} />
       )}
     </div>
+    </>
   );
 };
 

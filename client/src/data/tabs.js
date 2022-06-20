@@ -6,6 +6,7 @@ import {
   GiDinosaurBones,
   GiSunflower,
   GiTruck,
+  GiWaves
 } from "react-icons/gi";
 import {
   AiOutlineRobot
@@ -82,5 +83,12 @@ var exptabs = [
     className: "tabStateUnlocked",
     toggled: false,
   },
+  {
+    key: 2,
+    name: "WaveForms",
+    icon: <GiWaves size={"2rem"}/>,
+    className: "tabStateUnlocked",
+    toggled: false
+  }
 ];
 export { abouttabs, projecttabs, exptabs };

@@ -1,12 +1,18 @@
-import AboutMain from '../pages/About/AboutMain';
-import aboutLayout from '../pages/About/AboutLayout';
-import Menu from '../pages/About/Menu';
+import AboutMain from "../pages/About/AboutMain";
+import aboutLayout from "../pages/About/AboutLayout";
+import Menu from "../pages/About/Menu";
 import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
 import ConverStation from "../pages/Experiments/converStation/ConverStation";
-import {truthProps, beautyProps, goodnessProps} from '../pages/About/collapsible/props'
+import WavePortal from "../pages/Experiments/waveforms/WavePortal";
+import {
+  truthProps,
+  beautyProps,
+  goodnessProps,
+} from "../pages/About/collapsible/props";
+import { waveProps } from '../pages/Experiments/waveforms/props/waveProps';
 import { dino, paws, ring, flower, truck } from "./config";
 
 let Wrapped = undefined;
@@ -16,11 +22,13 @@ export const aboutSwitch = (state) => {
       return <AboutMain />;
     case "Fox":
       Wrapped = aboutLayout(Menu);
-      return <Wrapped props={truthProps} />
+      return <Wrapped props={truthProps} />;
     case "Sword":
-      return <Menu props={beautyProps}/>;
+      Wrapped = aboutLayout(Menu);
+      return <Wrapped props={beautyProps} />;
     case "Heart":
-      return <Menu props={goodnessProps}/>;
+      Wrapped = aboutLayout(Menu);
+      return <Wrapped props={goodnessProps} />;
     default:
       break;
   }
@@ -56,6 +64,8 @@ export const experimentSwitch = (state) => {
       return <ExpMain />;
     case "ConverStation":
       return <ConverStation />;
+    case "WaveForms":
+      return <WavePortal props={waveProps}/>;
     default:
       break;
   }

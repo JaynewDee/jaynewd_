@@ -2,7 +2,6 @@ import React from "react";
 import LinkBox from "../../components/LinkBox";
 import StatBox from '../../components/StatBox';
 const ProjectPage = ({ data, readme }) => {
-  console.log(readme)
   return (
     <>
       {!data ? (
@@ -23,4 +22,4 @@ const ProjectPage = ({ data, readme }) => {
   );
 };
 
-export default ProjectPage;
+export default React.memo(ProjectPage);

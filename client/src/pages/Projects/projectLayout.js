@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { Octokit } from "octokit";
 
 const getProject = (config) => {
@@ -12,7 +12,7 @@ const getReadme = (config) => {
 };
 
 function projectLayout(Page, config) {
-  class HOC extends Component {
+  class HOC extends PureComponent {
     constructor(props) {
       super(props);
       this.state = {

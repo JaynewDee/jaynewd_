@@ -25,4 +25,4 @@ const LinkBox = ({htmlUrl, cloneUrl}) => {
   );
 };
 
-export default LinkBox;
+export default React.memo(LinkBox);

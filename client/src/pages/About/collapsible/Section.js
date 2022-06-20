@@ -9,4 +9,4 @@ const Section = ({key, className, headerText, bodyText}) => {
   )
 }
 
-export default Section;
+export default React.memo(Section);

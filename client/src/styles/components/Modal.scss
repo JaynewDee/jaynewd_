@@ -1,4 +1,4 @@
-.modal[value="shown"] {
+.modal[value="true"] {
   position: absolute;
   width: 30rem;
   height: 30rem;
@@ -11,7 +11,7 @@
   opacity: 1;
 
 }
-.modal[value="shown"]::before {
+.modal[value="true"]::before {
   content: 'x';
   position: absolute;
   color: rgba(170, 0, 0, 0.8);
@@ -20,6 +20,7 @@
   left: 1.5rem;
 }
 .modal {
+  position: absolute;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -28,6 +29,12 @@
   border: 2px solid rgba(0,0,0, .6);
   outline: 2px solid rgba(0, 121, 140, 0.9);
   border-radius: 1rem;
+  bottom: 5rem;
+  left: 25%;
+  top: 25%;
+  transform: translate(-25%, -25%);
+  width: 66vw;
+  height: 66vh;
   .logError {
     width: 66%;
     margin: auto;
@@ -76,7 +83,7 @@
     cursor: pointer;
   }
 }
-.modal[value="hidden"] {
+.modal[value="false"] {
   position: absolute;
   transform: scale(0);
 }
