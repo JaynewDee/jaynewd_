@@ -16,13 +16,22 @@
     }
     .controlBox > p {
       margin: 0;
-      
-      span {
-         color:rgba(0, 121, 140, 0.7);
+      padding: 0.11rem;
+      .simple-clock {
+        margin: 0;
+      }
+      .weather-btn {
+        color: rgba(0, 121, 140, 0.7);
+        background: transparent;
+        border: none;
+      }
+      .weather-btn:hover {
+        transform: scale(1.2);
       }
     }
+
     .utilityBtn {
-      font-size: .66rem;
+      font-size: 0.66rem;
       height: 50%;
       background-color: rgba(50, 50, 50, 0.7);
       color: white;

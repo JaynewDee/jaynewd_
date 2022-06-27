@@ -23,11 +23,13 @@ const AboutNav = ({ setDisplay }) => {
     return (
       <button
         onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
           tabSwitch(e);
           setDisplay(e.target.value);
         }}
         className={item.className}
-        key={item.key}
+        key={Math.floor(Math.random() * 1000)}
         value={item.name}
       >
         {item.icon}

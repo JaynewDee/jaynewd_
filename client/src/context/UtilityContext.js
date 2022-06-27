@@ -6,7 +6,6 @@ import {
   useMemo,
 } from "react";
 
-
 const UtilityContext = createContext();
 
 const useUtilsContext = () => {
@@ -20,17 +19,25 @@ const useUtilsContext = () => {
 };
 
 const UtilityContextProvider = ({ children }) => {
-  const [modal, setModal] = useState({
+  const [modal, toggleModal] = useState({
     visibility: false,
-    type: "login"
-  })
-
-  
+    type: "login",
+  });
+  const off = () => {
+    const newState = { visibility: false, type: "login" };
+    return toggleModal(newState);
+  };
+  const on = (type) => {
+    const newState = { visibility: true, type: type };
+    return toggleModal(newState);
+  };
   const initialContext = useMemo(
     () => ({
       modal,
+      off,
+      on,
     }),
-    [modal]
+    [modal, off, on]
   );
 
   return (

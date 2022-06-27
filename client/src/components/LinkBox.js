@@ -1,9 +1,10 @@
 import React from "react";
 
-const LinkBox = ({htmlUrl, cloneUrl}) => {
-    const redirect = (e) => {
-        window.open(e.target.value, "_blank");
-      };
+const LinkBox = ({ htmlUrl, cloneUrl }) => {
+  const redirect = (e) => {
+    window.open(e.target.value, "_blank");
+  };
+
   return (
     <section className="linkBox">
       <button value={htmlUrl} onClick={(e) => redirect(e)}>

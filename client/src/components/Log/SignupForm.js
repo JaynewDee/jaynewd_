@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { createUser } from "../../utils/dbAPI/user";
 import { useUserContext } from "../../context/UserContext";
+import { useUtilsContext } from "../../context/UtilityContext";
 const SignupForm = ({}) => {
   const { signin } = useUserContext();
+  const { off } = useUtilsContext();
   const [formState, setFormState] = useState({
     lastName: "",
     email: "",
@@ -21,6 +23,7 @@ const SignupForm = ({}) => {
     const userData = await createUser(formState);
     if (userData) {
       signin(userData);
+      off();
     }
 
     setFormState({

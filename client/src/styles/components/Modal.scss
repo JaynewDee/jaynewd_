@@ -1,18 +1,16 @@
 .modal[value="true"] {
   position: absolute;
-  width: 30rem;
-  height: 30rem;
+  width: 66%;
+  height: 66%;
   transform: scale(1);
-  z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15),
     0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15),
     0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
   animation: grow 1s ease-in-out forwards;
   opacity: 1;
-
 }
 .modal[value="true"]::before {
-  content: 'x';
+  content: "x";
   position: absolute;
   color: rgba(170, 0, 0, 0.8);
   font-size: 1.5rem;
@@ -26,7 +24,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  border: 2px solid rgba(0,0,0, .6);
+  border: 2px solid rgba(0, 0, 0, 0.6);
   outline: 2px solid rgba(0, 121, 140, 0.9);
   border-radius: 1rem;
   bottom: 5rem;
@@ -51,7 +49,7 @@
     }
     label {
       color: rgba(0, 121, 140, 0.9);
-      font-size: .88rem;
+      font-size: 0.88rem;
       margin-left: -1rem;
     }
     .submitBtn {
@@ -60,17 +58,17 @@
       border-radius: 5px;
       background: none;
       border: 3px solid rgba(0, 121, 140, 0.8);
-      font-size: .88rem;
+      font-size: 0.88rem;
       margin: 1rem -1rem 0rem auto;
     }
     .submitBtn:hover {
       background: transparent;
       outline: 2px solid rgba(0, 0, 0, 0.8);
       transform: scale(1.03);
-      box-shadow:0px .66rem 2rem rgba(0, 0, 0, 0.3)
+      box-shadow: 0px 0.66rem 2rem rgba(0, 0, 0, 0.3);
     }
   }
-  
+
   .modalExitBtn {
     justify-self: flex-start;
     margin: 0;

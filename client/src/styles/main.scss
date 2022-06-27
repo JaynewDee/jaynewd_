@@ -169,8 +169,8 @@ body {
       display: flex;
       flex-flow: column nowrap;
       justify-self: flex-end;
-      margin: 0 auto 2rem;
-      padding-top: 2rem;
+      margin: 0 auto 1rem;
+      padding-top: 1rem;
 
       a {
         text-decoration: none;
@@ -184,8 +184,8 @@ body {
         background: linear-gradient(
           135deg,
           rgba(170, 0, 0, 0.9) 2%,
-          rgba(200,0,0,.6) 36%,
-          rgba(0,212,255,0.6) 68%,
+          rgba(200, 0, 0, 0.6) 36%,
+          rgba(0, 212, 255, 0.6) 68%,
           rgba(0, 212, 255, 0.9) 100%
         );
         box-shadow: 0 0 0.33rem 0.11rem black;
@@ -236,7 +236,7 @@ body {
         justify-content: flex-start;
         flex-flow: column nowrap;
         align-items: center;
-        
+
         .projectWrapper {
           display: flex;
           justify-content: center;
@@ -266,6 +266,18 @@ body {
         .stat {
           line-height: 0.3;
         }
+        .currentWeather {
+          .weather-report {
+            .spaced-row {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+            }
+            .spaced-row > span {
+              margin-left: 3rem;
+            }
+          }
+        }
       }
     }
   }
@@ -288,7 +300,6 @@ body {
 .icons {
   pointer-events: none;
 }
-
 
 @keyframes slideDown {
   0% {

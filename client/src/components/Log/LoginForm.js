@@ -12,7 +12,7 @@ const LoginForm = ({ setVisibility }) => {
     email: "",
     password: "",
   });
-  const {toggleModal} = useUtilsContext();
+  const { off } = useUtilsContext();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -29,9 +29,8 @@ const LoginForm = ({ setVisibility }) => {
     const data = await loginUser(formState);
     if (data) {
       signin(data);
-      toggleModal()
-    }
-    else {
+      off();
+    } else {
       setErrorState({
         show: true,
         error: (

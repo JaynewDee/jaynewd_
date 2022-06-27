@@ -27,16 +27,28 @@ const Serpent = () => {
     <section key={uuidv4()} className="one-line">
       {renderCount.map((num, index) => (
         <>
-          <span key={uuidv4()} className={`line-top line-${index}`}>
+          <span
+            key={Math.round(Math.random() * 1000)}
+            className={`line-top line-${index}`}
+          >
             &gt;
           </span>
-          <span key={uuidv4()} className={`line-top line-${index}`}>
+          <span
+            key={Math.round(Math.random() * 1000)}
+            className={`line-top line-${index}`}
+          >
             -
           </span>
-          <span key={uuidv4()} className={`line-top line-${index}`}>
+          <span
+            key={Math.round(Math.random() * 1000)}
+            className={`line-top line-${index}`}
+          >
             -
           </span>
-          <span key={uuidv4()} className={`line-top line-${index}`}>
+          <span
+            key={Math.round(Math.random() * 1000)}
+            className={`line-top line-${index}`}
+          >
             &le;
           </span>
         </>

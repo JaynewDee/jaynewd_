@@ -1,25 +1,22 @@
-import React from 'react';
-import  Header  from './components/Header';
-import Portal from './components/Portal';
-import Footer from './components/Footer';
-import './index.scss';
-
-
-
+import React from "react";
+import Header from "./components/Header";
+import Portal from "./components/Portal";
+import Footer from "./components/Footer";
+import "./index.scss";
 
 const ConverStation = () => {
-    return (
-      <>
+  return (
+    <>
       <div>
-      <div className="converstationBox">
-        <Header />
-            {/* or, gateway between form, display and history */}
+        <div className="converstationBox">
+          <Header />
+          {/* or, gateway between form, display and history */}
           <Portal />
-        <Footer />
+          <Footer />
+        </div>
       </div>
-      </div>
-      </>
-    );
+    </>
+  );
 };
 
 export default ConverStation;

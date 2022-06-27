@@ -12,8 +12,9 @@ import {
   beautyProps,
   goodnessProps,
 } from "../pages/About/collapsible/props";
-import { waveProps } from '../pages/Experiments/waveforms/props/waveProps';
+import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { dino, paws, ring, flower, truck } from "./config";
+import { CurrentWeather } from "../components/Weather/Current";
 
 let Wrapped = undefined;
 export const aboutSwitch = (state) => {
@@ -65,8 +66,15 @@ export const experimentSwitch = (state) => {
     case "ConverStation":
       return <ConverStation />;
     case "WaveForms":
-      return <WavePortal props={waveProps}/>;
+      return <WavePortal props={waveProps} />;
     default:
       break;
+  }
+};
+
+export const weatherSwitch = (state) => {
+  switch (state) {
+    case "current":
+      return <CurrentWeather />;
   }
 };

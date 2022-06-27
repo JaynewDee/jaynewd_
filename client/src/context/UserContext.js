@@ -20,7 +20,7 @@ const useUserContext = () => {
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-
+  const [weatherSession, setWeather] = useState(null);
   const signout = useCallback(() => {
     setUser(null);
   }, []);
@@ -28,14 +28,18 @@ const UserContextProvider = ({ children }) => {
   const signin = useCallback((userObject) => {
     setUser(userObject);
   }, []);
-
+  const storeWeather = useCallback((weatherObject) => {
+    setWeather(weatherObject);
+  }, []);
   const initialContext = useMemo(
     () => ({
       user,
       signout,
       signin,
+      weatherSession,
+      storeWeather,
     }),
-    [user, signout, signin]
+    [user, signout, signin, weatherSession, storeWeather]
   );
 
   return (

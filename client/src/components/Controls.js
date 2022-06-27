@@ -1,16 +1,47 @@
-import React from 'react';
-import { useUserContext } from '../context/UserContext';
+import React, { useCallback, useEffect, useState } from "react";
+import { useUserContext } from "../context/UserContext";
+import { TiWeatherPartlySunny } from "react-icons/ti";
+import { getWhole } from "../utils/weatherAPI/weather";
+import Clock from "./Clock";
+const Controls = ({ setDisplay }) => {
+  const { user, storeWeather, weatherSession } = useUserContext();
+  const [local, setLocal] = useState();
 
-const Controls = () => {
-  const {user} = useUserContext();
+  useEffect(() => {
+    setLocal(weatherSession);
+  }, [weatherSession]);
 
+  async function getWeather() {
+    const weatherObj = await getWhole();
+    storeWeather(weatherObj);
+  }
+
+  const renderDelay = () => {
+    setTimeout(() => {
+      setDisplay("current");
+    }, 1000);
+  };
   return (
     <div className="controlBox">
-      <p>OPERATOR: <span>{user.lastName}</span></p>
-      <p>Time: <span>{new Date(12345 * 1000).toISOString().slice(11, -5)}</span></p>
-      <p>Secrets: <span></span></p>
+      <p>
+        OPERATOR: <span>{user.lastName}</span>
+      </p>
+      <p>
+        <Clock />
+      </p>
+      <p>
+        Weather:{" "}
+        <button
+          onClick={() => {
+            getWeather();
+          }}
+          className="weather-btn"
+        >
+          {"->"} <TiWeatherPartlySunny /> {"<-"}
+        </button>
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(Controls);
+export default Controls;

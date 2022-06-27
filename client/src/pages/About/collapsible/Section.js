@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const Section = ({key, className, headerText, bodyText}) => {
+const Section = ({ className, headerText, bodyText }) => {
   return (
-    <section key={Math.floor(Math.random()*100)} className={className}>
-    <h2>{headerText}</h2>
-    <p>{bodyText}</p>
-  </section>
-  )
-}
+    <section key={Math.floor(Math.random() * 100)} className={className}>
+      <h2 key={Math.floor(Math.random() * 1000)}>{headerText}</h2>
+      <p key={Math.floor(Math.random() * 1000)}>{bodyText}</p>
+    </section>
+  );
+};
 
-export default React.memo(Section);
+export default Section;

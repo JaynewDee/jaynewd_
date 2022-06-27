@@ -1,42 +1,47 @@
-import React, { useState, useReducer } from "react";
-import { createRoot } from 'react-dom/client'
-import { createPortal } from 'react-dom';
+import React, { useState, useMemo, useReducer } from "react";
+import { createRoot } from "react-dom/client";
+import { createPortal } from "react-dom";
 
 import { GiExitDoor } from "react-icons/gi";
-import { useUserContext } from '../context/UserContext'
-import { modalReducer } from "../context/reducers";
-import { TOGGLE_MODAL } from "../context/actions";
+
 import LoginForm from "../components/Log/LoginForm";
 import SignupForm from "../components/Log/SignupForm";
+import { useUtilsContext } from "../context/UtilityContext";
+const modalRoot = document.getElementById("modal-root");
 
-const Modal = ({state}) => {
-  const [loading, setLoadState] = useState(true)
-  const renderSwitch = (state) => {
-    switch(state){
+const Modal = ({}) => {
+  const [containerEl, setContainerEl] = useState(document.createElement("div"));
+  const { modal, off } = useUtilsContext();
+  const renderSwitch = (modal) => {
+    switch (modal.type) {
       case "login":
-        return <LoginForm />
+        return <LoginForm />;
       case "signup":
-        return <SignupForm />
-        default:
-          break
+        return <SignupForm />;
+      case "close":
+        return null;
+      default:
+        break;
     }
-  }
+  };
 
-  return (
-  createPortal(
-    
-    <div value={state} className="modal">
+  useMemo(() => {
+    modalRoot.appendChild(containerEl);
+  }, [containerEl]);
+
+  return createPortal(
+    <div value={modal.visibility} className="modal">
       <GiExitDoor
         onClick={() => {
-          dispatch(null)
+          off();
         }}
         className="modalExitBtn"
         size={"3rem"}
       />
-      {renderSwitch(state)}
+      {renderSwitch(modal)}
     </div>,
-    document.getElementById('root')
-  ))
+    containerEl
+  );
 };
 
 export default Modal;

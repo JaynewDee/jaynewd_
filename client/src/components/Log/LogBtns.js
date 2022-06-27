@@ -1,10 +1,10 @@
 import React, { useReducer } from "react";
-import { modalReducer } from '../../context/reducers';
-const LogBtns = ({dispatch}) => {
-
+import { useUtilsContext } from "../../context/UtilityContext";
+const LogBtns = ({}) => {
+  const { modal, on, off } = useUtilsContext();
   const handleBtnClick = (e) => {
     e.preventDefault();
-    dispatch(e.target.value)
+    on(e.target.value);
   };
 
   return (
@@ -29,4 +29,4 @@ const LogBtns = ({dispatch}) => {
   );
 };
 
-export {LogBtns}
+export { LogBtns };
