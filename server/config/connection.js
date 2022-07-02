@@ -5,7 +5,7 @@ connect().catch((err) => console.log(err));
 // ** Hoisted and called above ** //
 async function connect() {
   await mongoose
-    .connect(environment.MONGODB_URI, {
+    .connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
