@@ -17,8 +17,8 @@ const AboutMain = () => {
         </p>
         <h3>etc.</h3>
         <p>
-          Some novelties that were never realized beyond the joy they were to
-          make.
+          Any of my creative endeavors which would fall clumsily into the
+          Projects category.
         </p>
       </section>
       <p>

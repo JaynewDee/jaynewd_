@@ -1,24 +1,23 @@
 import React from "react";
 import LinkBox from "../../components/LinkBox";
 import StatBox from "../../components/StatBox";
-const ProjectPage = ({ data, readme }) => {
+const ProjectPage = ({ data }) => {
   return (
     <>
       {!data ? (
         <div>Loading, please wait ...</div>
       ) : (
         <>
-          <h3 id={data.id}>| {data.name || "Fetching data..."} |</h3>
+          <h2>{data.name}</h2>
 
-          <LinkBox htmlUrl={data.html_url} cloneUrl={data.clone_url} />
+          <LinkBox urls={data?.urls} />
           <StatBox
-            language={data.language}
-            created={data.created_at}
-            updated={data.updated_at}
+            lang={data.lang}
+            date={data.created}
             license={data.license}
           />
 
-          <section>{readme}</section>
+          <section className="project-body">{data.body}</section>
         </>
       )}
     </>

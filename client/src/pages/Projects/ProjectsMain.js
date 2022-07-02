@@ -1,13 +1,28 @@
 import React from "react";
 
 const ProjectsMain = () => {
-  const left = "floatLeft";
-  const right = "floatRight";
   return (
     <>
-      <h3>Projects Main</h3>
+      <h3>The Project Beneath</h3>
 
-      {/* Summary of projects  */}
+      <p>
+        This web application, in addition to being a place to display
+        programming projects and other creative accomplishments, is itself a
+        personal project and the largest codebase I have built to date.
+      </p>
+      <p>
+        I build the majority of projects with a strong focus on efficiency and
+        utility, in both code quality and use case, but I took the liberty with
+        this portfolio application to freely explore vague ideas without
+        hesitation.
+      </p>
+      <p>
+        The codebase reflects this approach, as it is messy and attempts to be
+        many things, falling short of most of them. I do believe, however, that
+        I succeeded at my original objective: to journey wherever my curiousity
+        might take me and absorb the resulting lessons, many of which
+        communicate a clear "what not to do".
+      </p>
     </>
   );
 };

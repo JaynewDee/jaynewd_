@@ -1,10 +1,11 @@
-import React from 'react'
-import { v4 as uuidv4 } from "uuid";
+import React from "react";
 
-const NavBtn = ({index, label}) => {
+const NavBtn = ({ index, label }) => {
   return (
-    <button className="menu-btn"key={uuidv4()*index}>{label}</button>
-  )
-}
+    <button className="menu-btn" key={index + label}>
+      {label}
+    </button>
+  );
+};
 
 export default NavBtn;

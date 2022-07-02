@@ -3,39 +3,39 @@ export const truthProps = [
     key: 0,
     name: "Truth",
     header: {
-      text: "The Organizing Principle",
+      text: "The Invincible",
       name: "truthHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "Hide head under blanket so no one can see get away from me stupid dog. Miaow then turn around and show you my bum pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now.",
+      text: "Invincible, earnestless, and perfectly tolerant, Truth expects nothing, needs nothing, and asks for less.  In the aftermath of absolute annihilation, Truth yet remains, like a lone gemstone lying still and unblemished despite the bombs.",
     },
   },
   {
     key: 1,
     name: "Integrity",
     header: {
-      text: "Creative Speech",
+      text: "The Membrane",
       name: "logosHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "Cats are the world get poop stuck in paws jumping out of litter box and run around the house scream meowing and smearing hot cat mud all over yet spill litter box, scratch at owner, destroy all furniture, especially couch snuggles up to shoulders or knees and purrs you to sleep.",
+      text: "The impermeable membrane surrounding the heart of being, Integrity defines Truth's periphery, the bridge that we cross over into the domain of wholeness and trust.",
     },
   },
   {
     key: 2,
     name: "Reason",
     header: {
-      text: "or Ration: To Measure the World",
+      text: "The Guide",
       name: "reasonHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "Bathe private parts with tongue then lick owner's face really likes hummus yet catch eat throw up catch eat throw up bad birds yet steal mom's crouton while she is in the bathroom yet pet me pet me don't pet me. Refuse to drink water except out of someone's glass stand in front of the computer screen chill on the couch table yet knock over christmas tree.",
+      text: "Reason keeps a human being's feet along the lighted road, wearing curiousity with bright colors and stoking the fire when the wolves sing.",
     },
   },
 ];
@@ -45,79 +45,78 @@ export const beautyProps = [
     key: 3,
     name: "Beauty",
     header: {
-      text: "The Organizing Principle",
+      text: "The Performance",
       name: "truthHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "Hide head under blanket so no one can see get away from me stupid dog. Miaow then turn around and show you my bum pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now.",
+      text: "Servant to none and gift to all, Beauty guards the portal between the perceptual apparatus and the phenomenal world, dressing the travelers with pattern and song.",
     },
   },
   {
     key: 4,
     name: "Elegance",
     header: {
-      text: "Creative Speech",
+      text: "The Seamstress",
       name: "logosHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "Cats are the world get poop stuck in paws jumping out of litter box and run around the house scream meowing and smearing hot cat mud all over yet spill litter box, scratch at owner, destroy all furniture, especially couch snuggles up to shoulders or knees and purrs you to sleep.",
+      text: "Elegance, when partnered equally with Truth, gives rise to universally novel forms.  Fragments of becoming request cohesion, and Elegance provides.",
     },
   },
   {
     key: 5,
     name: "Form",
     header: {
-      text: "or Ration: To Measure the World",
+      text: "The Substance",
       name: "reasonHead",
     },
     section: {
       name: "",
       className: "collapsed",
-      text: "jlkdfahosdifaosu",
+      text: "The eldest child of emergence, Form is the ultimate consequence of Elegance and Integrity, providing differentiated universals their mysterious autonomy.  The subduer of entropy's dark mass.",
     },
   },
-]
+];
 
 export const goodnessProps = [
-  
-    {
-      key: 6,
-      name: "Goodness",
-      header: {
-        text: "The Organizing Principle",
-        name: "truthHead",
-      },
-      section: {
-        name: "",
-        text: "kitty kitty meow meow",
-      },
+  {
+    key: 6,
+    name: "Goodness",
+    header: {
+      text: "The Way",
+      name: "truthHead",
     },
-    {
-      key: 7,
-      name: "Compassion",
-      header: {
-        text: "Creative Speech",
-        name: "logosHead",
-      },
-      section: {
-        name: "",
-        text: "Cats are the world get poop stuck in paws jumping out of litter box and run around the house scream meowing and smearing hot cat mud all over yet spill litter box, scratch at owner, destroy all furniture, especially couch snuggles up to shoulders or knees and purrs you to sleep.",
-      },
+    section: {
+      name: "",
+      text: "Inevitable consequence of the accord between Truth and Beauty, Goodness elevates the social animal to the transcendental realm, where reconnection with the source may be earned.",
     },
-    {
-      key: 8,
-      name: "Joy",
-      header: {
-        text: "or Ration: To Measure the World",
-        name: "reasonHead",
-      },
-      section: {
-        name: "",
-        text: "Bathe private parts with tongue then lick owner's face really likes hummus yet catch eat throw up catch eat throw up bad birds yet steal mom's crouton while she is in the bathroom yet pet me pet me don't pet me. Refuse to drink water except out of someone's glass stand in front of the computer screen chill on the couch table yet knock over christmas tree.",
-      },
+  },
+  {
+    key: 7,
+    name: "Compassion",
+    header: {
+      text: "The Bond",
+      name: "logosHead",
     },
-]
+    section: {
+      name: "",
+      text: "The intuition of our Oneness and the nemesis of suffering, Compassion dispels the illusion of isolated grief. Compassion saves us from despair by providing belonging it's apparency.",
+    },
+  },
+  {
+    key: 8,
+    name: "Joy",
+    header: {
+      text: "The Destination",
+      name: "reasonHead",
+    },
+    section: {
+      name: "",
+      text: "The ultimate reason for Being.  Requiring tremendous energy, the primordial plan to shatter kept cryptic reasons.  The Oneness asked 'Why?', to which Reason responded: 'Joy'.",
+    },
+  },
+];

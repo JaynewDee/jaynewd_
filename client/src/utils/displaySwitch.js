@@ -7,13 +7,13 @@ import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
 import ConverStation from "../pages/Experiments/converStation/ConverStation";
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
+import Audio from "../components/Audio/Audio";
 import {
   truthProps,
   beautyProps,
   goodnessProps,
 } from "../pages/About/collapsible/props";
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
-import { dino, paws, ring, flower, truck } from "./config";
 import { CurrentWeather } from "../components/Weather/Current";
 
 let Wrapped = undefined;
@@ -40,16 +40,16 @@ export const projectSwitch = (state) => {
     case "projectMain":
       return <ProjectsMain />;
     case "Dino":
-      Wrapped = projectLayout(ProjectPage, dino);
+      Wrapped = projectLayout(ProjectPage, { name: "Parks & Rex" });
       return <Wrapped />;
     case "Paw":
-      Wrapped = projectLayout(ProjectPage, paws);
+      Wrapped = projectLayout(ProjectPage, { name: "Dayspaw" });
       return <Wrapped />;
     case "Ring":
-      Wrapped = projectLayout(ProjectPage, ring);
+      Wrapped = projectLayout(ProjectPage, { name: "Mood Ring" });
       return <Wrapped />;
     case "Flower":
-      Wrapped = projectLayout(ProjectPage);
+      Wrapped = projectLayout(ProjectPage, { name: "Cara Bella" });
       return <Wrapped />;
     case "Truck":
       projectLayout(ProjectPage);
@@ -67,6 +67,8 @@ export const experimentSwitch = (state) => {
       return <ConverStation />;
     case "WaveForms":
       return <WavePortal props={waveProps} />;
+    case "Radio":
+      return <Audio />;
     default:
       break;
   }

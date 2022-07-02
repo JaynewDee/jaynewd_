@@ -6,25 +6,24 @@ import {
   GiDinosaurBones,
   GiSunflower,
   GiTruck,
-  GiWaves
+  GiWaves,
+  GiPocketRadio,
 } from "react-icons/gi";
-import {
-  AiOutlineRobot
-} from "react-icons/ai";
+import { AiOutlineRobot } from "react-icons/ai";
 import { FaPaw } from "react-icons/fa";
 
 var abouttabs = [
   {
     key: 1,
     name: "Fox",
-    icon: <GiFox size={"3rem"} />,
+    icon: <GiFox size={"2.66rem"} />,
     className: "aboutTabUnlocked",
     toggled: false,
   },
   {
     key: 2,
     name: "Sword",
-    icon: <GiWingedSword size={"3rem"} />,
+    icon: <GiWingedSword size={"2.66rem"} />,
     className: "aboutTabUnlocked",
     toggled: false,
   },
@@ -39,9 +38,16 @@ var abouttabs = [
 
 var projecttabs = [
   {
+    key: 4,
+    name: "Flower",
+    icon: <GiSunflower size={"1.66rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false,
+  },
+  {
     key: 1,
     name: "Dino",
-    icon: <GiDinosaurBones size={"2rem"} />,
+    icon: <GiDinosaurBones size={"1.66rem"} />,
     className: "tabStateUnlocked",
     toggled: false,
   },
@@ -55,21 +61,15 @@ var projecttabs = [
   {
     key: 3,
     name: "Ring",
-    icon: <GiBigDiamondRing size={"2rem"} />,
+    icon: <GiBigDiamondRing size={"1.66rem"} />,
     className: "tabStateUnlocked",
     toggled: false,
   },
-  {
-    key: 4,
-    name: "Flower",
-    icon: <GiSunflower size={"2rem"} />,
-    className: "tabStateUnlocked",
-    toggled: false,
-  },
+
   {
     key: 5,
     name: "Truck",
-    icon: <GiTruck size={"2rem"} />,
+    icon: <GiTruck size={"1.66rem"} />,
     className: "tabStateUnlocked",
     toggled: false,
   },
@@ -86,9 +86,16 @@ var exptabs = [
   {
     key: 2,
     name: "WaveForms",
-    icon: <GiWaves size={"2rem"}/>,
+    icon: <GiWaves size={"2rem"} />,
     className: "tabStateUnlocked",
-    toggled: false
-  }
+    toggled: false,
+  },
+  {
+    key: 3,
+    name: "Radio",
+    icon: <GiPocketRadio size={"2rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false,
+  },
 ];
 export { abouttabs, projecttabs, exptabs };

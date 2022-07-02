@@ -1,37 +1,29 @@
 import React, { PureComponent } from "react";
-import { Octokit } from "octokit";
+import { getOneProject } from "../../utils/dbAPI/project";
 
-const getProject = (config) => {
-  return new Octokit({ auth: process.env.PRIVATE_KEY }).rest.repos.get(config);
-};
-const getReadme = (config) => {
-  return new Octokit({ auth: process.env.PRIVATE_KEY }).request(
-    "GET /repos/{owner}/{repo}/readme",
-    config
-  );
-};
-
-function projectLayout(Page, config) {
+function projectLayout(Page, projectName) {
   class HOC extends PureComponent {
     constructor(props) {
       super(props);
       this.state = {
         data: {},
-        readme: "",
       };
     }
 
     componentDidMount() {
-      getProject(config).then((data) => this.setState({ data: data.data }));
-      getReadme(config).then((readme) => {
-        this.setState({ readme: atob(readme.data.content) });
+      getOneProject(projectName).then((data) => {
+        this.setState({ data: data });
       });
     }
 
     render() {
       return (
         <section className="projectWrapper">
-          <Page data={this.state.data} readme={this.state.readme} />
+          {this.state.data ? (
+            <Page data={this.state.data} />
+          ) : (
+            <div> Loading ... </div>
+          )}
         </section>
       );
     }

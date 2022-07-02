@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "start": "cd server && npm run start",
-    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\""
+    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\"",
+    "seed": "cd server/config && node seed.js",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,11 @@
   },
   "homepage": "https://github.com/JaynewDee/jaynewd_#readme",
   "devDependencies": {
-    "@vercel/node": "^2.2.0",
     "concurrently": "^7.1.0"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.81.0",
     "axios": "^0.27.2",
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "mongodb": "^4.7.0",
     "nodemon": "^2.0.16"
   }

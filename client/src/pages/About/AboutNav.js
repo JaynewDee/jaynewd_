@@ -19,7 +19,7 @@ const AboutNav = ({ setDisplay }) => {
     setPrevious(e.target);
   };
 
-  return abouttabs.map((item) => {
+  return abouttabs.map((item, index) => {
     return (
       <button
         onClick={(e) => {
@@ -29,7 +29,7 @@ const AboutNav = ({ setDisplay }) => {
           setDisplay(e.target.value);
         }}
         className={item.className}
-        key={Math.floor(Math.random() * 1000)}
+        key={index}
         value={item.name}
       >
         {item.icon}

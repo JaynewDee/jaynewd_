@@ -1,7 +1,7 @@
-@import "./styles/main.scss", "./styles/Nav.scss",
-  "./styles/Pages/About.scss", "./styles/Nav/AboutNav.scss",
-  "./styles/Nav/ProjectsNav.scss", "./styles/Nav/ExpNav.scss",
-  "./styles/components/Modal.scss", "./styles/components/Footer.scss";
+@import "./styles/main.scss", "./styles/Nav.scss", "./styles/Pages/About.scss",
+  "./styles/Nav/AboutNav.scss", "./styles/Nav/ExpNav.scss",
+  "./styles/components/Modal.scss", "./styles/components/Footer.scss",
+  "./styles/components/Audio.scss";
 
 @media screen and (max-width: 769px) {
   :root {

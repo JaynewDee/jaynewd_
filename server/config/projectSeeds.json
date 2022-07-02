@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Parks & Rex",
+    "lang": "JavaScript",
+    "created": "2022-01-19",
+    "license": "MIT",
+    "body": "An exercise in imagination and creative exploration, Parks & Rex was built alongside a team of peers while studying web development at Southern Methodist University.  As the third and final major group project at university, the Parks & Rex codebase demonstrates proficiency with many modern web development technologies, both front and back end.  The application depends on React, Node, Express, Apollo, and MongoDB, among many other incredible tools.",
+    "urls": {
+      "repo": "https://github.com/brandynh/ParksAndRex",
+      "clone": "git@github.com:brandynh/ParksAndRex.git",
+      "deployment": "https://parksandrex.herokuapp.com/"
+    }
+  },
+  {
+    "name": "Dayspaw",
+    "lang": "JavaScript",
+    "created": "2021-11-07",
+    "license": "MIT",
+    "body": "Built with a team of peers while studying web development at Southern Methodist University, Dayspaw is an enterprise application, designed to be used by a doggie daycare business to manage appointments and customer records.",
+    "urls": {
+      "repo": "https://github.com/MikeMallonIT/Project2-DaySpaw",
+      "clone": "git@github.com:MikeMallonIT/Project2-DaySpaw.git",
+      "deployment": "https://project2-dayspaw.herokuapp.com/"
+    }
+  },
+  {
+    "name": "Mood Ring",
+    "lang": "CSS",
+    "created": "2021-09-24",
+    "license": "MIT",
+    "body": "My first ever collaborative coding project, The Mood Ring is a unique application focused on delivering an aesthetic experience. The user explores the relationship between color, meme, and sound.",
+    "urls": {
+      "repo": "https://github.com/JaynewDee/Mood-Ring",
+      "clone": "git@github.com:JaynewDee/Mood-Ring.git",
+      "deployment": "https://jaynewdee.github.io/Mood-Ring/"
+    }
+  },
+  {
+    "name": "Cara Bella",
+    "lang": "JavaScript",
+    "created": "2022-03-13",
+    "license": "MIT",
+    "body": "My first paid project beyond graduation, this page was built as a central hub for spa owner Tricia Kelly to direct potential customers.  We have future plans to implement a scheduling/appointments feature, rendering this a full-stack enterprise application.",
+    "urls": {
+      "repo": "https://github.com/JaynewDee/CaraBella",
+      "clone": "git@github.com:JaynewDee/CaraBella.git",
+      "deployment": "https://cara-bella.vercel.app/"
+    }
+  }
+]

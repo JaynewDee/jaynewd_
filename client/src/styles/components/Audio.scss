@@ -1,0 +1,16 @@
+.playlist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  .track {
+    border-top: 2px solid rgba(10, 10, 10, 0.6);
+    border-bottom: 2px solid rgba(10, 10, 10, 0.6);
+    padding-bottom: 2rem;
+    audio {
+      display: block;
+      width: 50vw;
+    }
+  }
+}

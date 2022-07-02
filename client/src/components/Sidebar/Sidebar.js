@@ -27,7 +27,7 @@ const Sidebar = ({ navState, setDisplay }) => {
     <aside id="leftBox">
       <Name />
       <section key={Math.floor(Math.random() * 1000)} id="buttonBox">
-        {navSwitch(navState)}
+        <div className="top-selection">{navSwitch(navState)}</div>
       </section>
       <SocialBox />
     </aside>

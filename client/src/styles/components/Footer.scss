@@ -12,13 +12,14 @@
     .controlBox {
       display: flex;
       flex-flow: column wrap;
-      margin: 0 auto 1.3rem 10%;
+      margin: -0.66rem auto 1rem 10%;
     }
     .controlBox > p {
       margin: 0;
       padding: 0.11rem;
       .simple-clock {
         margin: 0;
+        letter-spacing: -1px;
       }
       .weather-btn {
         color: rgba(0, 121, 140, 0.7);

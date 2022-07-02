@@ -41,17 +41,3 @@ const Weather = ({ weather }) => {
 };
 
 export default Weather;
-
-/* condition: {
-  icon: string,
-  text: string
-  } 
-  humidity: number,
-  precip_in: number,
-  temp_f: number,
-  uv: number,
-  wind_degree: number,
-  wind_dir: string,
-  wind_mph: number
-
-*/

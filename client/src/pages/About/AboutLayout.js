@@ -8,7 +8,11 @@ const aboutLayout = (Page) => {
     }
 
     render() {
-      return <Page {...this.props} />;
+      return (
+        <section>
+          <Page {...this.props} />
+        </section>
+      );
     }
   }
   return Layout;

@@ -112,7 +112,6 @@ body {
         flex-flow: column nowrap;
         font-size: 1.3rem;
         line-height: 1.5rem;
-        z-index: 5;
         // *SYNTHETIC RAIN* //
         .nameBox {
           display: flex;
@@ -156,13 +155,25 @@ body {
     }
     #buttonBox {
       display: flex;
-      flex-flow: column wrap;
-      justify-content: space-evenly;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      margin: 1rem auto;
+      width: 66%;
       height: 66%;
-      width: 80%;
-      margin: auto;
       border-top: 1px solid rgba(155, 155, 155, 0.5);
       border-bottom: 1px solid rgba(155, 155, 155, 0.5);
+      overflow-x: visible;
+      overflow-y: auto;
+      z-index: 5;
+
+      .top-selection {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1rem auto;
+        gap: 1rem;
+        z-index: -2;
+        overflow-x: none;
+      }
     }
     .socialBox {
       height: auto;
@@ -171,6 +182,7 @@ body {
       justify-self: flex-end;
       margin: 0 auto 1rem;
       padding-top: 1rem;
+      z-index: 3;
 
       a {
         text-decoration: none;
@@ -183,12 +195,13 @@ body {
         filter: saturate(1.5);
         background: linear-gradient(
           135deg,
-          rgba(170, 0, 0, 0.9) 2%,
-          rgba(200, 0, 0, 0.6) 36%,
-          rgba(0, 212, 255, 0.6) 68%,
-          rgba(0, 212, 255, 0.9) 100%
+          rgba(170, 0, 0, 0.7) 2%,
+          rgba(200, 0, 0, 0.3) 36%,
+          rgba(0, 212, 255, 0.3) 68%,
+          rgba(0, 212, 255, 0.7) 100%
         );
         box-shadow: 0 0 0.33rem 0.11rem black;
+        transform: scale(1.15);
       }
     }
   }
@@ -243,6 +256,7 @@ body {
           align-items: center;
           flex-flow: column nowrap;
           animation: slideDown 2s ease-in-out forwards;
+          margin-bottom: 3rem;
           .linkBox {
             display: flex;
             flex-flow: column nowrap;
@@ -250,7 +264,19 @@ body {
             button {
               margin: auto;
               border-radius: 0.22rem;
+              transition: all 0.3s;
             }
+            button:hover {
+              transform: scale(1.1);
+              transition: all 0.3s;
+            }
+            button:active {
+              transform: scale(1.05);
+              transition: all 0.2s;
+            }
+          }
+          .project-body {
+            margin-top: 3rem;
           }
         }
 

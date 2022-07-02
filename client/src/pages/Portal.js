@@ -16,12 +16,10 @@ import { useUserContext } from "../context/UserContext";
 import { UtilityContextProvider } from "../context/UtilityContext";
 
 const Portal = ({ navLocation }) => {
-  console.log(`Portal rendered`);
   const [displayState, setDisplay] = useState("aboutMain");
   const [navState, setNav] = useState("");
-
   const keygen = () => {
-    return Math.floor(Math.random() * 1000);
+    return Math.floor(Math.random() * 10000);
   };
 
   return (
