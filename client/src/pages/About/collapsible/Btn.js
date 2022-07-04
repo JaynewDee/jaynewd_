@@ -1,26 +1,31 @@
 import React, { useState } from "react";
 
-const Btn = ({ name }) => {
-  const locked = "collapsed";
-  const unlocked = "expanded";
-
-  const clickHandler = (e) => {
-    if (e.target.value === unlocked) {
-      e.target.value = locked;
-    } else {
-      e.target.value = unlocked;
-    }
+const Btn = ({ name, id }) => {
+  const [classState, setClass] = useState("menu-btn-collapsed");
+  let locked = "menu-btn-collapsed";
+  let unlocked = "menu-btn-expanded";
+  const handleClick = (e) => {
+    let btns = document.querySelectorAll(".menu-btn");
+    btns.forEach((btn, index) => {
+      if (index === parseInt(e.target.id)) {
+        btn.classList.replace(locked, unlocked);
+      } else {
+        btn.classList.replace(unlocked, locked);
+      }
+    });
+    return btns;
   };
 
   return (
     <>
       <button
-        value={locked}
+        id={id}
+        className={"menu-btn " + classState}
         key={Math.floor(Math.random() * 1000)}
         onClick={(e) => {
           e.preventDefault();
-          console.log(e.target);
-          clickHandler(e);
+          e.stopPropagation();
+          handleClick(e);
         }}
       >
         {name}
@@ -29,4 +34,4 @@ const Btn = ({ name }) => {
   );
 };
 
-export default React.memo(Btn);
+export default Btn;

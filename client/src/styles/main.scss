@@ -51,6 +51,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 :root {
@@ -169,8 +170,8 @@ body {
       .top-selection {
         display: flex;
         flex-flow: column nowrap;
-        margin: 1rem auto;
         gap: 1rem;
+        margin: auto 0.33rem;
         z-index: -2;
         overflow-x: none;
       }
@@ -201,6 +202,7 @@ body {
           rgba(0, 212, 255, 0.7) 100%
         );
         box-shadow: 0 0 0.33rem 0.11rem black;
+        -webkit-transform: scale(1.15);
         transform: scale(1.15);
       }
     }
@@ -249,6 +251,12 @@ body {
         justify-content: flex-start;
         flex-flow: column nowrap;
         align-items: center;
+        .drop-shadow {
+          -webkit-filter: drop-shadow(0px -2rem 1px rgba(20, 20, 20, 0.3))
+            drop-shadow(0px -1rem 1px rgba(20, 20, 20, 0.2));
+          filter: drop-shadow(0px -2rem 1px rgba(20, 20, 20, 0.3))
+            drop-shadow(0px -1rem 1px rgba(20, 20, 20, 0.2));
+        }
 
         .projectWrapper {
           display: flex;
@@ -257,6 +265,7 @@ body {
           flex-flow: column nowrap;
           animation: slideDown 2s ease-in-out forwards;
           margin-bottom: 3rem;
+          width: 110%;
           .linkBox {
             display: flex;
             flex-flow: column nowrap;
@@ -264,22 +273,44 @@ body {
             button {
               margin: auto;
               border-radius: 0.22rem;
+              -webkit-transition: all 0.3s;
               transition: all 0.3s;
             }
-            button:hover {
-              transform: scale(1.1);
-              transition: all 0.3s;
-            }
+            button:hover,
             button:active {
-              transform: scale(1.05);
-              transition: all 0.2s;
+              -webkit-transition: all 0.3s;
+              transition: all 0.3s;
+              color: white;
+              background-color: rgba(15, 15, 15, 0.8);
             }
           }
           .project-body {
-            margin-top: 3rem;
+            font-size: 1.11rem;
+            margin-top: 2rem;
+            text-align: left;
+            text-indent: 3rem;
+            line-height: 1.33rem;
           }
         }
-
+        .section {
+          margin-bottom: 2rem;
+          .section-header {
+            margin-left: 1rem;
+          }
+          .section-header::before {
+            content: ">";
+            color: rgba(0, 121, 145, 1);
+            margin-right: 0.5rem;
+          }
+          p {
+            margin-left: 1rem;
+            margin-bottom: 2rem;
+            text-indent: 2rem;
+          }
+        }
+        .section + p {
+          text-indent: 2rem;
+        }
         filter: drop-shadow(0 0.5rem 0.5rem rgba(101, 101, 101, 0.3));
         .red {
           color: rgb(170, 0, 0);
@@ -329,9 +360,22 @@ body {
 
 @keyframes slideDown {
   0% {
+    -webkit-transform: translateY(-750px);
     transform: translateY(-750px);
   }
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-750px);
+    transform: translateY(-750px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }

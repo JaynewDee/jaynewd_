@@ -1,11 +1,22 @@
 import React from "react";
 
+const bracketLeft = {
+  color: "rgba(0,121,145,.9)",
+  marginRight: "1rem",
+  fontSize: "2rem",
+};
+const bracketRight = {
+  color: "rgba(0,121,145,.9)",
+  marginLeft: "1rem",
+  fontSize: "2rem",
+};
 const ExpMain = () => {
   return (
     <>
-      <h2 style={{ marginTop: "6rem" }}>
-        <span style={{ color: "rgba(0,121,145,.9)" }}>{"["}</span>Experiments
-        <span style={{ color: "rgba(0,121,145,.9)" }}>{"]"}</span>
+      <h2 className="drop-shadow" style={{ marginTop: "20vh" }}>
+        <span style={bracketLeft}>{"["}</span>
+        Experiments
+        <span style={bracketRight}>{"]"}</span>
       </h2>
       <br />
       <br />

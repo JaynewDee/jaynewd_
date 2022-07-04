@@ -3,7 +3,9 @@ import React from "react";
 const ProjectsMain = () => {
   return (
     <>
-      <h3>The Project Beneath</h3>
+      <h3 className="drop-shadow" style={{ marginTop: "15%" }}>
+        The Project Beneath
+      </h3>
 
       <p>
         This web application, in addition to being a place to display
@@ -18,8 +20,8 @@ const ProjectsMain = () => {
       </p>
       <p>
         The codebase reflects this approach, as it is messy and attempts to be
-        many things, falling short of most of them. I do believe, however, that
-        I succeeded at my original objective: to journey wherever my curiousity
+        many things, falling short of most of them. But I do feel that I
+        succeeded at my original objective: to journey wherever my curiousity
         might take me and absorb the resulting lessons, many of which
         communicate a clear "what not to do".
       </p>

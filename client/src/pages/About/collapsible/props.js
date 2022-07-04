@@ -1,6 +1,7 @@
 export const truthProps = [
   {
     key: 0,
+    id: 0,
     name: "Truth",
     header: {
       text: "The Invincible",
@@ -14,6 +15,7 @@ export const truthProps = [
   },
   {
     key: 1,
+    id: 1,
     name: "Integrity",
     header: {
       text: "The Membrane",
@@ -27,6 +29,7 @@ export const truthProps = [
   },
   {
     key: 2,
+    id: 2,
     name: "Reason",
     header: {
       text: "The Guide",
@@ -43,6 +46,7 @@ export const truthProps = [
 export const beautyProps = [
   {
     key: 3,
+    id: 0,
     name: "Beauty",
     header: {
       text: "The Performance",
@@ -51,11 +55,12 @@ export const beautyProps = [
     section: {
       name: "",
       className: "collapsed",
-      text: "Servant to none and gift to all, Beauty guards the portal between the perceptual apparatus and the phenomenal world, dressing the travelers with pattern and song.",
+      text: "Servant to none and gift to all, Beauty is ward of the portal between the perceptual apparatus and the phenomenal world, dressing the travelers with pattern and song.",
     },
   },
   {
     key: 4,
+    id: 1,
     name: "Elegance",
     header: {
       text: "The Seamstress",
@@ -69,6 +74,7 @@ export const beautyProps = [
   },
   {
     key: 5,
+    id: 2,
     name: "Form",
     header: {
       text: "The Substance",
@@ -85,6 +91,7 @@ export const beautyProps = [
 export const goodnessProps = [
   {
     key: 6,
+    id: 0,
     name: "Goodness",
     header: {
       text: "The Way",
@@ -97,6 +104,7 @@ export const goodnessProps = [
   },
   {
     key: 7,
+    id: 1,
     name: "Compassion",
     header: {
       text: "The Bond",
@@ -109,6 +117,7 @@ export const goodnessProps = [
   },
   {
     key: 8,
+    id: 2,
     name: "Joy",
     header: {
       text: "The Destination",

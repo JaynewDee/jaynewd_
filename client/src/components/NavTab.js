@@ -17,7 +17,7 @@ const Nav = ({ setNav, setDisplay, location }) => {
     }
     if (e.target.className === locked) {
       e.target.className = unlocked;
-    } else if (e.target.className === unlocked) {
+    } else {
       e.target.className = locked;
     }
     setPrevious(e.target);
@@ -41,7 +41,6 @@ const Nav = ({ setNav, setDisplay, location }) => {
       {routes.map((route, index) => {
         return (
           <button
-            autoFocus={index === 0 ? true : false}
             type="reset"
             value={route.value}
             onClick={(e) => {

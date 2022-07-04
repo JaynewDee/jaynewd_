@@ -9,14 +9,6 @@ import satori3 from "./files/satori3.mp3";
 
 const tracks = [
   {
-    name: "Lament",
-    src: lament,
-  },
-  {
-    name: "An Honest Lie",
-    src: anhonestlie,
-  },
-  {
     name: "Ascend, Unravel",
     src: ascendunravel,
   },
@@ -39,6 +31,14 @@ const tracks = [
   {
     name: "Satori #3",
     src: satori3,
+  },
+  {
+    name: "Lament",
+    src: lament,
+  },
+  {
+    name: "An Honest Lie",
+    src: anhonestlie,
   },
 ];
 
