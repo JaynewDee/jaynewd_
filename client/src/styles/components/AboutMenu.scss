@@ -15,17 +15,18 @@
     }
     .menu-btn:hover,
     .menu-btn:focus {
-      color: white;
       background-color: rgba(15, 15, 15, 0.8);
+      color: white;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
     }
     .menu-btn + section {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column nowrap;
-
+      margin: auto;
       .section-header {
-        letter-spacing: 0.15rem;
       }
       .section-text {
         text-align: center;
@@ -34,17 +35,23 @@
     .menu-btn-collapsed + section {
       -webkit-transform: scale(0);
       transform: scale(0);
+      -webkit-transition: all 1s;
+      transition: all 1s;
       height: 0;
       .section-header {
       }
       .section-text {
       }
     }
+    .menu-btn-expanded {
+    }
     .menu-btn-expanded + section {
       -webkit-transform: scale(1);
       transform: scale(1);
+      -webkit-transition: all 1s;
+      transition: all 1s;
       margin-bottom: 3rem;
-      height: auto;
+      height: 30vh;
       .section-header {
       }
       .section-text {
