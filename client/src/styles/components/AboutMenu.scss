@@ -1,0 +1,54 @@
+.menu-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin-top: 4rem;
+  .value-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    .menu-btn {
+      padding: 0.33rem 0.66rem;
+      border-radius: 5px;
+    }
+    .menu-btn:hover,
+    .menu-btn:focus {
+      color: white;
+      background-color: rgba(15, 15, 15, 0.8);
+    }
+    .menu-btn + section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+
+      .section-header {
+        letter-spacing: 0.15rem;
+      }
+      .section-text {
+        text-align: center;
+      }
+    }
+    .menu-btn-collapsed + section {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      height: 0;
+      .section-header {
+      }
+      .section-text {
+      }
+    }
+    .menu-btn-expanded + section {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      margin-bottom: 3rem;
+      height: auto;
+      .section-header {
+      }
+      .section-text {
+      }
+    }
+  }
+}

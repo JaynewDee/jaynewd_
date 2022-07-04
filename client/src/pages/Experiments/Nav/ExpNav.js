@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "../../../styles/Nav/ExpNav.scss";
 import { exptabs } from "../../../data/tabs";
 
-const ExpNav = ({setDisplay}) => {
+const ExpNav = ({ setDisplay }) => {
   const [previousClicked, setPrevious] = useState("");
 
   const locked = "tabStateLocked";
@@ -21,21 +20,18 @@ const ExpNav = ({setDisplay}) => {
     setPrevious(e.target);
   };
 
-  return (
-    exptabs.map((item) => 
-     (
-      <button
-        onClick={(e) => {
-          tabSwitch(e);
-          setDisplay(e.target.value);
-        }}
-        className={item.className}
-        key={item.key}
-        value={item.name}
-      >
-        {item.icon}
-      </button>
-    )
+  return exptabs.map((item) => (
+    <button
+      onClick={(e) => {
+        tabSwitch(e);
+        setDisplay(e.target.value);
+      }}
+      className={item.className}
+      key={item.key}
+      value={item.name}
+    >
+      {item.icon}
+    </button>
   ));
 };
 

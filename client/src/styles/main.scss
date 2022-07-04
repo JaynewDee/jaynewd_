@@ -51,6 +51,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 :root {
@@ -169,8 +170,8 @@ body {
       .top-selection {
         display: flex;
         flex-flow: column nowrap;
-        margin: 1rem auto;
         gap: 1rem;
+        margin: auto 0.33rem;
         z-index: -2;
         overflow-x: none;
       }
@@ -201,6 +202,7 @@ body {
           rgba(0, 212, 255, 0.7) 100%
         );
         box-shadow: 0 0 0.33rem 0.11rem black;
+        -webkit-transform: scale(1.15);
         transform: scale(1.15);
       }
     }
@@ -257,6 +259,7 @@ body {
           flex-flow: column nowrap;
           animation: slideDown 2s ease-in-out forwards;
           margin-bottom: 3rem;
+          width: 110%;
           .linkBox {
             display: flex;
             flex-flow: column nowrap;
@@ -267,16 +270,22 @@ body {
               transition: all 0.3s;
             }
             button:hover {
+              -webkit-transform: scale(1.1);
               transform: scale(1.1);
               transition: all 0.3s;
             }
             button:active {
+              -webkit-transform: scale(1.05);
               transform: scale(1.05);
               transition: all 0.2s;
             }
           }
           .project-body {
-            margin-top: 3rem;
+            font-size: 1.11rem;
+            margin-top: 2rem;
+            text-align: left;
+            text-indent: 3rem;
+            line-height: 1.33rem;
           }
         }
 
@@ -329,9 +338,22 @@ body {
 
 @keyframes slideDown {
   0% {
+    -webkit-transform: translateY(-750px);
     transform: translateY(-750px);
   }
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-750px);
+    transform: translateY(-750px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
