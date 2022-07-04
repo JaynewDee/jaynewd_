@@ -1,5 +1,4 @@
 const axios = require("axios").default;
-const environment = require("../../env");
 
 const getEngines = async (url) => {
   const engineList = await axios({
