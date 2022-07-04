@@ -3,7 +3,9 @@ import React from "react";
 const ProjectsMain = () => {
   return (
     <>
-      <h3 className="drop-shadow">The Project Beneath</h3>
+      <h3 className="drop-shadow" style={{ marginTop: "15%" }}>
+        The Project Beneath
+      </h3>
 
       <p>
         This web application, in addition to being a place to display

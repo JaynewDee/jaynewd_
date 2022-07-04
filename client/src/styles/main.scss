@@ -295,7 +295,12 @@ body {
         .section {
           margin-bottom: 2rem;
           .section-header {
-            margin-left: 3rem;
+            margin-left: 1rem;
+          }
+          .section-header::before {
+            content: ">";
+            color: rgba(0, 121, 145, 1);
+            margin-right: 0.5rem;
           }
           p {
             margin-left: 1rem;

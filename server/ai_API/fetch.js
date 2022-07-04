@@ -7,7 +7,7 @@ const getEngines = async (url) => {
     url: url,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.AI_API_KEY}`,
+      Authorization: `Bearer ${environment.AI_API_KEY}`,
     },
   });
   return engineList.data;
@@ -31,7 +31,7 @@ const postCompletion = async (url, prompt) => {
     url: url,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.AI_API_KEY}`,
+      Authorization: `Bearer ${environment.AI_API_KEY}`,
     },
     data: {
       prompt: `${prompt}`,
