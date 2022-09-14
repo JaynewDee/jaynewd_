@@ -5,7 +5,7 @@ import { tracks } from "./data";
 const Audio = () => {
   const [playlist, setPlaylist] = useState(tracks);
   const [playing, setPlaying] = useState(false);
-  console.log(playlist);
+
   return !playlist ? (
     <div>Loading playlist ...</div>
   ) : (

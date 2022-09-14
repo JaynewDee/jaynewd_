@@ -5,8 +5,6 @@ import HistorySection from "./HistorySection";
 const Portal = () => {
   // Current, or previous, prompt/response pair that was passed
   const [currentExchange, setCurrent] = useState([{}]);
-  // Aggregate history of exchanges
-  console.log(currentExchange);
 
   return (
     <div id="portal-box">

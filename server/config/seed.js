@@ -1,6 +1,6 @@
 const db = require("./connection");
 const Project = require("../models/Project");
-const projectSeeds = require("./projectSeeds.json");
+const projectSeeds = require("./projects.json");
 
 db.once("open", async () => {
   try {

@@ -8,6 +8,9 @@ import ExpMain from "../pages/Experiments/ExpMain";
 import ConverStation from "../pages/Experiments/converStation/ConverStation";
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
 import Audio from "../components/Audio/Audio";
+import Astronomy from "../components/Astronomy";
+import { App } from "../pages/Experiments/typerider/App";
+const TypeRider = App;
 import {
   truthProps,
   beautyProps,
@@ -69,6 +72,10 @@ export const experimentSwitch = (state) => {
       return <WavePortal props={waveProps} />;
     case "Radio":
       return <Audio />;
+    case "TypeRider":
+      return <TypeRider />;
+    case "Stars":
+      return <Astronomy />;
     default:
       break;
   }

@@ -19,16 +19,10 @@ const Form = ({ setCurrent }) => {
       },
     })
       .then((data) => {
-        // Strip newlines from relevant prompt/response data
         let choices = data.data.choices[0].text.replace(/(\r\n|\n|\r)/gm, " ");
-        // Transform json string into manageable object
         let promptObject = JSON.parse(data.config.data);
-        // Extract string value of prompt key in object
         let textOnly = promptObject.prompt;
-        // Replace any occurrences of the prompt inside the entire text string,
-        // storing only the AI's response
         let replyOnly = choices.replace(textOnly, "");
-        // Store final values in component state, to pass to parent portal
         return { prompt: textOnly, response: replyOnly };
       })
       .then((current) => {

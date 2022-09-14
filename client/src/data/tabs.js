@@ -8,6 +8,8 @@ import {
   GiTruck,
   GiWaves,
   GiPocketRadio,
+  GiBlackBook,
+  GiStarSwirl,
 } from "react-icons/gi";
 import { AiOutlineRobot } from "react-icons/ai";
 import { FaPaw } from "react-icons/fa";
@@ -94,6 +96,20 @@ var exptabs = [
     key: 3,
     name: "Radio",
     icon: <GiPocketRadio size={"2rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false,
+  },
+  {
+    key: 4,
+    name: "TypeRider",
+    icon: <GiBlackBook size={"2rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false,
+  },
+  {
+    key: 5,
+    name: "Stars",
+    icon: <GiStarSwirl size={"2rem"} />,
     className: "tabStateUnlocked",
     toggled: false,
   },

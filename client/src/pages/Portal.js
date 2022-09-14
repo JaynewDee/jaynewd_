@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState } from "react";
 import NavTab from "../components/NavTab";
 import Sidebar from "../components/Sidebar/Sidebar";
 import UtilityBar from "../components/UtilityBar";
@@ -12,7 +12,6 @@ import {
 import Modal from "../components/Modal";
 
 import { IconContext } from "react-icons";
-import { useUserContext } from "../context/UserContext";
 import { UtilityContextProvider } from "../context/UtilityContext";
 
 const Portal = ({ navLocation }) => {
@@ -45,7 +44,6 @@ const Portal = ({ navLocation }) => {
                 {weatherSwitch(displayState)}
               </aside>
             </section>
-
             <footer key={keygen()} className="footer">
               <UtilityBar setDisplay={setDisplay} />
             </footer>

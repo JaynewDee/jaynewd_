@@ -1,13 +1,13 @@
 const axios = require("axios").default;
 const environment = require("../../env");
-
+const { AI_API_KEY } = environment;
 const getEngines = async (url) => {
   const engineList = await axios({
     method: "get",
     url: url,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${environment.AI_API_KEY}`,
+      Authorization: `Bearer ${AI_API_KEY}`,
     },
   });
   return engineList.data;
@@ -19,7 +19,7 @@ const getInstance = async (url) => {
     url: url,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.AI_API_KEY}`,
+      Authorization: `Bearer ${AI_API_KEY}`,
     },
   });
   return instance.data;
@@ -31,7 +31,7 @@ const postCompletion = async (url, prompt) => {
     url: url,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${environment.AI_API_KEY}`,
+      Authorization: `Bearer ${AI_API_KEY}`,
     },
     data: {
       prompt: `${prompt}`,

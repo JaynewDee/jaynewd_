@@ -24,7 +24,7 @@ curie.post("/api/completion", async (req, response) => {
       response.send(res)
     );
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
 });
 
