@@ -3,7 +3,7 @@ import Window from "./components/Window";
 import "./index.scss";
 const App = () => {
   return (
-    <div className="App">
+    <div className="Typerider-App">
       <Window />
     </div>
   );

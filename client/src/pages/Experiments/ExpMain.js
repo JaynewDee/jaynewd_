@@ -1,5 +1,5 @@
 import React from "react";
-
+import { GiAbstract020 } from "react-icons/gi";
 const bracketLeft = {
   color: "rgba(0,121,145,.9)",
   marginRight: "1rem",
@@ -18,11 +18,11 @@ const ExpMain = () => {
         Experiments
         <span style={bracketRight}>{"]"}</span>
       </h2>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <GiAbstract020
+        size={"2rem"}
+        style={{ margin: "5rem auto" }}
+        className="abstract-icon"
+      />
       <p style={{ width: "12rem", textAlign: "center" }}>
         Explore freely using the buttons at left!
       </p>

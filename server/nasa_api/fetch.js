@@ -8,7 +8,6 @@ const getStarshot = async (url) => {
       "Content-Type": "application/json",
     },
   });
-  console.log(shinies.data);
   return shinies.data;
 };
 

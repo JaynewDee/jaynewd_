@@ -3,7 +3,7 @@ import React from "react";
 const ProjectsMain = () => {
   return (
     <>
-      <h3 className="drop-shadow" style={{ marginTop: "15%" }}>
+      <h3 className="drop-shadow" style={{ margin: "12% auto" }}>
         The Project Beneath
       </h3>
 

@@ -15,13 +15,14 @@ const Astronomy = () => {
   }, []);
 
   return (
-    <div>
+    <div id="astronomy-page">
       {loading ? (
         <div>Fetching photograph, please wait ... </div>
       ) : (
-        <div>
+        <div style={{ padding: "1rem" }}>
           <h3>{photoData.title}</h3>
           <img src={photoData.hdurl}></img>
+          <p>{photoData.explanation}</p>
         </div>
       )}
     </div>

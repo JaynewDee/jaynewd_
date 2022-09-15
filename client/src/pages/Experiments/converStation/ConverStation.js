@@ -8,7 +8,7 @@ const ConverStation = () => {
   return (
     <>
       <div>
-        <div className="converstationBox">
+        <div className="Converstation-App">
           <Header />
           <Portal />
           <Footer />

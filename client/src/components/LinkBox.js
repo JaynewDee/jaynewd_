@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const LinkBox = ({ urls }) => {
   const [tooltip, setTooltip] = useState(false);
-  console.log(tooltip);
   const manageClipboard = (e) => {
     e.preventDefault();
 

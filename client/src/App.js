@@ -3,10 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import Portal from "./pages/Portal";
 import { UserContextProvider } from "./context/UserContext";
 import { handleOver, handleEnter, handleDrop } from "./utils/dragNdrop";
-import { BiDesktop } from "react-icons/bi";
 
 const App = () => {
-  console.log(`App rendered`);
   const [device, setDevice] = useState({
     type: "Desktop",
   });
@@ -24,6 +22,7 @@ const App = () => {
       return "Mobile";
     }
   }
+  console.log(device);
   useEffect(() => {
     setScreenSize();
   }, [device.type]);
@@ -49,4 +48,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default React.memo(App);
