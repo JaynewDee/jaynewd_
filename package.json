@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/JaynewDee/jaynewd_#readme",
   "devDependencies": {
-    "concurrently": "^7.1.0"
+    "concurrently": "^7.2.2"
   },
   "dependencies": {
     "axios": "^0.27.2",
