@@ -1,8 +1,8 @@
 import React from "react";
 
-const NavBtn = ({ index, label }) => {
+const NavBtn = ({ label, index }) => {
   return (
-    <button className="menu-btn" key={index + label}>
+    <button className="menu-btn" key={index}>
       {label}
     </button>
   );

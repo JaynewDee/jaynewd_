@@ -19,19 +19,16 @@ import {
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
 
-let Wrapped = undefined;
 export const aboutSwitch = (state) => {
+  const Wrapped = aboutLayout(Menu);
   switch (state) {
     case "aboutMain":
       return <AboutMain />;
     case "Fox":
-      Wrapped = aboutLayout(Menu);
       return <Wrapped props={truthProps} />;
     case "Sword":
-      Wrapped = aboutLayout(Menu);
       return <Wrapped props={beautyProps} />;
     case "Heart":
-      Wrapped = aboutLayout(Menu);
       return <Wrapped props={goodnessProps} />;
     default:
       break;
@@ -39,6 +36,7 @@ export const aboutSwitch = (state) => {
 };
 
 export const projectSwitch = (state) => {
+  let Wrapped;
   switch (state) {
     case "projectMain":
       return <ProjectsMain />;

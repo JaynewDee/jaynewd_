@@ -22,10 +22,21 @@ app.use("/converstation", converStationRoutes);
 app.use("/user", userRoutes);
 app.use("/project", projectRoutes);
 app.use("/nasa", nasaRoutes);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
+// var forceSsl = function (req, res, next) {
+//   if (req.headers["x-forwarded-proto"] !== "https") {
+//     return res.redirect(["https://", req.get("Host"), req.url].join(""));
+//   }
+//   return next();
+// };
+
+// app.use(forceSsl);
+
+// other configurations etc for express go here...
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/index.html"))
 );

@@ -4,16 +4,13 @@ header {
   align-items: center;
   flex-flow: row wrap;
   position: sticky;
-  top: 3rem;
-  max-width: 66%;
   margin-top: 2rem;
-  z-index: 3;
 }
 
 header > * {
   padding-bottom: 1rem;
 }
-header > h1 {
+header > h1.sentence-header {
   max-width: 100%;
   color: white;
   font-size: 1.33rem;

@@ -3,7 +3,7 @@ import React from "react";
 const Header = ({ sentence }) => {
   return (
     <header className="sentence-box">
-      <h1>{sentence.scrambled}</h1>
+      <h1 className="sentence-header">{sentence.scrambled}</h1>
     </header>
   );
 };

@@ -5,7 +5,7 @@ import { useUtilsContext } from "../../context/UtilityContext";
 
 import Error from "./Error";
 
-const LoginForm = ({ setVisibility }) => {
+const LoginForm = ({}) => {
   const { signin } = useUserContext();
   const [error, setErrorState] = useState({ show: false, error: <Error /> });
   const [formState, setFormState] = useState({

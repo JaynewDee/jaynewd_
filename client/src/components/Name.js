@@ -10,7 +10,7 @@ const Name = () => {
           }}
         >
           {" "}
-          <div className="nameBox">
+          <div className="nameBox" style={{ marginTop: "1rem" }}>
             <data id="firstName">
               <em>Joshua</em>
             </data>

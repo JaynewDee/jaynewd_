@@ -15,6 +15,7 @@ const ProjectPage = ({ data }) => {
             lang={data.lang}
             date={data.created}
             license={data.license}
+            className="statbox"
           />
 
           <section className="project-body">{data.body}</section>

@@ -3,7 +3,7 @@ import React from "react";
 const AboutMain = () => {
   return (
     <>
-      <h3 style={{ alignSelf: "flex-start" }}>Hello!</h3>
+      <h3 style={{ alignSelf: "flex-start", marginBottom: "3rem" }}>Hello!</h3>
       <section className="section">
         <h3 className="section-header">Projects</h3>
         <p>
