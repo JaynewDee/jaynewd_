@@ -3,7 +3,7 @@ const axios = require("axios").default;
 
 const Form = ({ setCurrent }) => {
   const [formText, setFormText] = useState("");
-
+  const [error, setError] = useState(false);
   const handleInputChange = (event) => {
     const { value } = event.target;
     setFormText(value);
@@ -11,6 +11,7 @@ const Form = ({ setCurrent }) => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    event.stopPropagation();
     await axios({
       method: "post",
       url: "converstation/api/completion",
@@ -27,8 +28,7 @@ const Form = ({ setCurrent }) => {
       })
       .then((current) => {
         setCurrent(current);
-      })
-      .catch((err) => console.error(err));
+      });
     // clear form values
     setFormText("");
   };
@@ -37,7 +37,9 @@ const Form = ({ setCurrent }) => {
     <section className="prompt-box">
       <form action="submit" method="post" id="prompt-form">
         <textarea
-          value={formText}
+          value={
+            error ? "Curie is currently offline for maintenance" : formText
+          }
           id="prompt-field"
           form="prompt-form"
           spellCheck="true"

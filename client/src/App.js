@@ -22,7 +22,6 @@ const App = () => {
       return "Mobile";
     }
   }
-  console.log(device);
   useEffect(() => {
     setScreenSize();
   }, [device.type]);
