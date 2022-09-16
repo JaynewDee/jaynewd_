@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const environment = require("../../env");
+const environment = require("../env");
 const { AI_API_KEY } = environment;
 const getEngines = async (url) => {
   const engineList = await axios({
@@ -41,6 +41,7 @@ const postCompletion = async (url, prompt) => {
       echo: true,
     },
   });
+  console.log(botResponse.data);
   return botResponse.data;
 };
 

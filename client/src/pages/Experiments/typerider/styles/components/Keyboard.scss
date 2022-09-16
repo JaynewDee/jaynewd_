@@ -15,7 +15,9 @@
   transform: translateY(-75rem);
 }
 
-input {
+.letter-field,
+.space-field,
+.solved {
   text-align: center;
   pointer-events: none;
   border-radius: 1rem;
