@@ -47,20 +47,14 @@ const Window = () => {
   };
 
   const fetchByMode = (mode) => {
-    switch (mode) {
-      case "default":
-        return fetchSentence(publicUrl, round);
-      case "dictionary":
-        return getDictionary(dictionaryArray[round]);
-      case "dinosaur":
-        return fetchDino();
-      case "hipster":
-        return fetchHipsum();
-      case "mongo":
-        return getOneSentence().then((response) => response[0].sentence);
-      default:
-        break;
-    }
+    const modeSettings = {
+      default: fetchSentence(publicUrl, round),
+      dictionary: getDictionary(dictionaryArray[round]),
+      dinosaur: fetchDino(),
+      hipster: fetchHipsum(),
+      mongo: getOneSentence().then((response) => response[0].sentence),
+    };
+    return modeSettings[mode];
   };
 
   getDictionary("melancholy");

@@ -10,9 +10,6 @@ const LogoutBtn = () => {
     signout();
   };
 
-  const handleUserDeletion = async () => {
-    await deleteAll();
-  };
   return (
     <>
       <button onClick={() => handleLogout()} className="utilityBtn logoutBtn">
