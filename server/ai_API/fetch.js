@@ -41,6 +41,7 @@ const postCompletion = async (url, prompt) => {
       echo: true,
     },
   });
+  console.log(botResponse.data);
   return botResponse.data;
 };
 
