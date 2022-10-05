@@ -19,6 +19,13 @@ import {
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
 
+const aboutMap = {
+  aboutMain: <AboutMain />,
+  Fox: <Wrapped props={truthProps} />,
+  Sword: <Wrapped props={beautyProps} />,
+  Heart: <Wrapped props={goodnessProps} />,
+};
+
 export const aboutSwitch = (state) => {
   const Wrapped = aboutLayout(Menu);
   switch (state) {
@@ -64,8 +71,6 @@ export const experimentSwitch = (state) => {
   switch (state) {
     case "experimentMain":
       return <ExpMain />;
-    case "ConverStation":
-      return <ConverStation />;
     case "WaveForms":
       return <WavePortal props={waveProps} />;
     case "Radio":
