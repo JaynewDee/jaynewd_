@@ -5,9 +5,7 @@ export const getKey = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-    })
-      .then((key) => key.json())
-      .then((json) => json);
+    });
   } catch (err) {
     console.log(err);
   }
