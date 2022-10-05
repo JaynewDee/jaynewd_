@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const env = require("../../env");
+const env = require("../env");
 
 connect().catch((err) => console.log(err));
-// ** Hoisted and called above ** //
+
 async function connect() {
   await mongoose
     .connect(env.MONGODB_URI, {
