@@ -2,7 +2,7 @@ const nasa = require("express").Router();
 const urls = require("./urls.js");
 const { getStarshot } = require("./fetch.js");
 const { get } = urls;
-const environment = require("../../env");
+const environment = require("../env");
 const { NASA_API_KEY } = environment;
 
 nasa.get("/apod", async (req, res) => {

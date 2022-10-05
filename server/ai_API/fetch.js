@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const environment = require("../../env");
+const environment = require("../env");
 const { AI_API_KEY } = environment;
 const getEngines = async (url) => {
   const engineList = await axios({
