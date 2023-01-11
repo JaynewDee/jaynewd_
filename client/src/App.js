@@ -12,6 +12,7 @@ const App = () => {
     top: "0rem",
     left: "15%",
   });
+  console.log(navigator.userAgent);
   function setScreenSize() {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -31,8 +32,8 @@ const App = () => {
       <UserContextProvider>
         <div
           style={
-            device.type === "Mobile"
-              ? { marginBottom: "15vh" }
+            device.type == "Mobile"
+              ? { marginBottom: "300px" }
               : { marginBottom: "0" }
           }
           className="App"

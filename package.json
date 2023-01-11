@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -23,12 +26,13 @@
   },
   "homepage": "https://github.com/JaynewDee/jaynewd_#readme",
   "devDependencies": {
-    "concurrently": "^7.1.0"
+    "concurrently": "^7.2.2"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "mongodb": "^4.7.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "normalize.css": "^8.0.1"
   }
 }

@@ -5,7 +5,10 @@ import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
+<<<<<<< HEAD
 import Feature from "../pages/Experiments/feature/Feature";
+=======
+>>>>>>> main
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
 import Audio from "../components/Audio/Audio";
 import Astronomy from "../components/Astronomy";

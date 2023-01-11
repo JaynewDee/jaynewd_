@@ -251,6 +251,10 @@ body {
         justify-content: flex-start;
         flex-flow: column nowrap;
         align-items: center;
+        p {
+          text-indent: 3rem;
+        }
+
         .drop-shadow {
           -webkit-filter: drop-shadow(0px -2rem 1px rgba(20, 20, 20, 0.3))
             drop-shadow(0px -1rem 1px rgba(20, 20, 20, 0.2));
@@ -312,10 +316,6 @@ body {
             text-indent: 2rem;
           }
         }
-        .section + p {
-          text-indent: 2rem;
-        }
-        filter: drop-shadow(0 0.5rem 0.5rem rgba(101, 101, 101, 0.3));
         .red {
           color: rgb(170, 0, 0);
         }
