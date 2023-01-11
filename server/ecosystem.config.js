@@ -5,7 +5,8 @@ module.exports = {
       instances: "max",
       watch: ".",
       env: {
-        NODE_ENV: "production"
+        NODE_ENV: "production",
+        PORT: "80"
       }
     }
   ]
