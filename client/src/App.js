@@ -6,27 +6,27 @@ import { handleOver, handleEnter, handleDrop } from "./utils/dragNdrop";
 
 const App = () => {
   const [device, setDevice] = useState({
-    type: "Desktop",
+    type: "Desktop"
   });
   const [navLocation, setNavLocation] = useState({
     top: "0rem",
-    left: "15%",
+    left: "15%"
   });
-  console.log(navigator.userAgent);
-  function setScreenSize() {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      setDevice({ type: "Mobile" });
-      return "Mobile";
-    }
-  }
-  useEffect(() => {
-    setScreenSize();
-  }, [device.type]);
-
+  // console.log(navigator.userAgent);
+  // function setScreenSize() {
+  //   if (
+  //     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  //       navigator.userAgent
+  //     )
+  //   ) {
+  //     setDevice({ type: "Mobile" });
+  //     return "Mobile";
+  //   }
+  // }
+  // useEffect(() => {
+  //   setScreenSize();
+  // }, [device.type]);
+  console.log(device.type);
   return (
     <BrowserRouter>
       <UserContextProvider>
