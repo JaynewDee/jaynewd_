@@ -5,8 +5,8 @@ const getStarshot = async (url) => {
     method: "get",
     url: url,
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
   return shinies.data;
 };
