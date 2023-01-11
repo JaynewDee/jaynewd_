@@ -1,10 +1,11 @@
 const lotr = require("express").Router();
+const { getData } = require("./fetch.js");
 const environment = require("../env");
-const { LOTR_API_KEY } = environment;
 
-lotr.get("/key", async (req, res) => {
+lotr.get("/", async (req, res) => {
   try {
-    res.send(LOTR_API_KEY);
+    const data = await getData();
+    res.json(data);
   } catch (err) {
     console.error(err);
   }

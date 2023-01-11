@@ -5,7 +5,7 @@ import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
-import LordPortal from "../pages/Experiments/lotr/LordPortal";
+import Feature from "../pages/Experiments/feature/Feature";
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
 import Audio from "../components/Audio/Audio";
 import Astronomy from "../components/Astronomy";
@@ -58,7 +58,7 @@ export const ProjectSwitch = (state) => {
 export const ExperimentSwitch = (state) => {
   const expOptions = {
     experimentMain: <ExpMain />,
-    Lotr: <LordPortal />,
+    feature: <Feature />,
     WaveForms: <WavePortal props={waveProps} />,
     Radio: <Audio />,
     TypeRider: <TypeRider />,
