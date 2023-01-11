@@ -57,7 +57,6 @@ export const ProjectSwitch = (state) => {
 export const ExperimentSwitch = (state) => {
   const expOptions = {
     experimentMain: <ExpMain />,
-    feature: <Feature />,
     WaveForms: <WavePortal props={waveProps} />,
     Radio: <Audio />,
     TypeRider: <TypeRider />,
