@@ -5,7 +5,7 @@ const ProjectPage = ({ data }) => {
   return (
     <>
       {!data ? (
-        <div>Loading, please wait ...</div>
+        <div>Loading, please wait ... </div>
       ) : (
         <>
           <h2>{data.name}</h2>

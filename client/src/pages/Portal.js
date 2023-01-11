@@ -3,9 +3,9 @@ import NavTab from "../components/NavTab";
 import Sidebar from "../components/Sidebar/Sidebar";
 import UtilityBar from "../components/UtilityBar";
 import {
-  aboutSwitch,
-  projectSwitch,
-  experimentSwitch,
+  AboutSwitch,
+  ProjectSwitch,
+  ExperimentSwitch,
   weatherSwitch,
 } from "../utils/displaySwitch";
 
@@ -34,13 +34,12 @@ const Portal = ({ navLocation }) => {
           <IconContext.Provider value={{ className: "icons" }}>
             <Sidebar navState={navState} setDisplay={setDisplay} />
           </IconContext.Provider>
-
           <article id="rightBox">
             <section className="displayBox">
               <aside key={keygen()} className="contentBox">
-                {aboutSwitch(displayState)}
-                {projectSwitch(displayState)}
-                {experimentSwitch(displayState)}
+                {AboutSwitch(displayState)}
+                {ProjectSwitch(displayState)}
+                {ExperimentSwitch(displayState)}
                 {weatherSwitch(displayState)}
               </aside>
             </section>
@@ -49,6 +48,7 @@ const Portal = ({ navLocation }) => {
             </footer>
           </article>
         </div>
+
         <Modal />
       </UtilityContextProvider>
     </>

@@ -5,11 +5,15 @@ import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
+<<<<<<< HEAD
+import Feature from "../pages/Experiments/feature/Feature";
+=======
+>>>>>>> main
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
 import Audio from "../components/Audio/Audio";
 import Astronomy from "../components/Astronomy";
-import { App } from "../pages/Experiments/typerider/App";
-const TypeRider = App;
+import { TypeRider } from "../pages/Experiments/typerider/App";
+
 import {
   truthProps,
   beautyProps,
@@ -18,23 +22,18 @@ import {
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
 
-export const aboutSwitch = (state) => {
+export const AboutSwitch = (state) => {
   const Wrapped = aboutLayout(Menu);
-  switch (state) {
-    case "aboutMain":
-      return <AboutMain />;
-    case "Fox":
-      return <Wrapped props={truthProps} />;
-    case "Sword":
-      return <Wrapped props={beautyProps} />;
-    case "Heart":
-      return <Wrapped props={goodnessProps} />;
-    default:
-      break;
-  }
+  const aboutOptions = {
+    aboutMain: <AboutMain />,
+    Fox: <Wrapped props={truthProps} />,
+    Sword: <Wrapped props={beautyProps} />,
+    Heart: <Wrapped props={goodnessProps} />,
+  };
+  return aboutOptions[state];
 };
 
-export const projectSwitch = (state) => {
+export const ProjectSwitch = (state) => {
   let Wrapped;
   switch (state) {
     case "projectMain":
@@ -59,28 +58,21 @@ export const projectSwitch = (state) => {
   }
 };
 
-export const experimentSwitch = (state) => {
-  switch (state) {
-    case "experimentMain":
-      return <ExpMain />;
-    case "ConverStation":
-      return <ConverStation />;
-    case "WaveForms":
-      return <WavePortal props={waveProps} />;
-    case "Radio":
-      return <Audio />;
-    case "TypeRider":
-      return <TypeRider />;
-    case "Stars":
-      return <Astronomy />;
-    default:
-      break;
-  }
+export const ExperimentSwitch = (state) => {
+  const expOptions = {
+    experimentMain: <ExpMain />,
+    feature: <Feature />,
+    WaveForms: <WavePortal props={waveProps} />,
+    Radio: <Audio />,
+    TypeRider: <TypeRider />,
+    Stars: <Astronomy />,
+  };
+  return expOptions[state];
 };
 
 export const weatherSwitch = (state) => {
-  switch (state) {
-    case "current":
-      return <CurrentWeather />;
-  }
+  const weatherOptions = {
+    current: <CurrentWeather />,
+  };
+  return weatherOptions[state];
 };

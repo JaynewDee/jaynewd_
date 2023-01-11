@@ -1,7 +1,7 @@
 import React from "react";
 import Window from "./components/Window";
 import "./index.scss";
-const App = () => {
+const TypeRider = () => {
   return (
     <div className="Typerider-App">
       <Window />
@@ -9,4 +9,4 @@ const App = () => {
   );
 };
 
-export { App };
+export { TypeRider };

@@ -10,8 +10,8 @@ import {
   GiPocketRadio,
   GiBlackBook,
   GiStarSwirl,
+  GiFireRing,
 } from "react-icons/gi";
-import { AiOutlineRobot } from "react-icons/ai";
 import { FaPaw } from "react-icons/fa";
 
 var abouttabs = [
@@ -80,8 +80,8 @@ var projecttabs = [
 var exptabs = [
   {
     key: 1,
-    name: "ConverStation",
-    icon: <AiOutlineRobot size={"2rem"} />,
+    name: "Lotr",
+    icon: <GiFireRing size={"2rem"} />,
     className: "tabStateUnlocked",
     toggled: false,
   },
