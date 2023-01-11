@@ -5,10 +5,6 @@ import ProjectsMain from "../pages/Projects/ProjectsMain";
 import ProjectPage from "../pages/Projects/ProjectPage";
 import projectLayout from "../pages/Projects/projectLayout";
 import ExpMain from "../pages/Experiments/ExpMain";
-<<<<<<< HEAD
-import Feature from "../pages/Experiments/feature/Feature";
-=======
->>>>>>> main
 import WavePortal from "../pages/Experiments/waveforms/WavePortal";
 import Audio from "../components/Audio/Audio";
 import Astronomy from "../components/Astronomy";
@@ -17,7 +13,7 @@ import { TypeRider } from "../pages/Experiments/typerider/App";
 import {
   truthProps,
   beautyProps,
-  goodnessProps,
+  goodnessProps
 } from "../pages/About/collapsible/props";
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
@@ -28,7 +24,7 @@ export const AboutSwitch = (state) => {
     aboutMain: <AboutMain />,
     Fox: <Wrapped props={truthProps} />,
     Sword: <Wrapped props={beautyProps} />,
-    Heart: <Wrapped props={goodnessProps} />,
+    Heart: <Wrapped props={goodnessProps} />
   };
   return aboutOptions[state];
 };
@@ -65,14 +61,14 @@ export const ExperimentSwitch = (state) => {
     WaveForms: <WavePortal props={waveProps} />,
     Radio: <Audio />,
     TypeRider: <TypeRider />,
-    Stars: <Astronomy />,
+    Stars: <Astronomy />
   };
   return expOptions[state];
 };
 
 export const weatherSwitch = (state) => {
   const weatherOptions = {
-    current: <CurrentWeather />,
+    current: <CurrentWeather />
   };
   return weatherOptions[state];
 };
