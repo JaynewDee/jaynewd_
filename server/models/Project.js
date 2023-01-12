@@ -3,25 +3,25 @@ const { Schema, model } = require("mongoose");
 const projectSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   lang: {
-    type: String,
+    type: String
   },
   created: {
-    type: Date,
+    type: Date
   },
   license: {
-    type: String,
+    type: String
   },
   body: {
-    type: String,
+    type: String
   },
   urls: {
     repo: String,
     clone: String,
-    deployment: String,
-  },
+    deployment: String
+  }
 });
 
 const Project = model("Project", projectSchema);

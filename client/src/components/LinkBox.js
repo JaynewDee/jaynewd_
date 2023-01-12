@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 const LinkBox = ({ urls }) => {
   const [tooltip, setTooltip] = useState(false);
+
   const manageClipboard = (e) => {
     e.preventDefault();
-
+    if (e.target.value === false) return;
     navigator.clipboard
       .writeText(e.target.value)
       .then(() => {
@@ -18,15 +19,20 @@ const LinkBox = ({ urls }) => {
   const redirect = (e) => {
     window.open(e.target.value, "_blank");
   };
-
+  console.log(urls.deployment);
   return (
     <>
       {!urls ? (
         <div>Loading ...</div>
       ) : (
         <section className="linkBox">
-          <button value={urls.deployment} onClick={(e) => redirect(e)}>
-            Deployment
+          <button
+            disabled={!urls.deployment ? true : false}
+            style={!urls.deployment ? { pointerEvents: "none" } : {}}
+            value={urls.deployment}
+            onClick={(e) => redirect(e)}
+          >
+            {"Deployment"}
           </button>
 
           <button
