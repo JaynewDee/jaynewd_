@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const db = require("./config/connection");
 const {} = require("dotenv/config");
@@ -11,6 +12,14 @@ app.use(
   })
 );
 app.use(express.static("public"));
+app.use(
+  session({
+    secret: "visionsofveracityvexingviolent",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 8.64 ** 7 }
+  })
+);
 
 const userRoutes = require("./routes/user");
 const projectRoutes = require("./routes/project");
