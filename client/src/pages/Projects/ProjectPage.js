@@ -2,6 +2,7 @@ import React from "react";
 import LinkBox from "../../components/LinkBox";
 import StatBox from "../../components/StatBox";
 const ProjectPage = ({ data }) => {
+  console.log(data);
   return (
     <>
       {!data ? (
@@ -10,7 +11,7 @@ const ProjectPage = ({ data }) => {
         <>
           <h2>{data.name}</h2>
 
-          <LinkBox urls={data?.urls} />
+          <LinkBox urls={data.urls} />
           <StatBox
             lang={data.lang}
             date={data.created}

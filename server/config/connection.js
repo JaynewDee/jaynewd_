@@ -1,18 +1,12 @@
-const mongoose = require("mongoose");
-const {} = require("dotenv/config");
+const { connect, connection } = require("mongoose");
+require("dotenv").config();
 
-const URI = process.env.MONGODB_URI;
-connect().catch((err) => console.log(err));
+const URI = "mongodb://127.0.0.1:27017/synthetic";
 
-async function connect() {
-  await mongoose
-    .connect(URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-}
+connect(URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  autoCreate: true
+});
 
-module.exports = mongoose.connection;
+module.exports = connection;

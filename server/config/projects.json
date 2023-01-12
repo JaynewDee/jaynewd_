@@ -1,5 +1,17 @@
 [
   {
+    "name": "Grouper JS",
+    "lang": "JavaScript",
+    "created": "2022-12-14",
+    "license": "MIT",
+    "body": "CLI-based student groups management system being built for use by 2U/edX instructors and instructional specialists. Affiliation with 2U is preliminary and unofficial.",
+    "urls": {
+      "repo": "https://github.com/JaynewDee/grouper-js",
+      "clone": "git@github.com:JaynewDee/grouper-js.git",
+      "deployment": "https://www.npmjs.com/package/group-maker?activeTab=readme"
+    }
+  },
+  {
     "name": "Parks & Rex",
     "lang": "JavaScript",
     "created": "2022-01-19",
@@ -8,7 +20,7 @@
     "urls": {
       "repo": "https://github.com/brandynh/ParksAndRex",
       "clone": "git@github.com:brandynh/ParksAndRex.git",
-      "deployment": "https://parksandrex.herokuapp.com/"
+      "deployment": ""
     }
   },
   {
@@ -20,7 +32,7 @@
     "urls": {
       "repo": "https://github.com/MikeMallonIT/Project2-DaySpaw",
       "clone": "git@github.com:MikeMallonIT/Project2-DaySpaw.git",
-      "deployment": "https://project2-dayspaw.herokuapp.com/"
+      "deployment": ""
     }
   },
   {
@@ -40,7 +52,7 @@
     "lang": "JavaScript",
     "created": "2022-03-13",
     "license": "MIT",
-    "body": "My first paid project beyond graduation, this page was built as a central hub for spa owner Tricia Kelly to direct potential customers.  We have future plans to implement a scheduling/appointments feature, rendering this a full-stack enterprise application.",
+    "body": "This page was built as a central hub for independent spa owner Tricia Kelly to direct potential customers.  We have future plans to implement a scheduling/appointments feature, rendering this a full-stack enterprise application.",
     "urls": {
       "repo": "https://github.com/JaynewDee/CaraBella",
       "clone": "git@github.com:JaynewDee/CaraBella.git",
