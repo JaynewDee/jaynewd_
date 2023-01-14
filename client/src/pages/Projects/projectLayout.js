@@ -6,7 +6,7 @@ function projectLayout(Page, projectName) {
     constructor(props) {
       super(props);
       this.state = {
-        data: {},
+        data: null
       };
     }
 
@@ -20,7 +20,7 @@ function projectLayout(Page, projectName) {
       return (
         <section className="projectWrapper">
           {this.state.data ? (
-            <Page data={this.state.data} />
+            <Page data={this.state.data} loadState={this.state.loading} />
           ) : (
             <div> Loading ... </div>
           )}

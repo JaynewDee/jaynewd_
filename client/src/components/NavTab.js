@@ -32,12 +32,7 @@ const Nav = ({ setNav, setDisplay, location }) => {
   };
 
   return (
-    <nav
-      className={collapseState}
-      draggable="true"
-      // onDrag={(e) => onDrag(e)}
-      style={location}
-    >
+    <nav className={collapseState} draggable="true" style={location}>
       {routes.map((route, index) => {
         return (
           <button
@@ -48,7 +43,7 @@ const Nav = ({ setNav, setDisplay, location }) => {
               setNav(e.target.value);
               setDisplay(e.target.value);
             }}
-            className={route.className + " navLink"}
+            className={`${route.className} navLink`}
             style={{ textDecoration: "none" }}
             key={route.key}
           >
