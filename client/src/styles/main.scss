@@ -299,9 +299,10 @@ body {
           .project-body {
             font-size: 1.11rem;
             margin-top: 2rem;
-            text-align: left;
-            text-indent: 3rem;
+            text-align: justify;
+            text-indent: 2rem;
             line-height: 1.33rem;
+            max-width: 33rem;
           }
         }
         .section {
@@ -367,6 +368,12 @@ body {
 
 .icons {
   pointer-events: none;
+}
+
+.project-image {
+  margin: 3rem auto 1rem;
+  max-width: 23rem;
+  box-shadow: (0px -3px 12px rgba(0, 0, 0, 0.221));
 }
 
 @keyframes slideDown {

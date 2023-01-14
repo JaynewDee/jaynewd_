@@ -6,9 +6,15 @@ import {
   AboutSwitch,
   ProjectSwitch,
   ExperimentSwitch,
-  weatherSwitch,
+  weatherSwitch
 } from "../utils/displaySwitch";
 
+const SwitchSetContent = [
+  AboutSwitch,
+  ProjectSwitch,
+  ExperimentSwitch,
+  weatherSwitch
+];
 import Modal from "../components/Modal";
 
 import { IconContext } from "react-icons";
@@ -37,10 +43,7 @@ const Portal = ({ navLocation }) => {
           <article id="rightBox">
             <section className="displayBox">
               <aside key={keygen()} className="contentBox">
-                {AboutSwitch(displayState)}
-                {ProjectSwitch(displayState)}
-                {ExperimentSwitch(displayState)}
-                {weatherSwitch(displayState)}
+                {SwitchSetContent.map((fn) => fn(displayState))}
               </aside>
             </section>
             <footer key={keygen()} className="footer">

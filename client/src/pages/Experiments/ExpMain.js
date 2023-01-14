@@ -3,12 +3,12 @@ import { GiAbstract020 } from "react-icons/gi";
 const bracketLeft = {
   color: "rgba(0,121,145,.9)",
   marginRight: "1rem",
-  fontSize: "2rem",
+  fontSize: "2rem"
 };
 const bracketRight = {
   color: "rgba(0,121,145,.9)",
   marginLeft: "1rem",
-  fontSize: "2rem",
+  fontSize: "2rem"
 };
 const ExpMain = () => {
   return (
@@ -23,7 +23,7 @@ const ExpMain = () => {
         style={{ margin: "5rem auto" }}
         className="abstract-icon"
       />
-      <p style={{ width: "12rem", textAlign: "center" }}>
+      <p style={{ width: "12rem", textAlign: "center", textIndent: 0 }}>
         Explore freely using the buttons at left!
       </p>
     </>

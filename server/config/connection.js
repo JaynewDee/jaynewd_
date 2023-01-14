@@ -1,12 +1,11 @@
 const { connect, connection } = require("mongoose");
-require("dotenv").config();
+const {} = require("dotenv/config");
 
-const URI = "mongodb://127.0.0.1:27017/synthetic";
+const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/synthetic";
 
-connect(URI, {
+connect(uri, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  autoCreate: true
+  useUnifiedTopology: true
 });
 
 module.exports = connection;

@@ -13,10 +13,9 @@ const ProjectsMain = () => {
         personal project and the largest codebase I have built to date.
       </p>
       <p>
-        I build the majority of projects with a strong focus on efficiency and
-        utility, in both code quality and use case, but I took the liberty with
-        this portfolio application to freely explore vague ideas without
-        hesitation.
+        I typically strive to build projects with a strong focus on efficiency
+        and code quality, but I took the liberty with this portfolio application
+        to freely explore vague ideas without hesitation.
       </p>
       <p>
         The codebase reflects this approach, as it is messy and attempts to be

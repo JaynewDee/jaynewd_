@@ -17,6 +17,7 @@ import {
 } from "../pages/About/collapsible/props";
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
+import HexGuess from "../components/HexGuess";
 
 export const AboutSwitch = (state) => {
   const Wrapped = aboutLayout(Menu);
@@ -57,6 +58,7 @@ export const ProjectSwitch = (state) => {
 export const ExperimentSwitch = (state) => {
   const expOptions = {
     experimentMain: <ExpMain />,
+    Hex: <HexGuess />,
     WaveForms: <WavePortal props={waveProps} />,
     Radio: <Audio />,
     TypeRider: <TypeRider />,

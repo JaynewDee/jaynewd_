@@ -25,7 +25,7 @@ const AboutMain = () => {
         If the eye is a portal between the phenomenal world and the human mind,
         may this site be a portal between your world and mine.
       </p>
-      <p>Best always,</p>
+      <div style={{ marginTop: "3rem" }}>Sincerely,</div>
       <br />
       <h4>
         <strong>

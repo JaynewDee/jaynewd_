@@ -21,9 +21,9 @@ const Name = () => {
               <span>{"-------"}</span>
               <li>Developer</li>
               <span>{"-----"}</span>
-              <li>Explorer</li>
+              <li>& Student</li>
               <span>{"---"}</span>
-              <li>Artist</li>
+              <li>Engineer</li>
             </ul>
           </div>
         </h1>

@@ -12,6 +12,7 @@ const modalRoot = document.getElementById("modal-root");
 const Modal = ({}) => {
   const [containerEl, setContainerEl] = useState(document.createElement("div"));
   const { modal, off } = useUtilsContext();
+
   const renderSwitch = (modal) => {
     switch (modal.type) {
       case "login":
