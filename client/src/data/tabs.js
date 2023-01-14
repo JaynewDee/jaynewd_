@@ -10,7 +10,7 @@ import {
   GiPocketRadio,
   GiBlackBook,
   GiStarSwirl,
-  GiFireRing,
+  GiIceSpellCast
 } from "react-icons/gi";
 import { FaPaw } from "react-icons/fa";
 
@@ -20,22 +20,22 @@ var abouttabs = [
     name: "Fox",
     icon: <GiFox size={"2.66rem"} />,
     className: "aboutTabUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 2,
     name: "Sword",
     icon: <GiWingedSword size={"2.66rem"} />,
     className: "aboutTabUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 3,
     name: "Heart",
     icon: <GiGlassHeart size={"2.66rem"} />,
     className: "aboutTabUnlocked",
-    toggled: false,
-  },
+    toggled: false
+  }
 ];
 
 var projecttabs = [
@@ -44,74 +44,74 @@ var projecttabs = [
     name: "Flower",
     icon: <GiSunflower size={"1.66rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 1,
     name: "Dino",
     icon: <GiDinosaurBones size={"1.66rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 2,
     name: "Paw",
     icon: <FaPaw size={"1.66rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 3,
     name: "Ring",
     icon: <GiBigDiamondRing size={"1.66rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
-
   {
     key: 5,
     name: "Truck",
     icon: <GiTruck size={"1.66rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
-  },
+    toggled: false
+  }
 ];
 
 var exptabs = [
-  {
-    key: 1,
-    name: "Lotr",
-    icon: <GiFireRing size={"2rem"} />,
-    className: "tabStateUnlocked",
-    toggled: false,
-  },
-  {
-    key: 2,
-    name: "WaveForms",
-    icon: <GiWaves size={"2rem"} />,
-    className: "tabStateUnlocked",
-    toggled: false,
-  },
   {
     key: 3,
     name: "Radio",
     icon: <GiPocketRadio size={"2rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
+  {
+    key: 1,
+    name: "Hex",
+    icon: <GiIceSpellCast size={"2rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false
+  },
+
   {
     key: 4,
     name: "TypeRider",
     icon: <GiBlackBook size={"2rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
   {
     key: 5,
     name: "Stars",
     icon: <GiStarSwirl size={"2rem"} />,
     className: "tabStateUnlocked",
-    toggled: false,
+    toggled: false
   },
+  {
+    key: 2,
+    name: "WaveForms",
+    icon: <GiWaves size={"2rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false
+  }
 ];
 export { abouttabs, projecttabs, exptabs };
