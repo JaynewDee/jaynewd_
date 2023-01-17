@@ -1,0 +1,501 @@
+@font-face {
+  src: url("./assets/fonts/Trispace[wdth,wght].woff2");
+  font-family: "Trispace";
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+:root {
+  font-size: 18px;
+  height: 100%;
+  font-family: "Trispace";
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#bodyBox::before {
+  content: "";
+  height: 98vh;
+  width: 98vw;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+  border-radius: 1.66rem;
+  position: absolute;
+  margin-top: -0.33rem;
+  z-index: -1;
+}
+
+#bodyBox[value="Dino"]:hover {
+  cursor: url("./assets/cursors/spear.png") 15 10, move;
+}
+
+#bodyBox {
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Trispace";
+  font-weight: 300;
+  overflow: hidden;
+}
+
+#bodyBox #leftBox {
+  height: 99vh;
+  width: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-color: rgba(0, 5, 5, 0.85);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 1.33rem 0 0 1.33rem;
+  border-left: 0.33rem solid rgba(0, 121, 140, 0.7);
+}
+
+#bodyBox #leftBox .headerBox h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: right;
+  padding-right: 0.5rem;
+  border-right: 2px solid rgba(225, 225, 225, 0.9);
+  font-size: 1.3rem;
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox #firstName {
+  -webkit-animation: fadeInSynthetic 2s ease-out;
+          animation: fadeInSynthetic 2s ease-out;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox #lastName {
+  -webkit-animation: fadeInRain 2.1s ease-out;
+          animation: fadeInRain 2.1s ease-out;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox .traitList {
+  list-style-type: none;
+  padding: 0;
+  font-size: 0.66rem;
+  margin: 0;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox .traitList li {
+  text-align: right;
+  width: 100%;
+  line-height: 1;
+}
+
+#bodyBox #leftBox .headerBox h1 .nameBox .traitList span {
+  margin: -0.3rem;
+  position: relative;
+  color: rgba(0, 121, 140, 0.7);
+}
+
+#bodyBox #leftBox h1:hover {
+  cursor: pointer;
+}
+
+#bodyBox #leftBox #buttonBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem auto;
+  width: 66%;
+  height: 66%;
+  border-top: 1px solid rgba(155, 155, 155, 0.5);
+  border-bottom: 1px solid rgba(155, 155, 155, 0.5);
+  overflow-x: visible;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+#bodyBox #leftBox #buttonBox .top-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 1rem;
+  margin: auto 0.33rem;
+  z-index: -2;
+  overflow-x: none;
+}
+
+#bodyBox #leftBox .socialBox {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  justify-self: flex-end;
+  margin: 0 auto 1rem;
+  padding-top: 1rem;
+  z-index: 3;
+}
+
+#bodyBox #leftBox .socialBox a {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  padding: 0.3rem;
+}
+
+#bodyBox #leftBox .socialBox a:hover {
+  border-radius: 50%;
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+  background: linear-gradient(135deg, rgba(170, 0, 0, 0.7) 2%, rgba(200, 0, 0, 0.3) 36%, rgba(0, 212, 255, 0.3) 68%, rgba(0, 212, 255, 0.7) 100%);
+  -webkit-box-shadow: 0 0 0.33rem 0.11rem black;
+          box-shadow: 0 0 0.33rem 0.11rem black;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#bodyBox #rightBox {
+  color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  height: 100%;
+  width: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background-color: rgba(215, 215, 215, 0.1);
+  -webkit-box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15), inset 0 8px 10px rgba(0, 0, 0, 0.15) inset 0 10px 12px rgba(0, 0, 0, 0.15), inset 0 14px 16px rgba(0, 0, 0, 0.15), inset 0 18px 32px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15), inset 0 8px 10px rgba(0, 0, 0, 0.15) inset 0 10px 12px rgba(0, 0, 0, 0.15), inset 0 14px 16px rgba(0, 0, 0, 0.15), inset 0 18px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 0 1.33rem 1.33rem 0;
+}
+
+#bodyBox #rightBox .displayBox {
+  z-index: 5;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(0, 0, 0, 0.8);
+  width: 85%;
+  height: 80%;
+  margin: 4rem auto 1rem;
+  padding: 2rem 0;
+  border-radius: 0 0.66rem 0.66rem 0;
+  background-color: rgba(200, 200, 200, 0.1);
+  -webkit-box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1), inset -3px 6px 8px rgba(0, 0, 0, 0.1), inset -6px 8px 10px rgba(0, 0, 0, 0.2), inset -9px 10px 14px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1), inset -3px 6px 8px rgba(0, 0, 0, 0.1), inset -6px 8px 10px rgba(0, 0, 0, 0.2), inset -9px 10px 14px rgba(0, 0, 0, 0.3);
+}
+
+#bodyBox #rightBox .displayBox .contentBox {
+  margin: 4rem 3rem 2rem;
+  padding: 0 9%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#bodyBox #rightBox .displayBox .contentBox p {
+  text-indent: 3rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .drop-shadow {
+  -webkit-filter: drop-shadow(0px -2rem 1px rgba(20, 20, 20, 0.3)) drop-shadow(0px -1rem 1px rgba(20, 20, 20, 0.2));
+  filter: drop-shadow(0px -2rem 1px rgba(20, 20, 20, 0.3)) drop-shadow(0px -1rem 1px rgba(20, 20, 20, 0.2));
+}
+
+#bodyBox #rightBox .displayBox .contentBox .abstract-icon:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-animation: slideDown 2s ease-in-out forwards;
+          animation: slideDown 2s ease-in-out forwards;
+  margin-bottom: 3rem;
+  width: 110%;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper .linkBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 3rem auto 3rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper .linkBox button {
+  margin: auto;
+  border-radius: 0.22rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper .linkBox button:hover,
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper .linkBox button:active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  background-color: rgba(15, 15, 15, 0.8);
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper p {
+  text-align: center;
+  text-indent: 0%;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .projectWrapper .project-body {
+  font-size: 1.11rem;
+  margin-top: 2rem;
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: 1.33rem;
+  max-width: 33rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .section {
+  margin-bottom: 2rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .section .section-header {
+  margin-left: 1rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .section .section-header::before {
+  content: ">";
+  color: #007991;
+  margin-right: 0.5rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .section p {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  text-indent: 2rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .red {
+  color: #aa0000;
+}
+
+#bodyBox #rightBox .displayBox .contentBox p span {
+  color: rgba(0, 121, 140, 0.7);
+}
+
+#bodyBox #rightBox .displayBox .contentBox .stat {
+  line-height: 1.5;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .currentWeather .weather-report .spaced-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#bodyBox #rightBox .displayBox .contentBox .currentWeather .weather-report .spaced-row > span {
+  margin-left: 3rem;
+}
+
+#bodyBox #rightBox .displayBox .contentBox #astronomy-page > div > * {
+  margin: 2rem auto;
+}
+
+#bodyBox::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.86);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.15), 0 10px 12px rgba(0, 0, 0, 0.15), 0 14px 16px rgba(0, 0, 0, 0.15), 0 18px 32px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+  border-radius: 0rem;
+  position: absolute;
+  margin-top: -0.66rem;
+  z-index: -3;
+}
+
+.icons {
+  pointer-events: none;
+}
+
+.project-image {
+  margin: 3rem auto 1rem;
+  max-width: 23rem;
+  -webkit-box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.221);
+          box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.221);
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-750px);
+    transform: translateY(-750px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-750px);
+    transform: translateY(-750px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,95 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}
+
+.footer .utilityBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 95%;
+}
+
+.footer .utilityBox .controlBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: -0.66rem auto 1rem 10%;
+}
+
+.footer .utilityBox .controlBox > p {
+  margin: 0;
+  padding: 0.11rem;
+}
+
+.footer .utilityBox .controlBox > p .simple-clock {
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.footer .utilityBox .controlBox > p .weather-btn {
+  color: rgba(0, 121, 140, 0.7);
+  background: transparent;
+  border: none;
+}
+
+.footer .utilityBox .controlBox > p .weather-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.footer .utilityBox .utilityBtn {
+  font-size: 0.66rem;
+  height: 50%;
+  background-color: rgba(50, 50, 50, 0.7);
+  color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 0.33rem;
+  padding: 0 1rem;
+}
+
+.footer .utilityBox .utilityBtn:hover {
+  color: rgba(0, 121, 140, 0.7);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  background-color: rgba(150, 150, 150, 0.15);
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+  }
+  100% {
+    -webkit-transform: translateY(100rem);
+            transform: translateY(100rem);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+  }
+  100% {
+    -webkit-transform: translateY(100rem);
+            transform: translateY(100rem);
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

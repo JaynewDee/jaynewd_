@@ -1,0 +1,39 @@
+.wave-portal {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.wave-portal .menu-box {
+  height: 3rem;
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border-radius: 2rem;
+  border: 2px solid black;
+  background: transparent;
+  z-index: 2;
+  padding: 0.2rem 0.3rem;
+}
+
+.wave-portal .menu-box .menu-btn {
+  border-radius: 1rem;
+  height: 100%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
