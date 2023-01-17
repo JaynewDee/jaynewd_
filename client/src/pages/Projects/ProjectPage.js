@@ -23,6 +23,7 @@ const ProjectPage = ({ data }) => {
         return "";
     }
   };
+
   return (
     <>
       {!data ? (
