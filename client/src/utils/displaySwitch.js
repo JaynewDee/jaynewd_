@@ -17,7 +17,7 @@ import {
 } from "../pages/About/collapsible/props";
 import { waveProps } from "../pages/Experiments/waveforms/props/waveProps";
 import { CurrentWeather } from "../components/Weather/Current";
-import HexGuess from "../components/HexGuess";
+import HexGuess from "../components/HexGuess/Game";
 
 export const AboutSwitch = (state) => {
   const Wrapped = aboutLayout(Menu);
@@ -35,6 +35,9 @@ export const ProjectSwitch = (state) => {
   switch (state) {
     case "projectMain":
       return <ProjectsMain />;
+    case "Grouper":
+      Wrapped = projectLayout(ProjectPage, { name: "GroupMaker.js" });
+      return <Wrapped />;
     case "Dino":
       Wrapped = projectLayout(ProjectPage, { name: "Parks & Rex" });
       return <Wrapped />;

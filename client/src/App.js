@@ -12,21 +12,7 @@ const App = () => {
     top: "0rem",
     left: "15%"
   });
-  // console.log(navigator.userAgent);
-  // function setScreenSize() {
-  //   if (
-  //     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  //       navigator.userAgent
-  //     )
-  //   ) {
-  //     setDevice({ type: "Mobile" });
-  //     return "Mobile";
-  //   }
-  // }
-  // useEffect(() => {
-  //   setScreenSize();
-  // }, [device.type]);
-  console.log(device.type);
+
   return (
     <BrowserRouter>
       <UserContextProvider>

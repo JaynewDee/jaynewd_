@@ -46,5 +46,17 @@
       "clone": "git@github.com:JaynewDee/CaraBella.git",
       "deployment": "https://cara-bella.vercel.app/"
     }
+  },
+  {
+    "name": "GroupMaker.js",
+    "lang": "JS/Node",
+    "created": "2022-12-14",
+    "license": "MIT",
+    "body": "Inspired by the challenges of a teaching role, this command-line utility parses, reads, and writes files containing students' gpa scores.  Within a few simple commands, the user can produce a csv or json-formatted file containing group assignments for the contained students, algorithmically assigned with the goal of balance.  The algorithm  distributes students across disparate score categories, eliminating the need to make difficult decisions about group assignments for projects and beyond.",
+    "urls": {
+      "repo": "https://github.com/JaynewDee/grouper-js",
+      "clone": "git@github.com:JaynewDee/grouper-js.git",
+      "deployment": "https://www.npmjs.com/package/group-maker"
+    }
   }
 ]

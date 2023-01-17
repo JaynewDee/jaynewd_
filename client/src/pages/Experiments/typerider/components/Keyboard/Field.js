@@ -6,16 +6,19 @@ const Field = ({
   letter,
   round,
   setRound,
-  scoreDispatch,
+  scoreDispatch
 }) => {
   //
   const blink = {
-    animation: `blink .6s ease-in-out`,
+    animation: `blink .6s ease-in-out`
   };
+
   const [animateState, setAnimation] = useState({});
+
   const handleKeyPress = (e) => {
     let current = e.currentTarget;
     let nextRow = document.getElementById(`${0},${rowIdx + 1}`);
+
     if (e.key === current.value) {
       scoreDispatch({ type: "INCREASE", payload: 2 });
       current.className = "solved";
@@ -37,9 +40,11 @@ const Field = ({
       setAnimation({});
     }, 1000);
   };
+
   const rejectSelect = () => {
     return false;
   };
+
   return (
     <input
       style={animateState}

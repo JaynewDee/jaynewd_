@@ -5,10 +5,12 @@ import dinoImg from "../../assets/imgs/dino-background-public.jpeg";
 import caraBellaImg from "../../assets/imgs/cara-bella.png";
 import dayspawImg from "../../assets/imgs/day-spaw.png";
 import moodRingImg from "../../assets/imgs/mood-ring.png";
-
+import grouperImg from "../../assets/imgs/grouper.png";
 const ProjectPage = ({ data }) => {
   const imageSwitch = (name) => {
     switch (name) {
+      case "GroupMaker.js":
+        return grouperImg;
       case "Cara Bella":
         return caraBellaImg;
       case "Parks & Rex":
@@ -28,7 +30,7 @@ const ProjectPage = ({ data }) => {
       ) : (
         <>
           <h2>{data.name}</h2>
-          <img class="project-image" src={imageSwitch(data.name)}></img>
+          <img className="project-image" src={imageSwitch(data.name)}></img>
           <LinkBox urls={data?.urls} />
           <StatBox
             lang={data.lang}
@@ -36,7 +38,6 @@ const ProjectPage = ({ data }) => {
             license={data.license}
             className="statbox"
           />
-
           <section className="project-body">{data.body}</section>
         </>
       )}

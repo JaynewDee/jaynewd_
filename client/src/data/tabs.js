@@ -10,7 +10,8 @@ import {
   GiPocketRadio,
   GiBlackBook,
   GiStarSwirl,
-  GiIceSpellCast
+  GiIceSpellCast,
+  GiScales
 } from "react-icons/gi";
 import { FaPaw } from "react-icons/fa";
 
@@ -39,6 +40,13 @@ var abouttabs = [
 ];
 
 var projecttabs = [
+  {
+    key: 6,
+    name: "Grouper",
+    icon: <GiScales size={"1.66rem"} />,
+    className: "tabStateUnlocked",
+    toggled: false
+  },
   {
     key: 4,
     name: "Flower",

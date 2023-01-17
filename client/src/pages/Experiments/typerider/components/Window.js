@@ -4,7 +4,7 @@ import {
   fetchDino,
   fetchHipsum,
   getOneSentence,
-  getDictionary,
+  getDictionary
 } from "../api/fetch";
 import { scrambleWords } from "../utils/scramble";
 import { withSpaces } from "../utils/withSpaces";
@@ -25,7 +25,7 @@ const dictionaryArray = [
   "autumn",
   "terrain",
   "subterfuge",
-  "apoptosis",
+  "apoptosis"
 ];
 
 const Window = () => {
@@ -36,7 +36,7 @@ const Window = () => {
     solution: "",
     scrambled: "",
     loading: true,
-    words: [],
+    words: []
   });
 
   const minimize = (string) => {
@@ -52,7 +52,7 @@ const Window = () => {
       dictionary: getDictionary(dictionaryArray[round]),
       dinosaur: fetchDino(),
       hipster: fetchHipsum(),
-      mongo: getOneSentence().then((response) => response[0].sentence),
+      mongo: getOneSentence().then((response) => response[0].sentence)
     };
     return modeSettings[mode];
   };
@@ -63,7 +63,6 @@ const Window = () => {
     const getSentence = () => {
       if (round > 0 && round < 11) {
         fetchByMode(mode).then((sentence) => {
-          console.log(sentence);
           let scrambled = scrambleWords(sentence);
           const solution = minimize(sentence);
           let formatted = withSpaces(solution);
@@ -71,7 +70,7 @@ const Window = () => {
             solution: sentence,
             scrambled: scrambled,
             loading: false,
-            words: formatted,
+            words: formatted
           });
         });
       }
