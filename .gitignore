@@ -11,6 +11,8 @@ env.js
 # testing
 /coverage
 
+flow.bash
+
 # production
 /build
 /client/build
